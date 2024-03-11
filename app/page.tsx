@@ -25,27 +25,27 @@ export default function Home() {
         </div>
 
         <div className="anim my-4 grid h-fit w-full grid-cols-2 grid-rows-3 items-center justify-between border-y md:my-8 md:flex md:grid-rows-1 lg:my-12">
-          <div className="md:pad-l anim col-span-1 flex h-full w-full items-center justify-center py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2">
+          <div className="md:pad-l anim col-span-1 flex h-fit w-full items-center justify-center py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2">
             <p className="text-center text-xs font-medium text-foreground">
               Jira
             </p>
           </div>
-          <div className="anim col-span-1 flex h-full w-full items-center justify-center border-l py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2">
+          <div className="anim col-span-1 flex h-fit w-full items-center justify-center border-l py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2">
             <p className="text-center text-xs font-medium text-foreground">
               Typescript
             </p>
           </div>
-          <div className="anim col-span-1 flex h-full w-full items-center justify-center border-l-0 border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-l md:border-t-0">
+          <div className="anim col-span-1 flex h-fit w-full items-center justify-center border-l-0 border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-l md:border-t-0">
             <p className="text-center text-xs font-medium text-foreground">
               Hygraph
             </p>
           </div>
-          <div className="anim col-span-1 flex h-full w-full items-center justify-center border-l border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-t-0">
+          <div className="anim col-span-1 flex h-fit w-full items-center justify-center border-l border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-t-0">
             <p className="text-center text-xs font-medium text-foreground">
               Next
             </p>
           </div>
-          <div className="md:pad-r anim col-span-2 flex h-full w-full items-center justify-center border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-l md:border-t-0">
+          <div className="md:pad-r anim col-span-2 flex h-fit w-full items-center justify-center border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-l md:border-t-0">
             <p className="text-center text-xs font-medium text-foreground">
               Github
             </p>
