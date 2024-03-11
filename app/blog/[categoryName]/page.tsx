@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 // Text Balancer
 import Balancer from "react-wrap-balancer";
 
@@ -9,6 +7,7 @@ import Breadcrumb from "@/components/ui/breadcrumb";
 import Filter from "@/components/filter/Filter";
 import BlogCard from "@/components/macro/BlogCard";
 import { BlogSkeleton } from "@/components/ui/skeleton";
+import EmptyCard from "@/components/macro/EmptyCard";
 
 // Fetch
 import { getPostsCategory } from "@/lib/gql";
@@ -46,7 +45,7 @@ export default async function Category({
 
       <DividerHorizontal />
 
-      <div className="pad-x grid w-full gap-x-4 gap-y-6 py-4 md:grow md:grid-cols-2 md:py-8 xl:grid-cols-3">
+      <div className="pad-x grid h-fit w-full gap-x-4 gap-y-6 py-4 md:h-full md:grow md:grid-cols-2 md:py-8 xl:grid-cols-3">
         {!posts ? (
           Array.from({ length: 6 }).map((_, index) => (
             <BlogSkeleton key={index} />
@@ -57,22 +56,7 @@ export default async function Category({
             <BlogCard post={post} key={index} />
           ))
         ) : (
-          <div className="col-span-full flex h-full w-full grow flex-col items-center justify-center py-8 xs:py-12 md:py-16 lg:py-20">
-            <h1 className="text-center text-2xl font-semibold text-foreground">
-              Sorry!
-            </h1>
-            <p className="text-center text-muted-foreground">
-              There are no posts in this category,{" "}
-              <span className="italic">yet</span>
-            </p>
-            <Link
-              href="/blog"
-              aria-label="Go back to /blog"
-              className="mt-4 bg-foreground px-4 py-2 text-sm font-medium uppercase text-background"
-            >
-              Go back
-            </Link>
-          </div>
+          <EmptyCard />
         )}
       </div>
     </section>
