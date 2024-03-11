@@ -46,7 +46,7 @@ export default async function Category({
 
       <DividerHorizontal />
 
-      <div className="pad-x grid w-full gap-x-4 gap-y-6 py-4 grow md:grid-cols-2 md:py-8 xl:grid-cols-3">
+      <div className="pad-x grid w-full gap-x-4 gap-y-6 py-4 md:grow md:grid-cols-2 md:py-8 xl:grid-cols-3">
         {!posts ? (
           Array.from({ length: 6 }).map((_, index) => (
             <BlogSkeleton key={index} />

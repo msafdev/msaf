@@ -42,7 +42,7 @@ export default async function Blog() {
 
       <DividerHorizontal />
 
-      <div className="pad-x grid w-full grow gap-x-4 gap-y-6 py-4 md:grid-cols-2 md:py-8 xl:grid-cols-3">
+      <div className="pad-x grid w-full md:grow gap-x-4 gap-y-6 py-4 md:grid-cols-2 md:py-8 xl:grid-cols-3">
         {!posts ? (
           Array.from({ length: 6 }).map((_, index) => (
             <BlogSkeleton key={index} />
