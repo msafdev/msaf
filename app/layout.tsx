@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Fonts
 import { Montserrat } from "next/font/google";
@@ -34,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="no-scrollbar">
       <body className={montserrat.className}>
+        <SpeedInsights />
         <main className="flex min-h-screen w-full flex-col bg-background text-foreground">
           <Navbar />
           {children}
