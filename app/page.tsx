@@ -24,7 +24,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="anim my-4 grid w-full grid-cols-2 items-center justify-between border-y md:my-8 md:flex lg:my-12 h-fit">
+        <div className="anim my-4 grid h-fit w-full grid-cols-2 grid-rows-3 items-center justify-between border-y md:my-8 md:flex md:grid-rows-1 lg:my-12">
           <div className="md:pad-l anim col-span-1 flex h-full w-full items-center justify-center py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2">
             <p className="text-center text-xs font-medium text-foreground">
               Jira
