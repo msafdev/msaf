@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import {
-  TbBrandBehance,
+  TbBrandGithub,
   TbBrandDribbble,
   TbBrandFigma,
   TbBrandFiverr,
@@ -39,7 +39,7 @@ const Footer = () => {
           <TbBrandFigma className="anim h-6 w-6 text-foreground group-hover:rotate-6 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
         <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
-          <TbBrandBehance className="anim h-6 w-6 text-foreground group-hover:rotate-6 group-hover:scale-125 group-hover:text-primary-foreground" />
+          <TbBrandGithub className="anim h-6 w-6 text-foreground group-hover:rotate-6 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
         <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
           <TbBrandFiverr className="anim h-6 w-6 text-foreground group-hover:-rotate-12 group-hover:scale-125 group-hover:text-primary-foreground" />
