@@ -8,8 +8,8 @@ const NavItems = [
     href: "/contact",
   },
   {
-    name: "Component",
-    href: "/component",
+    name: "Project",
+    href: "/project",
   },
 ];
 
