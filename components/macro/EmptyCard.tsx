@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const EmptyCard = () => {
   return (
-    <div className="col-span-full flex h-full w-full grow flex-col items-center justify-center py-8 xs:py-12 md:py-16 lg:py-20">
+    <div className="col-span-full flex h-fit w-full flex-col items-center justify-center py-8 xs:py-12 md:h-full md:grow md:py-16 lg:py-20">
       <h1 className="text-center text-2xl font-semibold text-foreground">
         Sorry!
       </h1>
