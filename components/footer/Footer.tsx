@@ -10,44 +10,44 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="text-foreground bg-background min-h-screen w-full flex flex-col">
-      <div className="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-10 xl:grid-cols-12 border-t">
+    <footer className="z-40 flex min-h-screen w-full flex-col bg-background text-foreground">
+      <div className="grid grid-cols-3 border-t sm:grid-cols-6 lg:grid-cols-10 xl:grid-cols-12">
         {/* Footer */}
-        <div className="px-4 py-8 lg:py-4 col-span-3 sm:col-span-6 lg:col-span-4 xl:col-span-6 flex justify-center items-center md:border-r border-b lg:border-b-0">
-          <p className="text-sm font-semibold uppercase text-foreground text-center">
+        <div className="col-span-3 flex items-center justify-center border-b px-4 py-8 sm:col-span-6 md:border-r lg:col-span-4 lg:border-b-0 lg:py-4 xl:col-span-6">
+          <p className="text-center text-sm font-semibold uppercase text-foreground">
             Follow me
           </p>
-          <div className="w-full h-[2px] rounded-full max-w-12 xs:max-w-14 sm:max-w-16 md:max-w-32 bg-foreground mx-4 relative flex items-center">
-            <ChevronRightIcon className="absolute right-0 w-6 h-auto translate-x-2 text-foreground" />
+          <div className="relative mx-4 flex h-[2px] w-full max-w-12 items-center rounded-full bg-foreground xs:max-w-14 sm:max-w-16 md:max-w-32">
+            <ChevronRightIcon className="absolute right-0 h-auto w-6 translate-x-2 text-foreground" />
           </div>
-          <p className="text-sm font-semibold uppercase text-foreground text-center">
+          <p className="text-center text-sm font-semibold uppercase text-foreground">
             Here
           </p>
         </div>
 
         {/* Social Icons */}
-        <div className="py-6 sm:py-8 anim col-span-1 w-full h-auto sm:aspect-video flex items-center justify-center hover:bg-primary cursor-pointer group">
-          <TbBrandTwitter className="w-6 h-6 text-foreground group-hover:text-primary-foreground anim group-hover:scale-125 group-hover:rotate-12" />
+        <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
+          <TbBrandTwitter className="anim h-6 w-6 text-foreground group-hover:rotate-12 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
-        <div className="py-6 sm:py-8 anim col-span-1 w-full h-auto sm:aspect-video flex items-center justify-center hover:bg-primary cursor-pointer group">
-          <TbBrandInstagram className="w-6 h-6 text-foreground group-hover:text-primary-foreground anim group-hover:scale-125 group-hover:-rotate-12" />
+        <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
+          <TbBrandInstagram className="anim h-6 w-6 text-foreground group-hover:-rotate-12 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
-        <div className="py-6 sm:py-8 anim col-span-1 w-full h-auto sm:aspect-video flex items-center justify-center hover:bg-primary cursor-pointer group">
-          <TbBrandDribbble className="w-6 h-6 text-foreground group-hover:text-primary-foreground anim group-hover:scale-125 group-hover:-rotate-45" />
+        <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
+          <TbBrandDribbble className="anim h-6 w-6 text-foreground group-hover:-rotate-45 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
-        <div className="py-6 sm:py-8 anim col-span-1 w-full h-auto sm:aspect-video flex items-center justify-center hover:bg-primary cursor-pointer group">
-          <TbBrandFigma className="w-6 h-6 text-foreground group-hover:text-primary-foreground anim group-hover:scale-125 group-hover:rotate-6" />
+        <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
+          <TbBrandFigma className="anim h-6 w-6 text-foreground group-hover:rotate-6 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
-        <div className="py-6 sm:py-8 anim col-span-1 w-full h-auto sm:aspect-video flex items-center justify-center hover:bg-primary cursor-pointer group">
-          <TbBrandBehance className="w-6 h-6 text-foreground group-hover:text-primary-foreground anim group-hover:scale-125 group-hover:rotate-6" />
+        <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
+          <TbBrandBehance className="anim h-6 w-6 text-foreground group-hover:rotate-6 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
-        <div className="py-6 sm:py-8 anim col-span-1 w-full h-auto sm:aspect-video flex items-center justify-center hover:bg-primary cursor-pointer group">
-          <TbBrandFiverr className="w-6 h-6 text-foreground group-hover:text-primary-foreground anim group-hover:scale-125 group-hover:-rotate-12" />
+        <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
+          <TbBrandFiverr className="anim h-6 w-6 text-foreground group-hover:-rotate-12 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
       </div>
 
-      <div className="flex justify-center items-center py-8 border-y px-4">
-        <p className="text-xs md:text-sm text-muted-foreground text-left">
+      <div className="flex items-center justify-center border-y px-4 py-8">
+        <p className="text-left text-xs text-muted-foreground md:text-sm">
           &copy; 2024 <span className="font-semibold">MSAF</span>, all rights
           reserved.
         </p>

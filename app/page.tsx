@@ -1,4 +1,5 @@
 // Text Balancer
+import { Command } from "@/components/macro/CommandDialog";
 import { Experience } from "@/lib/constants";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
@@ -8,15 +9,19 @@ export default function Home() {
     <>
       <section
         id="home"
-        className="flex h-full w-full grow flex-col py-4 md:py-8 lg:py-12"
+        className="flex h-full w-full grow flex-col pt-4 md:pt-8 lg:pt-12"
       >
-        <div className="pad-x w-full">
+        <div className="pad-x relative w-full">
           <h1 className="text-center text-2xl font-semibold leading-tight xs:text-3xl sm:text-left md:w-[70%] lg:text-4xl">
             <Balancer>
               Visual Driven<span className="mx-2 text-yellow-400">★</span>Web
               Developer, converting ideas into reality
             </Balancer>
           </h1>
+
+          <div className="pad-r absolute bottom-0 right-0">
+            <Command />
+          </div>
         </div>
 
         <div className="anim my-4 grid w-full grid-cols-2 items-center justify-between border-y md:my-8 md:flex lg:my-12">
@@ -60,9 +65,10 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2">
             <div className="flex flex-col justify-between pt-6 md:py-6">
               <p className="text-lg text-muted-foreground md:max-w-sm lg:max-w-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi eaque blanditiis laudantium voluptas! Quaerat, error
-                dolorum? Sunt ducimus quidem possimus?
+                Ola! My name is Salman, a very funny-looking visual design
+                enthusiast. I do web design (<code>and development</code>),
+                business development, project manager, and also a speaker. Feel
+                free to surf around 👋
               </p>
 
               <Link

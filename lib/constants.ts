@@ -31,6 +31,14 @@ const FilterItems = [
     href: "/blog/personal",
   },
   {
+    name: "Tech",
+    href: "/blog/tech",
+  },
+  {
+    name: "Design",
+    href: "/blog/design",
+  },
+  {
     name: "Review",
     href: "/blog/review",
   },

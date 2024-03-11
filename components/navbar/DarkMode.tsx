@@ -3,35 +3,33 @@
 import { useEffect, useState } from "react";
 import { Switch } from "../ui/switch";
 
-const DarkMode = () => {
-  const fetchDarkMode = () => {
+const DarkMode = ({ isChecked = false }: { isChecked?: boolean }) => {
+  const [checked, setChecked] = useState<boolean>(isChecked);
+
+  useEffect(() => {
     if (typeof window !== "undefined") {
       const html = document.querySelector("html");
       if (html) {
         if (html.classList.contains("dark")) {
-          return true;
+          setChecked(true);
         } else {
-          return false;
+          setChecked(false);
         }
       }
     }
-  };
-
-  const [checked, setChecked] = useState(() => fetchDarkMode());
+  }, [isChecked]);
 
   const handleChange = () => {
-    if (typeof window !== "undefined") {
-      const html = document.querySelector("html");
-      if (html) {
-        if (checked) {
-          html.classList.remove("dark");
-          setChecked(false);
-        } else {
-          html.classList.add("dark");
-          setChecked(true);
-        }
+    const newValue = !checked;
+    const html = document.querySelector("html");
+    if (html) {
+      if (newValue) {
+        html.classList.add("dark");
+      } else {
+        html.classList.remove("dark");
       }
     }
+    setChecked(newValue);
   };
 
   return (

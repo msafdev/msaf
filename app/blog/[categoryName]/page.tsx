@@ -11,14 +11,18 @@ import BlogCard from "@/components/macro/BlogCard";
 import { BlogSkeleton } from "@/components/ui/skeleton";
 
 // Fetch
-import { getPosts } from "@/lib/gql";
+import { getPostsCategory } from "@/lib/gql";
 
-export default async function Blog() {
-  const posts = await getPosts();
+export default async function Category({
+  params,
+}: {
+  params: { categoryName: string };
+}) {
+  const posts = await getPostsCategory({ category: params.categoryName });
 
   return (
     <section
-      id="blog"
+      id="blog-category"
       className="flex h-full w-full grow flex-col pt-4 md:pt-8 lg:pt-12"
     >
       <div className="pad-x mb-4 pb-4 md:mb-6 lg:mb-8">
@@ -42,7 +46,7 @@ export default async function Blog() {
 
       <DividerHorizontal />
 
-      <div className="pad-x grid w-full grow gap-x-4 gap-y-6 py-4 md:grid-cols-2 md:py-8 xl:grid-cols-3">
+      <div className="pad-x grid w-full gap-x-4 gap-y-6 py-4 grow md:grid-cols-2 md:py-8 xl:grid-cols-3">
         {!posts ? (
           Array.from({ length: 6 }).map((_, index) => (
             <BlogSkeleton key={index} />

@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <header className="w-full flex items-center justify-between py-4 md:py-8 pad-x sticky top-0 bg-background border-b">
+    <header className="w-full flex items-center justify-between py-4 md:py-8 pad-x sticky top-0 bg-background border-b z-40">
       {/* Logo */}
       <Link href="/" className="flex items-center gap-x-4">
         <div className="flex flex-col justify-center items-center w-fit h-fit">

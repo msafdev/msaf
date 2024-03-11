@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+
+// Fonts
 import { Montserrat } from "next/font/google";
 
+// Assets
 import "./globals.css";
 
 // Pages
@@ -9,6 +12,7 @@ import NotFound from "./not-found";
 // Components
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -19,6 +23,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Salman",
   description: "Salman's personal website",
+  icons: "favicon.ico",
 };
 
 export default function RootLayout({
@@ -27,11 +32,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="no-scrollbar">
       <body className={montserrat.className}>
-        <main className="min-h-screen w-full flex flex-col text-foreground bg-background">
+        <main className="flex min-h-screen w-full flex-col bg-background text-foreground">
           <Navbar />
           {children}
+          <Toaster />
         </main>
         <Footer />
       </body>
