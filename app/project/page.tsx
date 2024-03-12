@@ -11,7 +11,7 @@ export default function Introduction() {
         This is a collection of components I have used in my projects. <br />
         This is <span className="font-semibold">NOT</span> a component library.
       </blockquote>
-      <h1 className="mt-6 text-lg font-semibold text-foreground">Reference</h1>
+      <h2 className="mt-6 text-lg font-semibold text-foreground">Reference</h2>
       <p className="mt-3 text-sm text-muted-foreground md:text-base">
         Making this by myself is never possible without the help of others. I
         took inspiration from many sources and I am grateful for that. Here are
