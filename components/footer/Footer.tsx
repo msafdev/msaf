@@ -11,7 +11,13 @@ import {
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
-import { HoverCard, HoverItem, HoverItems, HoverTitle } from "./HoverCard";
+import {
+  HoverCard,
+  HoverItem,
+  HoverItems,
+  HoverLinks,
+  HoverTitle,
+} from "./HoverCard";
 import Link from "next/link";
 
 const Footer = () => {
@@ -57,37 +63,50 @@ const Footer = () => {
           <HoverCard className="border-b">
             <HoverTitle>Nav</HoverTitle>
             <HoverItem header="Nav">
-              <HoverItems href="/blog">Blog</HoverItems>
-              <HoverItems href="/contact">Contact</HoverItems>
-              <HoverItems href="/project">Project</HoverItems>
+              <HoverLinks href="/blog">Blog</HoverLinks>
+              <HoverLinks href="/contact">Contact</HoverLinks>
+              <HoverLinks href="/project">Project</HoverLinks>
             </HoverItem>
           </HoverCard>
           <HoverCard className="border-b">
             <HoverTitle>Soc</HoverTitle>
             <HoverItem header="Soc">
-              <HoverItems href="https://twitter.com/msafdev" target="_blank">
+              <HoverLinks href="https://twitter.com/msafdev" target="_blank">
                 Twitter
-              </HoverItems>
-              <HoverItems
+              </HoverLinks>
+              <HoverLinks
                 href="https://linkedin.com/in/muhammadsalmoon"
                 target="_blank"
               >
                 LinkedIn
-              </HoverItems>
-              <HoverItems
+              </HoverLinks>
+              <HoverLinks
                 href="https://instagram.com/msalman_af"
                 target="_blank"
               >
                 Instagram
-              </HoverItems>
+              </HoverLinks>
             </HoverItem>
           </HoverCard>
           <HoverCard>
-            <HoverTitle>Rando</HoverTitle>
-            <HoverItem header="Rando">
-              <HoverItems href="/">History</HoverItems>
-              <HoverItems href="/">Logs</HoverItems>
-              <HoverItems href="/">Project</HoverItems>
+            <HoverTitle>Kbd</HoverTitle>
+            <HoverItem header="Kbd">
+              <HoverItems>
+                <p className="flex gap-x-2 text-xs text-muted-foreground">
+                  Theme
+                  <kbd className="pointer-events-none inline-flex h-fit select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+                    <span className="text-xs">⌘</span>M
+                  </kbd>
+                </p>
+              </HoverItems>
+              <HoverItems>
+                <p className="flex gap-x-2 text-xs text-muted-foreground">
+                  Command
+                  <kbd className="pointer-events-none inline-flex h-fit select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+                    <span className="text-xs">⌘</span>F
+                  </kbd>
+                </p>
+              </HoverItems>
             </HoverItem>
           </HoverCard>
         </div>

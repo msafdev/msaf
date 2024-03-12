@@ -16,6 +16,10 @@ interface HoverItemProps {
 }
 
 interface HoverItemsProps {
+  children: ReactNode;
+}
+
+interface HoverLinksProps {
   href: string;
   children: ReactNode;
   target?: string;
@@ -40,7 +44,11 @@ const HoverItem: FC<HoverItemProps> = ({ children, header }) => {
   );
 };
 
-const HoverItems: FC<HoverItemsProps> = ({ children, href, target }) => {
+const HoverItems: FC<HoverItemsProps> = ({ children }) => {
+  return <>{children}</>;
+};
+
+const HoverLinks: FC<HoverLinksProps> = ({ children, href, target }) => {
   return (
     <Link href={href} target={target}>
       <code className="anim text-xs font-medium text-muted-foreground hover:text-foreground">
@@ -60,4 +68,4 @@ const HoverCard: FC<HoverCardProps> = ({ children, className }) => {
   );
 };
 
-export { HoverTitle, HoverItem, HoverCard, HoverItems };
+export { HoverTitle, HoverItem, HoverCard, HoverItems, HoverLinks };
