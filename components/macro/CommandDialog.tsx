@@ -29,6 +29,7 @@ export function Command() {
     const down = (e: KeyboardEvent) => {
       if (e.key === "m" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
+        setOpen((open) => false);
         if (typeof window !== "undefined") {
           const html = document.querySelector("html");
           if (html) {
