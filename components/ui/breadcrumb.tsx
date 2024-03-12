@@ -14,12 +14,20 @@ const Breadcrumb = () => {
 
   return (
     <div className="flex items-center">
-      <ChevronRightIcon className="inline mr-2 -translate-x-1" />
+      <ChevronRightIcon className="mr-2 inline -translate-x-1" />
       {slicedPathname.map((part, index) => (
         <div key={index} className="flex items-center">
-          <p className="text-sm font-medium">{part}</p>
+          <p
+            className={`text-sm ${
+              index === slicedPathname.length - 1
+                ? "text-foreground font-semibold"
+                : "text-muted-foreground font-medium"
+            }`}
+          >
+            {part}
+          </p>
           {index !== slicedPathname.length - 1 && (
-            <ChevronRightIcon className="inline mx-2" />
+            <ChevronRightIcon className="mx-2 inline" />
           )}
         </div>
       ))}
