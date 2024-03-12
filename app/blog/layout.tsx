@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
+
+// Components
 import Filter from "@/components/filter/Filter";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { DividerHorizontal } from "@/components/ui/divider";
+
+export const metadata: Metadata = {
+  title: "Salman | Blog",
+  description: "Read what I've wrote",
+};
 
 export default function BlogLayout({
   children,
