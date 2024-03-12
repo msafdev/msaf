@@ -1,9 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// Types
 import { Post } from "@/lib/types/post";
 
-const BlogCard = ({ post }: { post: { node: Post } }) => {
+// Utils
+import { getBase64 } from "@/lib/blur";
+
+const BlogCard = async ({ post }: { post: { node: Post } }) => {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString("en-US", {
@@ -13,10 +17,14 @@ const BlogCard = ({ post }: { post: { node: Post } }) => {
     });
   };
 
+  const image = await getBase64(post.node.thumbnail.url);
+
   return (
     <div className="group flex h-fit flex-col items-stretch bg-background md:flex-row">
       <div className="anim relative aspect-[4/3] w-full md:h-36 md:w-auto">
         <Image
+          placeholder="blur"
+          blurDataURL={image}
           priority
           sizes="100% 100%"
           src={post.node.thumbnail.url}

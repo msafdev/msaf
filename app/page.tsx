@@ -1,8 +1,11 @@
 // Text Balancer
-import { Command } from "@/components/macro/CommandDialog";
-import { Experience } from "@/lib/constants";
 import Link from "next/link";
-import Balancer from "react-wrap-balancer";
+
+// Components
+import { Command } from "@/components/macro/CommandDialog";
+
+// Datas
+import { Experience } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -12,11 +15,9 @@ export default function Home() {
         className="flex h-full w-full grow flex-col pt-4 md:pt-8 lg:pt-12"
       >
         <div className="pad-x relative w-full">
-          <h1 className="text-center text-2xl font-semibold leading-tight xs:text-3xl sm:text-left md:w-[70%] lg:text-4xl">
-            <Balancer>
-              Visual Driven<span className="mx-2 text-yellow-400">★</span>Web
-              Developer, converting ideas into reality
-            </Balancer>
+          <h1 className="text-balance text-center text-2xl font-semibold leading-tight xs:text-3xl sm:text-left md:w-[70%] lg:text-4xl">
+            Visual Driven<span className="mx-2 text-yellow-400">★</span>Web
+            Developer, converting ideas into reality
           </h1>
 
           <div className="pad-r absolute bottom-0 right-0">
@@ -57,8 +58,8 @@ export default function Home() {
             <p className="w-full text-sm font-medium uppercase text-muted-foreground">
               Experience
             </p>
-            <h2 className="w-full text-3xl font-semibold text-foreground md:text-2xl lg:text-3xl">
-              <Balancer>I strive to create beatiful and useful things</Balancer>
+            <h2 className="w-full text-balance text-3xl font-semibold text-foreground md:text-2xl lg:text-3xl">
+              I strive to create beatiful and useful things
             </h2>
           </div>
 

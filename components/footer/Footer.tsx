@@ -1,4 +1,5 @@
-import { ChevronRightIcon } from "@radix-ui/react-icons";
+import { AtSign, ChevronRight } from "lucide-react";
+
 import {
   TbBrandGithub,
   TbBrandDribbble,
@@ -7,10 +8,15 @@ import {
   TbBrandInstagram,
   TbBrandTwitter,
 } from "react-icons/tb";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+import { Textarea } from "../ui/textarea";
+import { HoverCard, HoverItem, HoverItems, HoverTitle } from "./HoverCard";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="z-40 flex min-h-screen w-full flex-col bg-background text-foreground">
+    <footer className="z-40 flex h-fit min-h-screen w-full flex-col bg-background text-foreground">
       <div className="grid grid-cols-3 border-t sm:grid-cols-6 lg:grid-cols-10 xl:grid-cols-12">
         {/* Footer */}
         <div className="col-span-3 flex items-center justify-center border-b px-4 py-8 sm:col-span-6 md:border-r lg:col-span-4 lg:border-b-0 lg:py-4 xl:col-span-6">
@@ -18,7 +24,7 @@ const Footer = () => {
             Follow me
           </p>
           <div className="relative mx-4 flex h-[2px] w-full max-w-12 items-center rounded-full bg-foreground xs:max-w-14 sm:max-w-16 md:max-w-32">
-            <ChevronRightIcon className="absolute right-0 h-auto w-6 translate-x-2 text-foreground" />
+            <ChevronRight className="absolute right-0 h-auto w-6 translate-x-2 text-foreground" />
           </div>
           <p className="text-center text-sm font-semibold uppercase text-foreground">
             Here
@@ -46,11 +52,83 @@ const Footer = () => {
         </div>
       </div>
 
+      <div className="grid h-fit grow grid-cols-1 grid-rows-2 border-t md:grid-cols-2">
+        <div className="grid h-full grid-cols-1 grid-rows-3 border-t md:row-span-2 md:border-r md:border-t-0">
+          <HoverCard className="border-b">
+            <HoverTitle>Nav</HoverTitle>
+            <HoverItem header="Nav">
+              <HoverItems href="/blog">Blog</HoverItems>
+              <HoverItems href="/contact">Contact</HoverItems>
+              <HoverItems href="/project">Project</HoverItems>
+            </HoverItem>
+          </HoverCard>
+          <HoverCard className="border-b">
+            <HoverTitle>Soc</HoverTitle>
+            <HoverItem header="Soc">
+              <HoverItems href="https://twitter.com/msafdev" target="_blank">
+                Twitter
+              </HoverItems>
+              <HoverItems
+                href="https://linkedin.com/in/muhammadsalmoon"
+                target="_blank"
+              >
+                LinkedIn
+              </HoverItems>
+              <HoverItems
+                href="https://instagram.com/msalman_af"
+                target="_blank"
+              >
+                Instagram
+              </HoverItems>
+            </HoverItem>
+          </HoverCard>
+          <HoverCard>
+            <HoverTitle>Rando</HoverTitle>
+            <HoverItem header="Rando">
+              <HoverItems href="/">History</HoverItems>
+              <HoverItems href="/">Logs</HoverItems>
+              <HoverItems href="/">Project</HoverItems>
+            </HoverItem>
+          </HoverCard>
+        </div>
+
+        <div className="row-start-1 mx-auto flex h-full w-full flex-col justify-center px-4 py-6 md:row-span-2 md:px-12 lg:px-24">
+          <p className="anim w-full text-left text-sm font-medium uppercase text-muted-foreground">
+            Contact me
+          </p>
+          <p className="anim mb-8 mt-4 w-full max-w-sm text-balance text-left text-base font-medium text-foreground md:max-w-xs">
+            Hit me up and pitch me your <span className="italic">craziest</span>{" "}
+            ideas. Let's collaborate and make it happens.
+          </p>
+          <form className="flex w-full flex-col gap-y-3">
+            <div className="flex w-full items-center gap-x-2 md:max-w-xs">
+              <div className="flex aspect-square h-full items-center justify-center rounded-md bg-muted">
+                <AtSign className="h-4 w-4 text-muted-foreground" />
+              </div>
+              <Input
+                required
+                placeholder="Your email"
+                className="anim border"
+              />
+            </div>
+            <div className="flex w-full items-center gap-x-2 md:max-w-xs">
+              <Textarea
+                required
+                placeholder="Your message"
+                className="anim min-h-24 resize-none border"
+              />
+            </div>
+            <div className="flex md:max-w-xs">
+              <Button className="anim w-full md:ml-auto md:w-1/2">Send</Button>
+            </div>
+          </form>
+        </div>
+      </div>
+
       <div className="flex items-center justify-center border-y px-4 py-8">
-        <p className="text-left text-xs text-muted-foreground md:text-sm">
-          &copy; 2024 <span className="font-semibold">MSAF</span>, all rights
-          reserved.
-        </p>
+        <code className="text-center text-xs text-muted-foreground md:text-sm">
+          Crafted by the [2024] version of msaf
+        </code>
       </div>
     </footer>
   );
