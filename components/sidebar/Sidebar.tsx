@@ -1,11 +1,17 @@
+"use client";
+
 // Components
 import { ScrollArea } from "../ui/scroll-area";
 
 // Datas
 import { SidebarGeneralItems, SidebarItems } from "@/lib/constants";
 import SidebarButton from "./SidebarButton";
+import { useState } from "react";
+import { ChevronsRight } from "lucide-react";
 
 const Sidebar = () => {
+  const [open, setOpen] = useState(false);
+
   const sortedSidebarItems = SidebarItems.map((item) => ({
     ...item,
     subItems: item.subItems
@@ -14,7 +20,21 @@ const Sidebar = () => {
   }));
 
   return (
-    <aside className="flex h-[calc(100vh-73px)] w-fit flex-col border-r md:h-[calc(100vh-105px)]">
+    <aside
+      className={`anim relative flex h-[calc(100vh-73px)] flex-col border-r md:h-[calc(100vh-105px)] md:w-fit ${
+        open ? "w-full" : "w-0"
+      }`}
+    >
+      <button
+        className="absolute right-0 top-4 z-10 h-10 w-10 translate-x-full border bg-muted p-2 text-muted-foreground md:hidden"
+        onClick={() => setOpen(!open)}
+      >
+        <ChevronsRight
+          className={`anim-slow aspect-square h-full w-full ${
+            open ? "rotate-180" : "rotate-0"
+          }`}
+        />
+      </button>
       <ScrollArea className="flex h-full flex-col py-4 pr-4 md:py-6 md:pr-8 lg:pr-12">
         {SidebarGeneralItems.map((item, index) => (
           <div key={index} className="mb-5 flex flex-col gap-y-2">
