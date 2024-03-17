@@ -11,16 +11,48 @@ interface SidebarButtonProps {
 
 const SidebarButton: FC<SidebarButtonProps> = ({ children, href }) => {
   const currentPath = usePathname();
+
+  if (href === "") {
+    return (
+      <button
+        className={`anim group group flex w-fit cursor-pointer items-center border-b py-1 hover:border-b-primary ${
+          currentPath === `/project`
+            ? "border-b-primary"
+            : "border-b-transparent"
+        }`}
+      >
+        <Link
+          href={{
+            pathname: `/project`,
+          }}
+          className={`anim flex w-full items-center text-sm font-medium group-hover:text-foreground ${
+            currentPath === `/project`
+              ? "text-foreground"
+              : "text-muted-foreground"
+          }`}
+        >
+          {children}
+        </Link>
+      </button>
+    );
+  }
+
   return (
     <button
       className={`anim group group flex w-fit cursor-pointer items-center border-b py-1 hover:border-b-primary ${
-        currentPath === href ? "border-b-primary" : "border-b-transparent"
+        currentPath === `/project/${href}`
+          ? "border-b-primary"
+          : "border-b-transparent"
       }`}
     >
       <Link
-        href={`${href}`}
+        href={{
+          pathname: `/project/${href}`,
+        }}
         className={`anim flex w-full items-center text-sm font-medium group-hover:text-foreground ${
-          currentPath === href ? "text-foreground" : "text-muted-foreground"
+          currentPath === `/project/${href}`
+            ? "text-foreground"
+            : "text-muted-foreground"
         }`}
       >
         {children}

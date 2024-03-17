@@ -1,13 +1,16 @@
 "use client";
 
+import { useState } from "react";
+
 // Components
 import { ScrollArea } from "../ui/scroll-area";
+import SidebarButton from "./SidebarButton";
+
+// Icons
+import { ChevronsRight } from "lucide-react";
 
 // Datas
 import { SidebarGeneralItems, SidebarItems } from "@/lib/constants";
-import SidebarButton from "./SidebarButton";
-import { useState } from "react";
-import { ChevronsRight } from "lucide-react";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
