@@ -31,8 +31,7 @@ const Email = () => {
       setLoading(false);
     } else {
       toast({
-        variant: "destructive",
-        title: "Failed to send email",
+        title: "❌ Failed to send email",
         description: "Please try again later",
       });
       setLoading(false);
