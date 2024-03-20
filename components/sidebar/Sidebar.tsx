@@ -24,7 +24,7 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`anim relative flex h-[calc(100vh-73px)] flex-col border-r md:h-[calc(100vh-105px)] md:w-fit ${
+      className={`pad-l anim relative flex h-[calc(100vh-73px)] flex-col border-r md:h-[calc(100vh-105px)] md:w-fit ${
         open ? "w-full" : "w-0"
       }`}
     >

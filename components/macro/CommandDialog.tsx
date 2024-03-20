@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import { useState, useEffect } from "react";
 
 import { TbMail, TbCalendar, TbMoon } from "react-icons/tb";
 
@@ -20,12 +20,12 @@ import DarkMode from "../navbar/DarkMode";
 const email = "salmanalfarisi261002@gmail.com";
 
 export function Command() {
-  const [open, setOpen] = React.useState(false);
-  const [checked, setChecked] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   const { toast } = useToast();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "m" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
@@ -49,7 +49,7 @@ export function Command() {
     return () => document.removeEventListener("keydown", down);
   }, [checked]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "f" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
@@ -72,13 +72,13 @@ export function Command() {
 
   return (
     <>
-      <code className="mb-2 hidden justify-end gap-x-2 text-xs text-muted-foreground sm:flex">
+      <code className="justify-end gap-x-2 text-xs text-muted-foreground">
         Theme{" "}
         <kbd className="pointer-events-none inline-flex h-fit select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
           <span className="text-xs">⌘</span>M
         </kbd>
       </code>
-      <code className="hidden justify-end gap-x-2 text-xs text-muted-foreground sm:flex">
+      <code className="justify-end gap-x-2 text-xs text-muted-foreground">
         Command{" "}
         <kbd className="pointer-events-none inline-flex h-fit select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
           <span className="text-xs">⌘</span>F
@@ -123,7 +123,10 @@ export function Command() {
 
 const BookButton = ({ onClick }: { onClick?: () => void }) => {
   return (
-    <button className="w-full px-3 text-left font-medium text-muted-foreground group-hover:text-foreground">
+    <button
+      onClick={onClick}
+      className="w-full px-3 text-left font-medium text-muted-foreground group-hover:text-foreground"
+    >
       <span className="inline">Book a meet</span>
     </button>
   );

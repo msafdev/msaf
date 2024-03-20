@@ -20,8 +20,8 @@ const Breadcrumb = () => {
           <p
             className={`text-sm ${
               index === slicedPathname.length - 1
-                ? "text-foreground font-semibold"
-                : "text-muted-foreground font-medium"
+                ? "font-semibold text-foreground"
+                : "font-medium text-muted-foreground"
             }`}
           >
             {part}

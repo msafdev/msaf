@@ -30,12 +30,12 @@ interface SidebarGenItems {
 
 const NavItems = [
   {
-    name: "Blog",
-    href: "/blog",
+    name: "About",
+    href: "/about",
   },
   {
-    name: "Contact",
-    href: "/contact",
+    name: "Blog",
+    href: "/blog",
   },
   {
     name: "Project",
@@ -212,7 +212,7 @@ const Experience = [
     date: "10/2023 - Now",
   },
   {
-    title: "Cloud Cohort",
+    title: "Cloud Computing",
     company: "Dicoding",
     date: "02/2024 - Now",
   },

@@ -1,18 +1,13 @@
-"use client";
-
-import { useParams } from "next/navigation";
-
-const Components = () => {
-  const { slug } = useParams();
-
-  console.log(slug);
-
+const Components = ({ params }: { params: { slug: string } }) => {
   return (
-    <div className="flex h-full max-w-xl grow flex-col">
-      <h1 className="text-2xl font-semibold text-foreground capitalize">{slug}</h1>
-      <p className="mt-3 text-sm text-muted-foreground md:text-base">
+    <div className="flex h-full grow flex-col">
+      <h1 className="max-w-xl text-2xl font-semibold capitalize text-foreground">
+        {params.slug}
+      </h1>
+      <p className="mb-4 mt-3 max-w-xl text-sm text-muted-foreground md:text-base">
         ❌ under construction
       </p>
+      <div className="h-48 w-full border bg-muted"></div>
     </div>
   );
 };

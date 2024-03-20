@@ -1,4 +1,4 @@
-import { AtSign, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 import {
   TbBrandGithub,
@@ -8,9 +8,6 @@ import {
   TbBrandInstagram,
   TbBrandTwitter,
 } from "react-icons/tb";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import { Textarea } from "../ui/textarea";
 import {
   HoverCard,
   HoverItem,
@@ -18,7 +15,9 @@ import {
   HoverLinks,
   HoverTitle,
 } from "./HoverCard";
-import Link from "next/link";
+
+import Email from "./Email";
+import { Command } from "../macro/CommandDialog";
 
 const Footer = () => {
   return (
@@ -63,8 +62,8 @@ const Footer = () => {
           <HoverCard className="border-b">
             <HoverTitle>Nav</HoverTitle>
             <HoverItem header="Nav">
+              <HoverLinks href="/about">About</HoverLinks>
               <HoverLinks href="/blog">Blog</HoverLinks>
-              <HoverLinks href="/contact">Contact</HoverLinks>
               <HoverLinks href="/project">Project</HoverLinks>
             </HoverItem>
           </HoverCard>
@@ -92,20 +91,7 @@ const Footer = () => {
             <HoverTitle>Kbd</HoverTitle>
             <HoverItem header="Kbd">
               <HoverItems>
-                <p className="flex gap-x-2 text-xs text-muted-foreground">
-                  Theme
-                  <kbd className="pointer-events-none inline-flex h-fit select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-                    <span className="text-xs">⌘</span>M
-                  </kbd>
-                </p>
-              </HoverItems>
-              <HoverItems>
-                <p className="flex gap-x-2 text-xs text-muted-foreground">
-                  Command
-                  <kbd className="pointer-events-none inline-flex h-fit select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-                    <span className="text-xs">⌘</span>F
-                  </kbd>
-                </p>
+                <Command />
               </HoverItems>
             </HoverItem>
           </HoverCard>
@@ -119,28 +105,7 @@ const Footer = () => {
             Hit me up and pitch me your <span className="italic">craziest</span>{" "}
             ideas. Let's collaborate and make it happens.
           </p>
-          <form className="flex w-full flex-col gap-y-3">
-            <div className="flex w-full items-center gap-x-2 md:max-w-xs">
-              <div className="flex aspect-square h-full items-center justify-center rounded-md bg-muted">
-                <AtSign className="h-4 w-4 text-muted-foreground" />
-              </div>
-              <Input
-                required
-                placeholder="Your email"
-                className="anim border"
-              />
-            </div>
-            <div className="flex w-full items-center gap-x-2 md:max-w-xs">
-              <Textarea
-                required
-                placeholder="Your message"
-                className="anim min-h-24 resize-none border"
-              />
-            </div>
-            <div className="flex md:max-w-xs">
-              <Button className="anim w-full md:ml-auto md:w-1/2">Send</Button>
-            </div>
-          </form>
+          <Email />
         </div>
       </div>
 

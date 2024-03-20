@@ -20,8 +20,19 @@ export default function Home() {
             Developer, converting ideas into reality
           </h1>
 
-          <div className="pad-r absolute bottom-0 right-0">
-            <Command />
+          <div className="pad-r absolute bottom-0 right-0 hidden flex-col items-end gap-y-2 sm:flex">
+            <code className="justify-end gap-x-2 text-xs text-muted-foreground">
+              Theme{" "}
+              <kbd className="pointer-events-none inline-flex h-fit select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+                <span className="text-xs">⌘</span>M
+              </kbd>
+            </code>
+            <code className="justify-end gap-x-2 text-xs text-muted-foreground">
+              Command{" "}
+              <kbd className="pointer-events-none inline-flex h-fit select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+                <span className="text-xs">⌘</span>F
+              </kbd>
+            </code>
           </div>
         </div>
 
@@ -65,11 +76,11 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2">
             <div className="flex flex-col justify-between pt-6 md:py-6">
-              <p className="text-lg text-muted-foreground md:max-w-sm lg:max-w-lg">
-                Ola! My name is Salman, a very funny-looking visual design
-                enthusiast. I do web design (<code>and development</code>),
-                business development, project manager, and also a speaker. Feel
-                free to surf around 👋
+              <p className="text-balance text-lg text-muted-foreground md:max-w-sm lg:max-w-lg">
+                Ola! My name is <strong>Salman</strong>, a very funny-looking
+                visual design enthusiast. I do web design, web development,
+                product management, project manager, infra, and also a speaker.
+                Feel free to surf around 👋
               </p>
 
               <Link
