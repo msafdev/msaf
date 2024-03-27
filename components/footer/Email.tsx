@@ -13,6 +13,7 @@ import { AtSign, LoaderCircle } from "lucide-react";
 
 // Lib
 import { sendEmail } from "@/lib/email";
+import { PersonIcon } from "@radix-ui/react-icons";
 
 const Email = () => {
   const [loading, setLoading] = useState(false);
@@ -46,15 +47,14 @@ const Email = () => {
     >
       <div className="flex w-full items-center gap-x-2 md:max-w-xs">
         <div className="flex aspect-square h-full items-center justify-center rounded-md bg-muted">
-          <AtSign className="h-4 w-4 text-muted-foreground" />
+          <PersonIcon className="h-4 w-4 text-muted-foreground" />
         </div>
         <Input
           required
-          id="email"
-          type="email"
-          name="email"
+          id="name"
+          name="name"
           className="anim border"
-          placeholder="Your email"
+          placeholder="Name"
         />
       </div>
       <div className="flex w-full flex-col gap-y-3 md:max-w-xs">

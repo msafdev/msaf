@@ -77,7 +77,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-x-6 md:grid-cols-2">
             <div className="flex flex-col justify-between pt-6 md:py-6">
               <p className="text-balance text-lg text-muted-foreground md:max-w-sm lg:max-w-lg">
-                Ola! My name is <strong>Salman</strong>, a very funny-looking
+                Ola! My name is <span className="font-semibold">Salman</span>, a very funny-looking
                 visual design enthusiast. I do web design, web development,
                 product management, project manager, infra, and also a speaker.
                 Feel free to surf around 👋

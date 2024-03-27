@@ -78,7 +78,12 @@ export function Command() {
           <span className="text-xs">⌘</span>M
         </kbd>
       </code>
-      <code className="justify-end gap-x-2 text-xs text-muted-foreground">
+      <code
+        onClick={() => {
+          setOpen(true);
+        }}
+        className="cursor-pointer justify-end gap-x-2 text-xs text-muted-foreground"
+      >
         Command{" "}
         <kbd className="pointer-events-none inline-flex h-fit select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
           <span className="text-xs">⌘</span>F

@@ -8,6 +8,7 @@ import {
   TbBrandInstagram,
   TbBrandTwitter,
 } from "react-icons/tb";
+
 import {
   HoverCard,
   HoverItem,
@@ -59,7 +60,7 @@ const Footer = () => {
 
       <div className="grid h-fit grow grid-cols-1 grid-rows-2 border-t md:grid-cols-2">
         <div className="grid h-full grid-cols-1 grid-rows-3 border-t md:row-span-2 md:border-r md:border-t-0">
-          <HoverCard className="border-b">
+          <HoverCard className="border-b anim">
             <HoverTitle>Nav</HoverTitle>
             <HoverItem header="Nav">
               <HoverLinks href="/about">About</HoverLinks>
@@ -67,7 +68,7 @@ const Footer = () => {
               <HoverLinks href="/project">Project</HoverLinks>
             </HoverItem>
           </HoverCard>
-          <HoverCard className="border-b">
+          <HoverCard className="border-b anim">
             <HoverTitle>Soc</HoverTitle>
             <HoverItem header="Soc">
               <HoverLinks href="https://twitter.com/msafdev" target="_blank">
