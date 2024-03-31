@@ -33,10 +33,6 @@ const Sidebar = () => {
     } else {
       document.body.style.overflowY = "auto";
     }
-
-    return () => {
-      document.body.style.overflowY = "auto";
-    };
   }, [open]);
 
   return (
