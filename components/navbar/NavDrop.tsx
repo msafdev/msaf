@@ -37,8 +37,11 @@ const NavDrop = () => {
   return (
     <>
       <Popover>
-        <PopoverTrigger className="relative">
-          <div className="group flex w-8 cursor-pointer flex-col items-end justify-center gap-y-1.5 py-2">
+        <PopoverTrigger aria-label="Dropdown" className="relative">
+          <div
+            aria-label="dropdown"
+            className="group flex w-8 cursor-pointer flex-col items-end justify-center gap-y-1.5 py-2"
+          >
             <div className="h-0.5 w-full bg-foreground" />
             <div
               className={`anim-fast h-0.5 bg-foreground group-hover:w-full ${
