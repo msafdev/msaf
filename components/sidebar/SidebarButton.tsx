@@ -7,14 +7,16 @@ import { usePathname } from "next/navigation";
 interface SidebarButtonProps {
   children?: ReactNode;
   href?: string;
+  onClick?: () => void;
 }
 
-const SidebarButton: FC<SidebarButtonProps> = ({ children, href }) => {
+const SidebarButton: FC<SidebarButtonProps> = ({ children, href, onClick }) => {
   const currentPath = usePathname();
 
   if (href === "") {
     return (
       <button
+        onClick={onClick}
         className={`anim group group flex w-fit cursor-pointer items-center border-b py-1 hover:border-b-primary ${
           currentPath === `/project`
             ? "border-b-primary"
@@ -39,6 +41,7 @@ const SidebarButton: FC<SidebarButtonProps> = ({ children, href }) => {
 
   return (
     <button
+      onClick={onClick}
       className={`anim group group flex w-fit cursor-pointer items-center border-b py-1 hover:border-b-primary ${
         currentPath === `/project/${href}`
           ? "border-b-primary"

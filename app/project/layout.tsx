@@ -16,10 +16,13 @@ export default function ProjectLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section id="project" className="relative flex h-full w-full grow">
+    <section
+      id="project"
+      className="relative flex h-full w-full grow flex-col md:flex-row"
+    >
       <Sidebar />
       <main className="flex h-[calc(100vh-73px)] w-full overflow-x-hidden md:h-[calc(100vh-105px)]">
-        <ScrollArea className="pad-r flex h-full w-full flex-col py-20 pl-4 md:py-6 md:pl-8 lg:pl-12">
+        <ScrollArea className="pad-r flex h-full w-full flex-col pl-4 md:py-6 md:pl-8 lg:pl-12">
           <div className="mb-3">
             <Breadcrumb />
           </div>

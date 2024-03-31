@@ -17,11 +17,14 @@ import { useToast } from "@/components/ui/use-toast";
 
 import DarkMode from "../navbar/DarkMode";
 
+import { useAtom } from "jotai";
+import { themeAtom } from "@/lib/atoms/themeAtom";
+
 const email = "salmanalfarisi261002@gmail.com";
 
 export function Command() {
   const [open, setOpen] = useState(false);
-  const [checked, setChecked] = useState(false);
+  const [theme, setTheme] = useAtom(themeAtom);
 
   const { toast } = useToast();
 
@@ -29,15 +32,14 @@ export function Command() {
     const down = (e: KeyboardEvent) => {
       if (e.key === "m" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
-        setOpen((open) => false);
         if (typeof window !== "undefined") {
           const html = document.querySelector("html");
           if (html) {
             if (html.classList.contains("dark")) {
-              setChecked(true);
+              setTheme("light");
               html.classList.remove("dark");
             } else {
-              setChecked(false);
+              setTheme("dark");
               html.classList.add("dark");
             }
           }
@@ -47,7 +49,7 @@ export function Command() {
 
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
-  }, [checked]);
+  }, [theme]);
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -116,7 +118,7 @@ export function Command() {
               <TbMoon className="anim h-4 w-4 text-muted-foreground" />
               <DarkModeButton />
               <span className="ml-auto">
-                <DarkMode isChecked={checked} />
+                <DarkMode />
               </span>
             </CommandItem>
           </CommandGroup>

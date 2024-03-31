@@ -1,40 +1,36 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
 import { Switch } from "../ui/switch";
 
-const DarkMode = ({ isChecked = false }: { isChecked?: boolean }) => {
-  const [checked, setChecked] = useState<boolean>(isChecked);
+import { useAtom } from "jotai";
+import { themeAtom } from "@/lib/atoms/themeAtom";
+
+const DarkMode = () => {
+  const [theme, setTheme] = useAtom(themeAtom);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const html = document.querySelector("html");
       if (html) {
-        if (html.classList.contains("dark")) {
-          setChecked(true);
+        if (theme === "dark") {
+          html.classList.add("dark");
         } else {
-          setChecked(false);
+          html.classList.remove("dark");
         }
       }
     }
-  }, [isChecked]);
+  }, [theme]);
 
   const handleChange = () => {
-    const newValue = !checked;
-    const html = document.querySelector("html");
-    if (html) {
-      if (newValue) {
-        html.classList.add("dark");
-      } else {
-        html.classList.remove("dark");
-      }
-    }
-    setChecked(newValue);
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
   };
 
   return (
     <Switch
-      checked={checked}
+      checked={theme === "dark"}
       onCheckedChange={handleChange}
       className="data-[state=unchecked]:bg-yellow-300"
     />

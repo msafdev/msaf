@@ -13,9 +13,12 @@ import { DividerHorizontal } from "../ui/divider";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { useAtom } from "jotai";
+import { themeAtom } from "@/lib/atoms/themeAtom";
+
 const NavDrop = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [checked, setChecked] = useState(false);
+  const [theme, setTheme] = useAtom(themeAtom);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -23,9 +26,9 @@ const NavDrop = () => {
       const html = document.querySelector("html");
       if (html) {
         if (html.classList.contains("dark")) {
-          setChecked(true);
+          setTheme("dark");
         } else {
-          setChecked(false);
+          setTheme("light");
         }
       }
     }
@@ -108,7 +111,7 @@ const NavDrop = () => {
               <h3 className="whitespace-nowrap text-xs font-medium md:text-sm">
                 Dark
               </h3>
-              <DarkMode isChecked={checked} />
+              <DarkMode />
             </div>
           </div>
         </PopoverContent>

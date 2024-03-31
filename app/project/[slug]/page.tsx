@@ -19,10 +19,10 @@ const Components = ({ params }: { params: { slug: string } }) => {
       <h1 className="max-w-xl text-2xl font-semibold capitalize text-foreground">
         {params.slug}
       </h1>
-      <div className="relative mt-3 flex w-full min-w-48 max-w-3xl bg-accent px-1.5">
+      <div className="relative mt-3 flex w-full min-w-0 max-w-3xl bg-accent px-1.5">
         <Syntax
           language="tsx"
-          className="w-full min-w-48"
+          className="w-full min-w-0 overflow-x-hidden"
           wrapLines={true}
           wrapLongLines={true}
           style={vscDarkPlus}
