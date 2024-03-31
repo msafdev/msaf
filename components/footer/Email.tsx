@@ -75,12 +75,13 @@ const Email = () => {
       </div>
       <div className="flex md:max-w-xs">
         <Button
-          className={`anim h-9 w-full md:ml-auto md:w-1/2 ${
+          className={`anim h-9 w-full font-medium text-white md:ml-auto md:w-1/2 ${
             loading ? "bg-primary/80" : "bg-primary"
           }`}
           disabled={loading}
           type="submit"
           form="emailForm"
+          aria-label="Send email"
         >
           {loading ? <LoaderCircle className="h-5 w-5 animate-spin" /> : "Send"}
         </Button>

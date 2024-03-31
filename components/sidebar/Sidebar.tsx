@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // Components
 import { ScrollArea } from "../ui/scroll-area";
@@ -49,7 +49,7 @@ const Sidebar = () => {
             }`}
           />
           <div
-            className={`anim z-10 flex flex-col gap-y-2 overflow-y-auto h-fit bg-background ${
+            className={`anim z-10 flex h-fit flex-col gap-y-2 overflow-y-auto bg-background ${
               open ? "py-5 opacity-100" : "py-0 opacity-0"
             }`}
           >
