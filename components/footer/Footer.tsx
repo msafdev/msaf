@@ -22,7 +22,7 @@ import { Command } from "../macro/CommandDialog";
 
 const Footer = () => {
   return (
-    <footer className="z-40 flex h-fit min-h-screen w-full flex-col bg-background text-foreground">
+    <footer className="z-40 flex h-fit min-h-[100svh] w-full flex-col bg-background text-foreground">
       <div className="grid grid-cols-3 border-t sm:grid-cols-6 lg:grid-cols-10 xl:grid-cols-12">
         {/* Footer */}
         <div className="col-span-3 flex items-center justify-center border-b px-4 py-8 sm:col-span-6 md:border-r lg:col-span-4 lg:border-b-0 lg:py-4 xl:col-span-6">

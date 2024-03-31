@@ -72,8 +72,8 @@ const Sidebar = () => {
             }`}
           />
           <div
-            className={`anim z-10 flex flex-col gap-y-2 overflow-y-auto bg-background ${
-              open ? "py-4 opacity-100" : "py-0 opacity-0"
+            className={`anim z-10 flex flex-col gap-y-2 overflow-y-auto h-fit bg-background ${
+              open ? "py-5 opacity-100" : "py-0 opacity-0"
             }`}
           >
             {SidebarGeneralItems.map((item, index) => (
@@ -125,7 +125,7 @@ const Sidebar = () => {
 
       {/* normal sidebar */}
       <aside
-        className={`pad-l anim relative hidden h-[calc(100vh-73px)] flex-col border-r md:flex md:h-[calc(100vh-105px)] md:w-fit`}
+        className={`pad-l anim relative hidden h-[calc(100svh-73px)] flex-col border-r md:flex md:h-[calc(100svh-105px)] md:w-fit`}
       >
         <ScrollArea className="flex h-full flex-col py-4 pr-6 md:py-6 md:pr-8 lg:pr-12">
           {SidebarGeneralItems.map((item, index) => (
