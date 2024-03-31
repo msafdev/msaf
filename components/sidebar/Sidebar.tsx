@@ -28,11 +28,26 @@ const Sidebar = () => {
   };
 
   useEffect(() => {
+    const handleScroll = (e: any) => {
+      if (open) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    };
+
     if (open) {
       document.body.style.overflowY = "hidden";
+      document.documentElement.style.overflowY = "hidden";
+      window.addEventListener("scroll", handleScroll, { passive: false });
     } else {
       document.body.style.overflowY = "auto";
+      document.documentElement.style.overflowY = "auto";
+      window.removeEventListener("scroll", handleScroll);
     }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [open]);
 
   return (
