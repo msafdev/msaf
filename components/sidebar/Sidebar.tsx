@@ -1,18 +1,16 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 // Components
 import { ScrollArea } from "../ui/scroll-area";
 import SidebarButton from "./SidebarButton";
 
 // Icons
-import { X, GanttChart, Scroll } from "lucide-react";
+import { X, GanttChart } from "lucide-react";
 
 // Datas
 import { SidebarGeneralItems, SidebarItems } from "@/lib/constants";
-import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
 const Sidebar = () => {
@@ -28,6 +26,18 @@ const Sidebar = () => {
   const handleLink = () => {
     setOpen(false);
   };
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, [open]);
 
   return (
     <>
