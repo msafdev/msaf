@@ -1,6 +1,10 @@
 import { atomWithStorage } from "jotai/utils";
 
-const storedTheme = localStorage.getItem("theme");
+let storedTheme = null;
+
+if (typeof window !== "undefined") {
+  storedTheme = window.localStorage.getItem("theme");
+}
 
 export const themeAtom = atomWithStorage(
   "theme",
