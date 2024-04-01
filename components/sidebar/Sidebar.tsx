@@ -5,13 +5,13 @@ import { useState } from "react";
 // Components
 import { ScrollArea } from "../ui/scroll-area";
 import SidebarButton from "./SidebarButton";
+import { Input } from "../ui/input";
 
 // Icons
 import { X, GanttChart } from "lucide-react";
 
 // Datas
-import { SidebarGeneralItems, SidebarItems } from "@/lib/constants";
-import { Input } from "../ui/input";
+import { SidebarItems, SidebarGeneralItems } from "@/lib/freebies";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false);
@@ -49,7 +49,7 @@ const Sidebar = () => {
             }`}
           />
           <div
-            className={`anim z-10 flex h-fit flex-col gap-y-2 overflow-y-auto bg-background ${
+            className={`anim no-scrollbar z-10 flex h-fit flex-col gap-y-2 overflow-y-auto bg-background ${
               open ? "py-5 opacity-100" : "py-0 opacity-0"
             }`}
           >

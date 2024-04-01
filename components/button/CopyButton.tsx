@@ -10,9 +10,10 @@ import { useToast } from "@/components/ui/use-toast";
 
 interface CopyButtonProps {
   codeString: string;
+  className?: string;
 }
 
-const CopyButton: FC<CopyButtonProps> = ({ codeString }) => {
+const CopyButton: FC<CopyButtonProps> = ({ codeString, className }) => {
   const { toast } = useToast();
 
   const handleCopy = () => {
@@ -26,7 +27,7 @@ const CopyButton: FC<CopyButtonProps> = ({ codeString }) => {
     <button
       onClick={handleCopy}
       aria-label="Copy code snippet"
-      className="group absolute right-1 top-1 cursor-pointer bg-accent p-2 text-foreground/80"
+      className={`group cursor-pointer bg-primary p-2 text-primary-foreground dark:bg-accent dark:text-accent-foreground ${className}`}
     >
       <Copy className="anim h-4 w-4" />
     </button>
