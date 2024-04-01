@@ -25,14 +25,14 @@ const NavDrop = () => {
     if (typeof window !== "undefined") {
       const html = document.querySelector("html");
       if (html) {
-        if (html.classList.contains("dark")) {
-          setTheme("dark");
+        if (theme === "dark") {
+          html.classList.add("dark");
         } else {
-          setTheme("light");
+          html.classList.remove("dark");
         }
       }
     }
-  }, []);
+  }, [theme]);
 
   return (
     <>
