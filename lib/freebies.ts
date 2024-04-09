@@ -103,7 +103,7 @@ const SidebarItems: SidebarSubItems[] = [
     ],
   },
   {
-    name: "Templates",
+    name: "Layouts",
     subItems: [
       {
         name: "Typography",
@@ -111,14 +111,14 @@ const SidebarItems: SidebarSubItems[] = [
         href: "typography",
       },
       {
-        name: "Layout",
-        icon: ArrowRight,
-        href: "layout",
-      },
-      {
         name: "Gallery",
         icon: ArrowRight,
         href: "gallery",
+      },
+      {
+        name: "Landing Page",
+        icon: ArrowRight,
+        href: "landing-page",
       },
       {
         name: "Portfolio",
