@@ -17,7 +17,7 @@ const BlogCard = async ({ post }: { post: { node: Post } }) => {
     });
   };
 
-  const image = await getBase64(post.node.thumbnail.url);
+  const image = await getBase64(post?.node?.thumbnail?.url);
 
   return (
     <div className="group flex h-fit flex-col items-stretch bg-background md:flex-row">
@@ -27,35 +27,35 @@ const BlogCard = async ({ post }: { post: { node: Post } }) => {
           blurDataURL={image}
           priority
           sizes="100% 100%"
-          src={post.node.thumbnail.url}
-          alt={post.node.title}
+          src={post?.node?.thumbnail?.url}
+          alt={post?.node?.title}
           fill
           className="object-cover"
         />
       </div>
       <div className="group flex h-auto grow flex-col justify-end gap-y-2 bg-background md:py-0">
         <Link
-          href={`/read/${post.node.slug}`}
+          href={`/read/${post?.node?.slug}`}
           className="group flex flex-col md:pl-4"
         >
           <h2 className="leading px-2 pt-3 text-[5.5vw] font-semibold leading-tight underline-offset-4 group-hover:underline xs:max-w-none xs:text-[4.5vw] sm:text-[4vw] md:line-clamp-2 md:max-w-64 md:text-balance md:px-0 md:pt-0 md:text-lg">
-            {post.node.title}
+            {post?.node?.title}
           </h2>
         </Link>
         <div className="flex w-full items-center gap-x-3 px-3 py-2 md:py-0 md:pl-4 md:pr-0">
           <Image
-            src={post.node.person.avatar.url}
-            alt={post.node.person.name}
+            src={post?.node?.person?.avatar?.url}
+            alt={post?.node?.person?.name}
             width={32}
             height={32}
-            className="anim rounded-full bg-foreground p-1"
+            className="anim rounded-full"
           />
           <div className="flex w-full items-center justify-between md:flex-col md:items-start">
             <p className="anim text-sm font-medium text-foreground sm:text-base">
-              {post.node.person.name}
+              {post?.node?.person?.name}
             </p>
             <p className="anim line-clamp-1 text-xs text-muted-foreground sm:text-sm">
-              {formatDate(post.node.createdAt)}
+              {formatDate(post?.node?.createdAt)}
             </p>
           </div>
         </div>
