@@ -44,7 +44,10 @@ export default async function Read({ params }: { params: { slug: string } }) {
           );
         case "paragraph":
           return (
-            <p className="pb-4 text-base leading-[1.75rem] text-foreground/70" key={index}>
+            <p
+              className="pb-4 text-justify text-base leading-[1.75rem] text-foreground/70"
+              key={index}
+            >
               {renderInlineStyles(child.children)}
             </p>
           );
@@ -102,7 +105,9 @@ export default async function Read({ params }: { params: { slug: string } }) {
     return children.map((child: any, index: number) => {
       let element = child.text;
       if (child.bold) {
-        element = <span className="font-semibold text-foreground">{element}</span>;
+        element = (
+          <span className="font-semibold text-foreground">{element}</span>
+        );
       }
       if (child.italic) {
         element = <em className="text-foreground/80">{element}</em>;
@@ -130,14 +135,14 @@ export default async function Read({ params }: { params: { slug: string } }) {
 
   return (
     <section className="flex flex-col items-center py-6 md:py-12">
-      <h1 className="mb-6 w-full max-w-xl text-3xl font-bold md:mb-12 md:text-4xl lg:text-5xl">
+      <h1 className="mb-6 w-full max-w-xl px-5 text-3xl font-bold md:mb-12 md:text-4xl lg:text-5xl lg:leading-normal">
         {detail?.title}
       </h1>
-      <pre className="w-full max-w-xl whitespace-pre-wrap text-wrap text-sm text-foreground/70 md:text-base lg:text-lg">
+      <pre className="w-full max-w-xl whitespace-pre-wrap text-wrap px-5 text-sm text-foreground/70 md:text-base lg:text-lg">
         {detail?.excerpt}
       </pre>
       <div className="mt-6 h-[1px] w-full rounded-full bg-border md:mt-12" />
-      <div className="pad-x flex w-full items-center justify-between py-4">
+      <div className="pad-x flex w-full flex-col items-center justify-between gap-y-2 py-4 pb-0 sm:flex-row">
         <div className="flex items-center gap-x-2">
           <Avatar className="p-0.5">
             <AvatarImage src={detail?.person.avatar.url} />
@@ -145,7 +150,7 @@ export default async function Read({ params }: { params: { slug: string } }) {
           </Avatar>
           <p className="text-base font-medium">{detail?.person?.name}</p>
         </div>
-        <div className="flex items-center gap-x-2">
+        <div className="flex items-center gap-x-2 mb-2 sm:mb-0">
           {detail?.category.map((category, index) => (
             <code
               key={index}
@@ -157,7 +162,7 @@ export default async function Read({ params }: { params: { slug: string } }) {
         </div>
         <p className="text-sm font-medium text-foreground">{formattedDate}</p>
       </div>
-      <div className="read flex max-w-xl flex-col pb-6 pt-4">
+      <div className="read flex max-w-xl flex-col px-5 pb-6 pt-4">
         {detail?.content.raw.children &&
           renderChildren(detail.content.raw.children)}
       </div>
