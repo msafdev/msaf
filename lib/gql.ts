@@ -21,9 +21,6 @@ const getPosts = async () => {
             }
             category
             createdAt
-            content {
-              html
-            }
             person {
               name
               id
@@ -44,9 +41,44 @@ const getPosts = async () => {
   return response as FetchPostResponse;
 };
 
+const getPost = async ({ slug }: { slug: string }) => {
+  const query = gql`
+    query FetchPost($slug: String!) {
+      postsConnection(where: { slug: $slug }) {
+        edges {
+          node {
+            id
+            title
+            slug
+            excerpt
+            category
+            createdAt
+            content {
+              raw
+            }
+            person {
+              name
+              id
+              avatar {
+                url
+              }
+            }
+            thumbnail {
+              url
+            }
+          }
+        }
+      }
+    }
+  `;
+  const response = await graphQLClient.request(query, { slug });
+
+  return response as FetchPostResponse;
+};
+
 const getPostsCategory = async ({ category }: { category: string }) => {
   const query = gql`
-    query FetchPost {
+    query FetchCategories {
       postsConnection(where: { category_contains_some: ${category} }) {
         edges {
           node {
@@ -108,4 +140,4 @@ const getHigherUps = async () => {
   return response as FetchPersonResponse;
 };
 
-export { getPosts, getPostsCategory, getHigherUps };
+export { getPosts, getPost, getPostsCategory, getHigherUps };

@@ -35,7 +35,7 @@ const BlogCard = async ({ post }: { post: { node: Post } }) => {
       </div>
       <div className="group flex h-auto grow flex-col justify-end gap-y-2 bg-background md:py-0">
         <Link
-          href={`/blog/${post.node.slug}`}
+          href={`/read/${post.node.slug}`}
           className="group flex flex-col md:pl-4"
         >
           <h2 className="leading px-2 pt-3 text-[5.5vw] font-semibold leading-tight underline-offset-4 group-hover:underline xs:max-w-none xs:text-[4.5vw] sm:text-[4vw] md:line-clamp-2 md:max-w-64 md:text-balance md:px-0 md:pt-0 md:text-lg">

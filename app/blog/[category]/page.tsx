@@ -8,9 +8,9 @@ import { getPostsCategory } from "@/lib/gql";
 export default async function Category({
   params,
 }: {
-  params: { categoryName: string };
+  params: { category: string };
 }) {
-  const posts = await getPostsCategory({ category: params.categoryName });
+  const posts = await getPostsCategory({ category: params.category });
 
   return (
     <div className="pad-x grid h-fit w-full gap-x-4 gap-y-6 py-4 md:h-full md:grow md:grid-cols-2 md:py-8 xl:grid-cols-3">
