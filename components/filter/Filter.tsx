@@ -19,8 +19,7 @@ const Filter = () => {
           filter={item.name}
           href={item.href}
           active={
-            item.href ===
-            `/blog${params.categoryName ? `/${params.categoryName}` : ""}`
+            item.href === `/blog${params.category ? `/${params.category}` : ""}`
           }
         />
       ))}

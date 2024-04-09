@@ -87,7 +87,7 @@ export default async function Read({ params }: { params: { slug: string } }) {
               <Image
                 key={index}
                 src={child.src || ""}
-                alt={child.title || ""}
+                alt={child.title || "alt text"}
                 title={child.title || ""}
                 width={child.width}
                 height={child.height}
@@ -150,7 +150,7 @@ export default async function Read({ params }: { params: { slug: string } }) {
           </Avatar>
           <p className="text-base font-medium">{detail?.person?.name}</p>
         </div>
-        <div className="flex items-center gap-x-2 mb-2 sm:mb-0">
+        <div className="mb-2 flex items-center gap-x-2 sm:mb-0">
           {detail?.category.map((category, index) => (
             <code
               key={index}
