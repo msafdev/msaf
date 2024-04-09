@@ -34,9 +34,7 @@ const getPosts = async () => {
     }
   `;
 
-  const response = await graphQLClient.request(query, {
-    caches: "force-cache",
-  });
+  const response = await graphQLClient.request(query);
 
   return response as FetchPostResponse;
 };
