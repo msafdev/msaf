@@ -83,9 +83,8 @@ export default async function Read({ params }: { params: { slug: string } }) {
           );
         case "image":
           return (
-            <div className="aspect-auto max-w-xl pb-3">
+            <div key={index} className="mb-3 aspect-auto max-w-xl">
               <Image
-                key={index}
                 src={child.src || ""}
                 alt={child.title || "alt text"}
                 title={child.title || ""}
@@ -106,21 +105,36 @@ export default async function Read({ params }: { params: { slug: string } }) {
       let element = child.text;
       if (child.bold) {
         element = (
-          <span className="font-semibold text-foreground">{element}</span>
+          <span key={index} className="font-semibold text-foreground">
+            {element}
+          </span>
         );
       }
       if (child.italic) {
-        element = <em className="text-foreground/80">{element}</em>;
+        element = (
+          <em key={index} className="text-foreground/80">
+            {element}
+          </em>
+        );
       }
       if (child.underline) {
-        element = <u className="text-foreground/80">{element}</u>;
+        element = (
+          <u key={index} className="text-foreground/80">
+            {element}
+          </u>
+        );
       }
       if (child.code) {
-        element = <code className="text-foreground/80">{element}</code>;
+        element = (
+          <code key={index} className="text-foreground/80">
+            {element}
+          </code>
+        );
       }
       if (child.href) {
         element = (
           <a
+            key={index}
             className="text-primary underline"
             href={child.href}
             target={child.openInNewTab ? "_blank" : "_self"}
@@ -138,12 +152,18 @@ export default async function Read({ params }: { params: { slug: string } }) {
       <h1 className="mb-6 w-full max-w-xl px-5 text-3xl font-bold md:mb-12 md:text-4xl lg:text-5xl lg:leading-normal">
         {detail?.title}
       </h1>
-      <pre className="w-full max-w-xl whitespace-pre-wrap text-wrap px-5 text-sm text-foreground/70 md:text-base lg:text-lg">
-        {detail?.excerpt}
-      </pre>
+      {detail ? (
+        <pre className="w-full max-w-xl whitespace-pre-wrap text-wrap px-5 text-sm text-foreground/70 md:text-base lg:text-lg">
+          {detail.excerpt}
+        </pre>
+      ) : (
+        <p className="w-full max-w-xl text-center text-base text-foreground/70 md:text-lg">
+          •••
+        </p>
+      )}
       <div className="mt-6 h-[1px] w-full rounded-full bg-border md:mt-12" />
       <div className="pad-x flex w-full flex-col items-center justify-between gap-y-2 py-4 pb-0 sm:flex-row">
-        <div className="flex items-center gap-x-2">
+        <div className="flex flex-col items-center gap-x-2 sm:flex-row">
           <Avatar className="p-0.5">
             <AvatarImage src={detail?.person.avatar.url} />
             <AvatarFallback>SL</AvatarFallback>

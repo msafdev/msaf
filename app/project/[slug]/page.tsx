@@ -45,7 +45,7 @@ const Components = ({ params }: { params: { slug: string } }) => {
       <h1 className="max-w-xl text-2xl font-semibold capitalize text-foreground">
         {params.slug}
       </h1>
-      <div className="relative mt-3 flex w-full min-w-0 max-w-3xl">
+      <div className="group relative mt-3 flex w-full min-w-0 max-w-3xl">
         <Syntax
           language="tsx"
           className="w-full min-w-0 overflow-x-hidden"
@@ -56,7 +56,7 @@ const Components = ({ params }: { params: { slug: string } }) => {
           {codeString}
         </Syntax>
         <CopyButton
-          className="absolute right-1 top-3 rounded-sm"
+          className="anim absolute right-1 top-3 scale-0 rounded-sm opacity-0 group-hover:scale-100 group-hover:opacity-100"
           codeString={codeString}
         />
       </div>
