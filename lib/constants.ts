@@ -11,6 +11,10 @@ const NavItems = [
     name: "Project",
     href: "/project",
   },
+  {
+    name: "Template",
+    href: "/template",
+  },
 ];
 
 const FilterItems = [

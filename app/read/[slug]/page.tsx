@@ -45,7 +45,7 @@ export default async function Read({ params }: { params: { slug: string } }) {
         case "paragraph":
           return (
             <p
-              className="pb-4 text-justify text-base leading-[1.75rem] text-foreground/70"
+              className="pb-4 text-base leading-[1.75rem] text-foreground/70"
               key={index}
             >
               {renderInlineStyles(child.children)}

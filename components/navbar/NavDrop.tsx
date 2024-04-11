@@ -106,6 +106,22 @@ const NavDrop = () => {
                   Project
                 </p>
               </Link>
+              <Link
+                className={`anim group rounded-sm px-2 py-1 hover:bg-muted ${
+                  pathname === "/template" ? "bg-muted" : "bg-transparent"
+                }`}
+                href="/template"
+              >
+                <p
+                  className={`whitespace-nowrap text-sm font-medium group-hover:text-foreground md:text-base ${
+                    pathname === "/template"
+                      ? "text-foreground"
+                      : "text-muted-foreground"
+                  }`}
+                >
+                  Template
+                </p>
+              </Link>
             </div>
 
             <DividerHorizontal className="sm:hidden" />
