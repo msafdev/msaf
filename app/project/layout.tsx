@@ -22,7 +22,7 @@ export default function ProjectLayout({
     >
       <Sidebar />
       <main className="flex h-[calc(100svh-133px)] w-full overflow-x-hidden md:h-[calc(100svh-105px)]">
-        <ScrollArea className="pad-r flex h-full min-w-0 w-full flex-col pl-4 md:py-6 md:pl-8 lg:pl-12">
+        <ScrollArea className="scrollarea pad-r overflow-x-hidden flex h-full min-w-0 w-full flex-col pl-4 md:py-6 md:pl-8 lg:pl-12">
           <div className="mb-3">
             <Breadcrumb />
           </div>

@@ -27,7 +27,7 @@ const CopyButton: FC<CopyButtonProps> = ({ codeString, className }) => {
     <button
       onClick={handleCopy}
       aria-label="Copy code snippet"
-      className={`group cursor-pointer bg-primary p-2 text-primary-foreground dark:bg-accent dark:text-accent-foreground ${className}`}
+      className={`group cursor-pointer bg-popover p-2 rounded-md text-popover-foreground ${className}`}
     >
       <Copy className="anim h-4 w-4" />
     </button>
