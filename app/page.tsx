@@ -68,13 +68,13 @@ export default function Home() {
           <div className="grid grid-cols-1 items-end gap-x-6 md:grid-cols-2">
             <div className="flex flex-col justify-between">
               <p className="mb-2 w-full text-sm font-medium uppercase text-muted-foreground">
-                Works
+                Portfolio
               </p>
-              <h2 className="mb-4 w-full text-balance text-xl font-semibold text-foreground md:mb-6 md:text-2xl lg:text-3xl max-w-lg">
+              <h2 className="mb-4 w-full max-w-lg text-balance text-xl font-semibold text-foreground md:mb-6 md:text-2xl lg:text-3xl">
                 I strive to create beatiful and useful things
               </h2>
               <p className="text-balance text-base text-muted-foreground md:max-w-sm md:text-lg lg:max-w-lg">
-                Ola! My name is <span className="font-semibold">Salman</span>, a
+                Ola! My name is <span className="font-semibold text-foreground">Salman</span>, a
                 very funny-looking visual design enthusiast. I do web design,
                 web development, product management, project manager, infra, and
                 also a speaker. Feel free to surf around 👋
@@ -92,9 +92,7 @@ export default function Home() {
               collapsible
             >
               <AccordionItem value="item-1">
-                <AccordionTrigger>
-                  Countify
-                </AccordionTrigger>
+                <AccordionTrigger>Countify</AccordionTrigger>
                 <AccordionContent>
                   <p className="mb-4 text-muted-foreground">
                     A simple expense tracker web app that helps you to manage
@@ -114,14 +112,12 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>
-                  Terma
-                </AccordionTrigger>
+                <AccordionTrigger>Terma</AccordionTrigger>
                 <AccordionContent>
                   <p className="mb-4 text-muted-foreground">
                     A terminal-styled portfolio website, with functional and
                     scalable commands. Built with{" "}
-                    <span className="text-foreground">Next</span>, and{" "}
+                    <span className="text-foreground">Next</span> and{" "}
                     <span className="text-foreground">Tailwind</span>.
                   </p>
                   <Badge
@@ -135,14 +131,12 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>
-                  Noteify
-                </AccordionTrigger>
+                <AccordionTrigger>Noteify</AccordionTrigger>
                 <AccordionContent>
                   <p className="mb-4 text-muted-foreground">
                     A note taking website that can help you to write down,
                     manage, and visualize your thoughts and ideas. Built with{" "}
-                    <span className="text-foreground">Next</span>, and{" "}
+                    <span className="text-foreground">Next</span> and{" "}
                     <span className="text-foreground">Tailwind</span>.
                   </p>
                   <Badge

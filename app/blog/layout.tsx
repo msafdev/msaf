@@ -24,7 +24,7 @@ export default function BlogLayout({
         <h1 className="text-balance text-left text-3xl font-semibold leading-tight md:w-[70%] lg:text-4xl">
           Explore my latest thoughts and ideas 🌟
         </h1>
-        <p className="my-4 w-full max-w-lg font-medium text-muted-foreground md:my-5">
+        <p className="my-4 w-full max-w-lg text-muted-foreground md:my-5">
           I write about web development, business, and personal growth. You can
           find my latest articles below.
         </p>

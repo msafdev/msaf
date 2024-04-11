@@ -26,7 +26,7 @@ export default async function Read({ params }: { params: { slug: string } }) {
       switch (child.type) {
         case "heading-one":
           return (
-            <h1 className="pb-6 pt-2 text-4xl font-bold" key={index}>
+            <h1 className="pb-6 text-4xl font-bold" key={index}>
               {child.children[0].text}
             </h1>
           );
@@ -54,7 +54,7 @@ export default async function Read({ params }: { params: { slug: string } }) {
         case "block-quote":
           return (
             <blockquote
-              className="mb-3 border-l-2 border-primary py-1 pl-4 font-medium text-foreground/60"
+              className="mb-3 border-l-2 border-primary bg-accent px-4 py-2 text-xs font-medium text-accent-foreground md:text-sm"
               key={index}
             >
               {child.children[0].text}
@@ -182,7 +182,7 @@ export default async function Read({ params }: { params: { slug: string } }) {
         </div>
         <p className="text-sm font-medium text-foreground">{formattedDate}</p>
       </div>
-      <div className="read flex max-w-xl flex-col px-5 pb-6 pt-4">
+      <div className="read flex max-w-xl flex-col px-5 pt-4">
         {detail?.content.raw.children &&
           renderChildren(detail.content.raw.children)}
       </div>

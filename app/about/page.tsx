@@ -52,7 +52,7 @@ const About = () => {
           </h2>
           {/* Work Card */}
           <div className="flex items-center gap-x-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4 anim">
               <Image src={FN} alt="FN Digital Code" className="h-auto w-full" />
             </div>
             <div className="flex w-fit flex-col">
@@ -63,7 +63,7 @@ const About = () => {
             </div>
           </div>
           <div className="flex items-center gap-x-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4 anim">
               <Image src={Bangkit} alt="Bangkit" className="h-auto w-full" />
             </div>
             <div className="flex w-fit flex-col">
@@ -74,7 +74,7 @@ const About = () => {
             </div>
           </div>
           <div className="flex items-center gap-x-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4 anim">
               <Image src={Kemnaker} alt="Kemnaker" className="h-auto w-full" />
             </div>
             <div className="flex w-fit flex-col">
@@ -85,7 +85,7 @@ const About = () => {
             </div>
           </div>
           <div className="flex items-center gap-x-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4 anim">
               <Image src={Undip} alt="Undip" className="h-auto w-full" />
             </div>
             <div className="flex w-fit flex-col">
