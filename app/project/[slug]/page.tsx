@@ -41,16 +41,14 @@ const Components = ({ params }: { params: { slug: string } }) => {
   }`;
 
   return (
-    <div className="flex h-full grow flex-col">
+    <div className="flex h-full shrink-0 flex-col">
       <h1 className="max-w-xl text-2xl font-semibold capitalize text-foreground">
         {params.slug}
       </h1>
-      <div className="group relative mt-3 flex w-full min-w-0 max-w-3xl">
+      <div className="group relative mt-3 flex w-fit min-w-0 max-w-[calc(100vw-32px)] shrink overflow-x-auto lg:max-w-[calc(60vw)]">
         <Syntax
           language="tsx"
-          className="w-full min-w-0 overflow-x-hidden"
-          wrapLines={true}
-          wrapLongLines={true}
+          className="simplebar"
           style={theme === "dark" ? oneDark : oneLight}
         >
           {codeString}

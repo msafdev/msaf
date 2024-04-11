@@ -112,4 +112,26 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .simplebar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .simplebar::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+  }
+  .simplebar::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2);
+  }
+  .simplebar::-webkit-scrollbar-thumb:hover{
+  	background: rgba(0,0,0,0.4);
+  }
+  .simplebar::-webkit-scrollbar-thumb:active{
+  	background: rgba(0,0,0,.9);
+  }
+}
+
+.syntax {
 }
