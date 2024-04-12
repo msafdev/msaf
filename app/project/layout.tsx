@@ -21,13 +21,11 @@ export default function ProjectLayout({
       className="relative flex h-full w-full grow flex-col md:flex-row"
     >
       <Sidebar />
-      <main className="flex h-[calc(100svh-133px)] w-full overflow-x-hidden md:h-[calc(100svh-105px)]">
-        <ScrollArea className="scrollarea pad-r overflow-x-hidden flex h-full min-w-0 w-full flex-col pl-4 md:py-6 md:pl-8 lg:pl-12">
-          <div className="mb-3">
-            <Breadcrumb />
-          </div>
-          {children}
-        </ScrollArea>
+      <main className="flex h-[calc(100svh-133px)] w-full flex-col overflow-x-hidden px-4 md:h-[calc(100svh-105px)] md:py-6 md:pl-8 lg:pl-12 md:pad-r">
+        <div className="mb-3">
+          <Breadcrumb />
+        </div>
+        {children}
       </main>
     </section>
   );

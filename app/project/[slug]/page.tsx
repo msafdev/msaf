@@ -1,15 +1,15 @@
-// import Highlighter from "@/components/macro/Highlighter";
-import Shiki from "@/components/macro/Shiki";
+import ProjectMenu from "@/components/macro/ProjectMenu";
 
 const Components = ({ params }: { params: { slug: string } }) => {
   const codeString = `export default function ${params.slug}() {
-    return (
-      <div className="flex h-full max-w-xl grow flex-col">
-        <p className="mt-3 text-sm text-muted-foreground md:text-base">
-          ❌ under construction
-        </p>
-      </div>
-    );
+    {/* Use a static image import for better DX */}
+    <div className="h-16 w-16 rounded-full border bg-gray-100 p-2">
+      <Image
+        src={Avatar}
+        alt="Avatar's alt"
+        className="h-auto w-auto object-cover"
+      />
+    </div>;
   }`;
 
   return (
@@ -17,11 +17,7 @@ const Components = ({ params }: { params: { slug: string } }) => {
       <h1 className="mb-4 max-w-xl text-2xl font-semibold capitalize text-foreground">
         {params.slug}
       </h1>
-      <Shiki
-        code={codeString}
-        lang="typescript"
-        filename={`${params.slug}.tsx`}
-      />
+      <ProjectMenu codeString={codeString} />
     </div>
   );
 };
