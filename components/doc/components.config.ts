@@ -10,17 +10,15 @@ import ProfileTwo from "@/components/doc/profile/profile-two";
 import BadgeOne from "@/components/doc/badge/badge-one";
 import BadgeTwo from "@/components/doc/badge/badge-two";
 
-// Function to read file synchronously with error handling
 function readFileSyncSafe(filePath: string): string {
   try {
     return readFileSync(filePath, "utf8");
   } catch (error) {
     console.error(`Error reading file ${filePath}:`, error);
-    return "";
+    return "Invalid file content";
   }
 }
 
-// Read file contents
 const ProfileOneCode = readFileSyncSafe(
   join(process.cwd(), "./components/doc/profile/profile-one.tsx"),
 );
