@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 import { FC, ReactElement, ReactNode } from "react";
-import { join } from "path";
+import path, { join } from "path";
 
 // Profile
 import ProfileOne from "@/components/doc/profile/profile-one";
@@ -10,25 +10,28 @@ import ProfileTwo from "@/components/doc/profile/profile-two";
 import BadgeOne from "@/components/doc/badge/badge-one";
 import BadgeTwo from "@/components/doc/badge/badge-two";
 
-// Imports
-const ProfileOneCode = readFileSync(
-  join(process.cwd(), "components/doc/profile/profile-one.tsx"),
-  "utf8",
-);
+// Function to read file synchronously with error handling
+function readFileSyncSafe(filePath: string): string {
+  try {
+    return readFileSync(filePath, "utf8");
+  } catch (error) {
+    console.error(`Error reading file ${filePath}:`, error);
+    return "";
+  }
+}
 
-const ProfileTwoCode = readFileSync(
-  join(process.cwd(), "components/doc/profile/profile-two.tsx"),
-  "utf8",
+// Read file contents
+const ProfileOneCode = readFileSyncSafe(
+  join(process.cwd(), "./components/doc/profile/profile-one.tsx"),
 );
-
-const BadgeOneCode = readFileSync(
-  join(process.cwd(), "components/doc/badge/badge-one.tsx"),
-  "utf8",
+const ProfileTwoCode = readFileSyncSafe(
+  join(process.cwd(), "./components/doc/profile/profile-two.tsx"),
 );
-
-const BadgeTwoCode = readFileSync(
-  join(process.cwd(), "components/doc/badge/badge-two.tsx"),
-  "utf8",
+const BadgeOneCode = readFileSyncSafe(
+  join(process.cwd(), "./components/doc/badge/badge-one.tsx"),
+);
+const BadgeTwoCode = readFileSyncSafe(
+  join(process.cwd(), "./components/doc/badge/badge-two.tsx"),
 );
 
 // Types
