@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 // Components
-import Sidebar from "@/components/sidebar/sidebar";
+import Sidebar from "@/components/sidebar/side-bar";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
