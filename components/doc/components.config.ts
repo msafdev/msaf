@@ -10,6 +10,9 @@ import ProfileTwo from "@/components/doc/profile/profile-two";
 import BadgeOne from "@/components/doc/badge/badge-one";
 import BadgeTwo from "@/components/doc/badge/badge-two";
 
+// Resolve Directory
+const __dirname = path.resolve();
+
 function readFileSyncSafe(filePath: string): string {
   try {
     return readFileSync(filePath, "utf8");
@@ -19,18 +22,17 @@ function readFileSyncSafe(filePath: string): string {
   }
 }
 
-const ProfileOneCode = readFileSyncSafe(
-  join(process.cwd(), "./components/doc/profile/profile-one.tsx"),
-);
-const ProfileTwoCode = readFileSyncSafe(
-  join(process.cwd(), "./components/doc/profile/profile-two.tsx"),
-);
-const BadgeOneCode = readFileSyncSafe(
-  join(process.cwd(), "./components/doc/badge/badge-one.tsx"),
-);
-const BadgeTwoCode = readFileSyncSafe(
-  join(process.cwd(), "./components/doc/badge/badge-two.tsx"),
-);
+// Paths
+const profileOnePath = path.resolve(__dirname, "./components/doc/profile/profile-one.tsx");
+const profileTwoPath = path.resolve(__dirname, "./components/doc/profile/profile-two.tsx");
+const badgeOnePath = path.resolve(__dirname, "./components/doc/badge/badge-one.tsx");
+const badgeTwoPath = path.resolve(__dirname, "./components/doc/badge/badge-two.tsx");
+
+// Codes
+const ProfileOneCode = readFileSyncSafe(profileOnePath);
+const ProfileTwoCode = readFileSyncSafe(profileTwoPath);
+const BadgeOneCode = readFileSyncSafe(badgeOnePath);
+const BadgeTwoCode = readFileSyncSafe(badgeTwoPath);
 
 // Types
 type Components = {
