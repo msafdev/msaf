@@ -2,7 +2,7 @@
 
 import { FC, useState } from "react";
 
-import Shiki from "@/components/macro/shiki";
+import Shiki from "@/components/macro/shikijs";
 
 // UI
 import { Button } from "../ui/button";
