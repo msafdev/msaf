@@ -12,7 +12,7 @@ import NotFound from "./not-found";
 
 // Components
 import Navbar from "@/components/navbar/nav-bar";
-import Footer from "@/components/footer/footer";
+import Footer from "@/components/footer/foo-bar";
 import { Toaster } from "@/components/ui/toaster";
 
 const montserrat = Montserrat({
