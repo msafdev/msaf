@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en" className="no-scrollbar">
       <body className={montserrat.className}>
         <SpeedInsights />
-        <main className="flex md:min-h-[100svh] w-full flex-col bg-background ">
+        <main className="flex w-full flex-col bg-background md:min-h-[100svh] ">
           <Navbar />
           {children}
           <Toaster />
