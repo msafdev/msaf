@@ -1,6 +1,6 @@
 // Components
-import BlogCard from "@/components/macro/BlogCard";
-import EmptyCard from "@/components/macro/EmptyCard";
+import BlogCard from "@/components/macro/blog-card";
+import EmptyCard from "@/components/macro/empty-card";
 
 // Fetch
 import { getPosts } from "@/lib/gql";

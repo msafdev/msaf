@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/command";
 import { useToast } from "@/components/ui/use-toast";
 
-import DarkMode from "../navbar/DarkMode";
+import DarkMode from "../navbar/dark-mode";
 
 import { useAtom } from "jotai";
 import { themeAtom } from "@/lib/atoms/themeAtom";

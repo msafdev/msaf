@@ -76,29 +76,9 @@ const SidebarItems: SidebarSubItems[] = [
         href: "input",
       },
       {
-        name: "Avatar",
+        name: "Profile",
         icon: ArrowRight,
-        href: "avatar",
-      },
-      {
-        name: "Progress",
-        icon: ArrowRight,
-        href: "progress",
-      },
-      {
-        name: "Pagination",
-        icon: ArrowRight,
-        href: "pagination",
-      },
-      {
-        name: "Breadcrumb",
-        icon: ArrowRight,
-        href: "breadcrumb",
-      },
-      {
-        name: "Status",
-        icon: ArrowRight,
-        href: "status",
+        href: "profile",
       },
     ],
   },
@@ -116,9 +96,9 @@ const SidebarItems: SidebarSubItems[] = [
         href: "gallery",
       },
       {
-        name: "Landing Page",
+        name: "Hero",
         icon: ArrowRight,
-        href: "landing-page",
+        href: "hero",
       },
       {
         name: "Portfolio",

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 // Components
 import { ScrollArea } from "../ui/scroll-area";
-import SidebarButton from "./SidebarButton";
+import SidebarButton from "./sidebar-button";
 import { Input } from "../ui/input";
 
 // Icons
@@ -44,7 +44,7 @@ const Sidebar = () => {
         >
           <X
             onClick={() => setOpen(false)}
-            className={`absolute right-4 top-4 z-50 h-6 w-6 cursor-pointer bg-transparent text-foreground ${
+            className={`absolute right-4 top-5 z-50 h-6 w-6 cursor-pointer bg-transparent text-foreground ${
               open ? "anim-slower opacity-100" : "anim-fast opacity-0"
             }`}
           />
@@ -102,7 +102,7 @@ const Sidebar = () => {
 
       {/* normal sidebar */}
       <aside
-        className={`pad-l anim relative hidden h-[calc(100svh-73px)] flex-col border-r md:flex md:h-[calc(100svh-105px)] md:w-fit`}
+        className={`pad-l anim relative hidden h-auto grow flex-col border-r md:flex md:w-fit`}
       >
         <ScrollArea className="flex h-full flex-col py-4 pr-6 md:py-6 md:pr-8 lg:pr-12">
           {SidebarGeneralItems.map((item, index) => (

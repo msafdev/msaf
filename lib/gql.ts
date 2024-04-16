@@ -2,6 +2,7 @@ import { FetchPostResponse } from "@/lib/types/post";
 import { FetchPersonResponse } from "@/lib/types/people";
 
 import { GraphQLClient, gql } from "graphql-request";
+import { FetchProjectResponse } from "./types/project";
 
 const graphQLClient = new GraphQLClient(
   process.env.NEXT_PUBLIC_GQL_ENDPOINT || "",

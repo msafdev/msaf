@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 // Components
-import Filter from "@/components/filter/Filter";
+import Filter from "@/components/filter/filter";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { DividerHorizontal } from "@/components/ui/divider";
 

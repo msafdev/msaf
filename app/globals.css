@@ -113,30 +113,30 @@
     scrollbar-width: none; /* Firefox */
   }
 
-  .shiki::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
-  .shiki::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-track {
     border-radius: 10px;
     background: rgba(240, 230, 250, 1);
   }
-  .shiki::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.2);
   }
-  .dark .shiki::-webkit-scrollbar-track {
+  .dark ::-webkit-scrollbar-track {
     border-radius: 10px;
     background: rgba(37, 40, 53, 1);
   }
-  .dark .shiki::-webkit-scrollbar-thumb {
+  .dark ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: rgba(72, 77, 100, 1);
   }
-  .shiki::-webkit-scrollbar-thumb:hover {
+  ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 0, 0, 0.4);
   }
-  .shiki::-webkit-scrollbar-thumb:active {
+  ::-webkit-scrollbar-thumb:active {
     background: rgba(0, 0, 0, 0.9);
   }
 }

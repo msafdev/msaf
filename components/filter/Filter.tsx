@@ -6,7 +6,7 @@ import { useParams } from "next/navigation";
 import { FilterItems } from "@/lib/constants";
 
 // Components
-import FilterButton from "./FilterButton";
+import FilterButton from "./filter-button";
 
 const Filter = () => {
   const params = useParams();

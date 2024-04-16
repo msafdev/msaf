@@ -35,7 +35,7 @@ const HoverTitle: FC<ComponentsProps> = ({ children }) => {
 
 const HoverItem: FC<HoverItemProps> = ({ children, header }) => {
   return (
-    <div className="anim absolute flex h-fit w-full flex-wrap items-center justify-center gap-x-8 gap-y-4 bg-transparent px-6 delay-100 md:h-full md:translate-y-full md:bg-popover md:group-hover:translate-y-0">
+    <div className="anim absolute flex h-fit w-full flex-wrap items-center justify-center gap-x-8 gap-y-4 bg-transparent px-6 delay-100 md:h-full md:translate-y-[110%] md:bg-popover md:group-hover:translate-y-0">
       {header && (
         <p className="text-sm font-semibold text-foreground">{header}</p>
       )}

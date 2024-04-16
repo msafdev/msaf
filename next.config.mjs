@@ -5,7 +5,12 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "media.graphassets.com",
-        pathname: "/*",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        pathname: "/**",
       },
     ],
   },

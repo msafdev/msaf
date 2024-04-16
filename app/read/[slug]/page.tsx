@@ -7,7 +7,7 @@ import {
 } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 import Image from "next/image";
-import CopyButton from "@/components/button/CopyButton";
+import CopyButton from "@/components/button/copy-button";
 
 export default async function Read({ params }: { params: { slug: string } }) {
   const post = await getPost({ slug: params.slug });
@@ -45,7 +45,7 @@ export default async function Read({ params }: { params: { slug: string } }) {
         case "paragraph":
           return (
             <p
-              className="pb-4 text-base leading-[1.75rem] text-foreground/70"
+              className="pb-4 text-base leading-[1.75rem] text-muted-foreground"
               key={index}
             >
               {renderInlineStyles(child.children)}
@@ -153,11 +153,11 @@ export default async function Read({ params }: { params: { slug: string } }) {
         {detail?.title}
       </h1>
       {detail ? (
-        <pre className="w-full max-w-xl whitespace-pre-wrap text-wrap px-5 text-sm text-foreground/70 md:text-base lg:text-lg">
+        <pre className="w-full max-w-xl whitespace-pre-wrap text-wrap px-5 text-sm text-muted-foreground md:text-base lg:text-lg">
           {detail.excerpt}
         </pre>
       ) : (
-        <p className="w-full max-w-xl text-center text-base text-foreground/70 md:text-lg">
+        <p className="w-full max-w-xl text-center text-base text-muted-foreground md:text-lg">
           •••
         </p>
       )}

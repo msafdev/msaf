@@ -2,11 +2,11 @@
 
 import { codeToHtml } from "shiki";
 import type { BundledLanguage, BundledTheme } from "shiki";
-import CopyButton from "../button/CopyButton";
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { themeAtom } from "@/lib/atoms/themeAtom";
 import { LoaderCircle } from "lucide-react";
+import CopyButton from "../button/copy-button";
 
 type Props = {
   code: string;
@@ -16,7 +16,7 @@ type Props = {
 
 export default function Code({
   code,
-  lang = "typescript",
+  lang = "tsx",
   theme = "github-light-default",
 }: Props) {
   const [html, setHtml] = useState<string>("");
@@ -38,17 +38,18 @@ export default function Code({
   }, [mode, code, lang]);
 
   return (
-    <div className="w-[calc(100vw-32px)] max-w-2xl md:w-full">
+    <div className="relative w-full">
       {loading ? (
-        <div className="flex items-center justify-center rounded-sm border border-border bg-popover px-4 py-12 text-sm text-primary">
+        <div className="flex items-center justify-center rounded-sm border border-border px-4 py-12 text-sm text-primary">
           <LoaderCircle size={32} className="animate-spin" />
         </div>
       ) : (
         <div
-          className="rounded-sm border border-border text-sm [&>pre]:overflow-x-auto [&>pre]:!rounded-sm [&>pre]:!bg-popover [&>pre]:py-3 [&>pre]:pl-4 [&>pre]:pr-5 [&>pre]:leading-snug [&_code]:block [&_code]:w-fit [&_code]:min-w-full"
+          className="rounded-sm border pt-10 border-border bg-background text-sm [&>pre]:overflow-x-auto [&>pre]:!rounded-sm [&>pre]:py-3 [&>pre]:pl-4 [&>pre]:pr-5 [&>pre]:leading-snug dark:[&>pre]:!bg-background [&_code]:block [&_code]:w-fit [&_code]:min-w-full"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       )}
+      <CopyButton codeString={code} className="absolute top-2 right-2"/>
     </div>
   );
 }

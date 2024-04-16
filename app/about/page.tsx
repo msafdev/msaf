@@ -12,11 +12,11 @@ import { Button } from "@/components/ui/button";
 const About = () => {
   return (
     <section className="flex h-full w-full grow flex-col">
-      <div className="pad-x flex w-full flex-col items-start gap-x-8 gap-y-6 py-4 md:flex-row md:pt-8 lg:py-12">
+      <div className="pad-x flex w-full flex-col items-start gap-x-8 gap-y-6 py-4 md:flex-row md:py-8 lg:py-12">
         <h1 className="w-full text-balance text-2xl font-semibold leading-tight xs:text-3xl sm:text-left md:w-1/2 lg:text-4xl">
           I love to create something simple and clean
         </h1>
-        <div className="flex w-full flex-col gap-y-4 text-sm text-foreground/70 md:w-1/2 md:text-base">
+        <div className="flex w-full flex-col gap-y-4 text-xs text-muted-foreground md:w-1/2 md:text-sm">
           <p>
             <span className="font-medium text-foreground">MSAF</span> is a{" "}
             <span className="font-medium text-foreground">
@@ -52,47 +52,55 @@ const About = () => {
           </h2>
           {/* Work Card */}
           <div className="flex items-center gap-x-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4 anim">
+            <div className="anim flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4">
               <Image src={FN} alt="FN Digital Code" className="h-auto w-full" />
             </div>
             <div className="flex w-fit flex-col">
-              <h3 className="text-balance text-base font-semibold lg:text-lg">
+              <h3 className="text-balance text-base font-medium lg:text-lg">
                 FN Digital Code
               </h3>
-              <p className="text-sm text-foreground/70">Frontend Engineer</p>
+              <p className="text-xs text-muted-foreground md:text-sm">
+                Frontend Engineer
+              </p>
             </div>
           </div>
           <div className="flex items-center gap-x-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4 anim">
+            <div className="anim flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4">
               <Image src={Bangkit} alt="Bangkit" className="h-auto w-full" />
             </div>
             <div className="flex w-fit flex-col">
-              <h3 className="text-balance text-base font-semibold lg:text-lg">
+              <h3 className="text-balance text-base font-medium lg:text-lg">
                 Bangkit Dicoding
               </h3>
-              <p className="text-sm text-foreground/70">Cloud Computing</p>
+              <p className="text-xs text-muted-foreground md:text-sm">
+                Cloud Computing
+              </p>
             </div>
           </div>
           <div className="flex items-center gap-x-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4 anim">
+            <div className="anim flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4">
               <Image src={Kemnaker} alt="Kemnaker" className="h-auto w-full" />
             </div>
             <div className="flex w-fit flex-col">
-              <h3 className="text-balance text-base font-semibold lg:text-lg">
+              <h3 className="text-balance text-base font-medium lg:text-lg">
                 Ministry of Manpower
               </h3>
-              <p className="text-sm text-foreground/70">Frontend Engineer</p>
+              <p className="text-xs text-muted-foreground md:text-sm">
+                Frontend Engineer
+              </p>
             </div>
           </div>
           <div className="flex items-center gap-x-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4 anim">
+            <div className="anim flex h-14 w-14 items-center justify-center rounded-md border border-border bg-popover p-4">
               <Image src={Undip} alt="Undip" className="h-auto w-full" />
             </div>
             <div className="flex w-fit flex-col">
-              <h3 className="text-balance text-base font-semibold lg:text-lg">
+              <h3 className="text-balance text-base font-medium lg:text-lg">
                 Diponegoro University
               </h3>
-              <p className="text-sm text-foreground/70">Lecturer Assistant</p>
+              <p className="text-xs text-muted-foreground md:text-sm">
+                Lecturer Assistant
+              </p>
             </div>
           </div>
           <Button

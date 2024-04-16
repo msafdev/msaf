@@ -2,8 +2,8 @@ import Image from "next/image";
 
 // Import Assets
 import Mad from "@/public/images/avatar-mad.png";
-import NavLink from "./NavLink";
-import NavDrop from "./NavDrop";
+import NavLink from "./nav-link";
+import NavDrop from "./nav-drop";
 
 // Data
 import { NavItems } from "@/lib/constants";

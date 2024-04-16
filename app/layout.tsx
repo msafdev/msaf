@@ -11,8 +11,8 @@ import "./globals.css";
 import NotFound from "./not-found";
 
 // Components
-import Navbar from "@/components/navbar/Navbar";
-import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/navbar/nav-bar";
+import Footer from "@/components/footer/footer";
 import { Toaster } from "@/components/ui/toaster";
 
 const montserrat = Montserrat({
@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en" className="no-scrollbar">
       <body className={montserrat.className}>
         <SpeedInsights />
-        <main className="flex md:min-h-[100svh] w-full flex-col bg-background text-foreground">
+        <main className="flex md:min-h-[100svh] w-full flex-col bg-background ">
           <Navbar />
           {children}
           <Toaster />

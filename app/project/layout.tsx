@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 // Components
-import Sidebar from "@/components/sidebar/Sidebar";
+import Sidebar from "@/components/sidebar/sidebar";
 import Breadcrumb from "@/components/ui/breadcrumb";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
@@ -21,7 +21,7 @@ export default function ProjectLayout({
       className="relative flex h-full w-full grow flex-col md:flex-row"
     >
       <Sidebar />
-      <main className="flex h-[calc(100svh-133px)] w-full flex-col overflow-x-hidden px-4 md:h-[calc(100svh-105px)] md:py-6 md:pl-8 lg:pl-12 md:pad-r">
+      <main className="shiki md:pad-r flex grow w-full flex-col overflow-x-hidden px-4 pb-6 md:py-6 md:pl-8 lg:pl-12">
         <div className="mb-3">
           <Breadcrumb />
         </div>

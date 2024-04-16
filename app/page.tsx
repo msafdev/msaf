@@ -67,14 +67,15 @@ export default function Home() {
         <div className="pad-x flex w-full flex-col justify-center py-4 md:grow md:py-8 lg:py-12">
           <div className="grid grid-cols-1 items-end gap-x-6 md:grid-cols-2">
             <div className="flex flex-col justify-between">
-              <p className="mb-2 w-full text-sm font-medium uppercase text-muted-foreground">
+              <p className="mb-3 w-full text-sm font-medium uppercase text-muted-foreground md:mb-5">
                 Portfolio
               </p>
               <h2 className="mb-4 w-full max-w-lg text-balance text-xl font-semibold text-foreground md:mb-6 md:text-2xl lg:text-3xl">
                 I strive to create beatiful and useful things
               </h2>
               <p className="text-balance text-base text-muted-foreground md:max-w-sm md:text-lg lg:max-w-lg">
-                Ola! My name is <span className="font-semibold text-foreground">Salman</span>, a
+                Ola! My name is{" "}
+                <span className="font-semibold text-foreground">Salman</span>, a
                 very funny-looking visual design enthusiast. I do web design,
                 web development, product management, project manager, infra, and
                 also a speaker. Feel free to surf around 👋

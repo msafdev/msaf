@@ -8,7 +8,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import DarkMode from "./DarkMode";
+import DarkMode from "./dark-mode";
 import { DividerHorizontal } from "../ui/divider";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
