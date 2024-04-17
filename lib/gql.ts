@@ -1,8 +1,8 @@
 import { FetchPostResponse } from "@/lib/types/post";
 import { FetchPersonResponse } from "@/lib/types/people";
+import { FetchProjectResponse } from "./types/project";
 
 import { GraphQLClient, gql } from "graphql-request";
-import { FetchProjectResponse } from "./types/project";
 
 const graphQLClient = new GraphQLClient(
   process.env.NEXT_PUBLIC_GQL_ENDPOINT || "",
@@ -75,6 +75,30 @@ const getPost = async ({ slug }: { slug: string }) => {
   return response as FetchPostResponse;
 };
 
+const getProject = async ({ slug }: { slug: string }) => {
+  const query = gql`
+    query FetchProject($slug: String!) {
+      projectsConnection(where: { slug: $slug }) {
+        edges {
+          node {
+            createdAt
+            id
+            slug
+            title
+            updatedAt
+            code {
+              raw
+            }
+          }
+        }
+      }
+    }
+  `;
+  const response = await graphQLClient.request(query, { slug });
+
+  return response as FetchProjectResponse;
+};
+
 const getPostsCategory = async ({ category }: { category: string }) => {
   const query = gql`
     query FetchCategories {
@@ -139,4 +163,4 @@ const getHigherUps = async () => {
   return response as FetchPersonResponse;
 };
 
-export { getPosts, getPost, getPostsCategory, getHigherUps };
+export { getPosts, getPost, getPostsCategory, getHigherUps, getProject };

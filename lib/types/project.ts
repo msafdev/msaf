@@ -9,13 +9,10 @@ export interface ProjectContent {
 }
 
 export interface Project {
-  date: string;
   createdAt: string;
-  id: string;
   slug: string;
   title: string;
-  updatedAt: string;
-  content: ProjectContent;
+  code: ProjectContent;
 }
 
 export interface ProjectEdge {
