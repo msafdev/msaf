@@ -28,6 +28,7 @@ import { Categories, Components } from "@/lib/types/components";
 
 // Exports
 export const categories: Categories[] = [
+  // Profile
   {
     name: "Profile",
     type: "profile",
@@ -36,6 +37,7 @@ export const categories: Categories[] = [
     requirement: ["# components", "npx shadcn-ui@latest add avatar"],
     url: "https://github.com/msafdev",
   },
+  // Badge
   {
     name: "Badge",
     type: "badge",
@@ -44,13 +46,16 @@ export const categories: Categories[] = [
     requirement: ["# icons", "npm i @radix-ui/react-icons"],
     url: "https://github.com/msafdev",
   },
+  // Button
   {
     name: "Button",
     type: "button",
     description:
-      "A button component is a UI element or module designed to trigger an action or event within an application. It is one of the most common components in web development.",
+      "A button component is a UI element or module designed to trigger an action or event within an application.",
+    requirement: ["# icons", "npm i react-icons"],
     url: "https://github.com/msafdev",
   },
+  // Card
   {
     name: "Card",
     type: "card",
@@ -59,6 +64,7 @@ export const categories: Categories[] = [
     requirement: ["# icons", "npm i react-icons"],
     url: "https://github.com/msafdev",
   },
+  // Input
   {
     name: "Input",
     type: "input",
@@ -70,6 +76,7 @@ export const categories: Categories[] = [
 ];
 
 export const components: Components[] = [
+  // Profile
   {
     component: ProfileOne,
     path: "profile-one",
@@ -82,6 +89,7 @@ export const components: Components[] = [
     type: "profile",
     name: "Profile Card",
   },
+  // Badge
   {
     component: BadgeOne,
     path: "badge-one",
@@ -94,6 +102,7 @@ export const components: Components[] = [
     type: "badge",
     name: "Status Badge",
   },
+  // Button
   {
     component: ButtonOne,
     path: "button-one",
@@ -112,6 +121,7 @@ export const components: Components[] = [
     type: "button",
     name: "Icon",
   },
+  // Card
   {
     component: CardOne,
     path: "card-one",
@@ -128,8 +138,9 @@ export const components: Components[] = [
     component: CardThree,
     path: "card-three",
     type: "card",
-    name: "Card Three",
+    name: "Job Card",
   },
+  // Input
   {
     component: InputOne,
     path: "input-one",
