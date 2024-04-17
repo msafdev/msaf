@@ -54,7 +54,7 @@ export default async function Read({ params }: { params: { slug: string } }) {
         case "block-quote":
           return (
             <blockquote
-              className="mb-3 border-l-2 border-primary bg-accent px-4 py-2 text-xs font-medium text-accent-foreground md:text-sm"
+              className="mb-3 border-l-2 border-primary bg-secondary px-4 py-2 text-xs font-medium text-secondary-foreground md:text-sm"
               key={index}
             >
               {child.children[0].text}

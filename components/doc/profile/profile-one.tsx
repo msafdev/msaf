@@ -4,7 +4,7 @@ const ProfileOne = () => {
   return (
     <div className="flex w-fit items-center gap-x-2 rounded-md border bg-popover px-2">
       <Avatar>
-        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+        <AvatarImage src="https://github.com/msafdev.png" alt="@msafdev" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
       <div className="flex flex-col gap-y-0.5 border-l py-2 pl-2">

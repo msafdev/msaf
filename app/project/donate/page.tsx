@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Avatar1 from "@/public/images/avatar-blow.png";
 import Avatar2 from "@/public/images/avatar-cloud.png";
@@ -9,42 +10,46 @@ export default function Support() {
     <div className="flex h-full max-w-xl grow flex-col">
       <h1 className="text-2xl font-semibold text-foreground">Support Me</h1>
       <p className="mt-3 text-sm text-muted-foreground md:text-base">
-        This project is open-sourced and free to use. If you find this project
-        helpful to you in any way, consider supporting me by buying me a coffee.
+        This project is{" "}
+        <span className="font-medium text-foreground">open-sourced</span> and{" "}
+        <span className="font-medium text-foreground">free</span> to use. If
+        you find this project helpful to you in any way, consider supporting me
+        by buying me a coffee.
       </p>
       <h2 className="mt-6 text-lg font-semibold text-foreground">
         How to support
       </h2>
       <ul className="mt-3 text-sm md:text-base">
         <li>
-          <a href="/" className="flex items-center gap-x-2">
+          <Link href="/" className="flex w-fit items-center gap-x-2">
             -
-            <code className="anim font-medium text-muted-foreground hover:text-foreground">
+            <code className="anim font-medium text-foreground underline-offset-2 hover:underline">
               kofi
             </code>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/" className="flex items-center gap-x-2">
+          <Link href="/" className="flex w-fit items-center gap-x-2">
             -
-            <code className="anim font-medium text-muted-foreground hover:text-foreground">
+            <code className="anim font-medium text-foreground underline-offset-2 hover:underline">
               paypal
             </code>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/" className="flex items-center gap-x-2">
+          <Link href="/" className="flex w-fit items-center gap-x-2">
             -
-            <code className="anim font-medium text-muted-foreground hover:text-foreground">
+            <code className="anim font-medium text-foreground underline-offset-2 hover:underline">
               patreon
             </code>
-          </a>
+          </Link>
         </li>
       </ul>
       <h2 className="mt-6 text-lg font-semibold text-foreground">Benefits</h2>
       <p className="mt-3 text-sm text-muted-foreground md:text-base">
-        Every patrons will get a custom memoji made by me, and of course, my
-        deepest gratitude.
+        Every <span className="font-medium text-foreground">patrons</span>{" "}
+        will get a custom memoji made by me, and of course, my deepest
+        gratitude.
       </p>
       <h2 className="mt-6 text-lg font-semibold text-foreground">Patrons</h2>
       <div className="mt-3 flex -space-x-3 rtl:space-x-reverse">

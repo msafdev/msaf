@@ -2,7 +2,7 @@
 
 import { FC, useEffect, useState } from "react";
 
-import { codeToHtml } from "shiki";
+import { BundledLanguage, codeToHtml } from "shiki";
 
 import { themeAtom } from "@/lib/atoms/themeAtom";
 import { useAtom } from "jotai";
@@ -11,22 +11,23 @@ import { LoaderCircle } from "lucide-react";
 
 interface RequirementsProps {
   requirements?: string[];
+  lang?: BundledLanguage;
 }
 
-const Requirements: FC<RequirementsProps> = ({ requirements = [] }) => {
+const Requirements: FC<RequirementsProps> = ({
+  requirements = [],
+  lang = "shell",
+}) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [html, setHtml] = useState<string>("");
   const [mode, setMode] = useAtom(themeAtom);
 
   const fetchHTML = async () => {
     setLoading(true);
-    const html = await codeToHtml(
-      `${requirements.map((r) => r).join("\n")}`,
-      {
-        lang: "shell",
-        theme: mode === "dark" ? "github-dark-default" : "github-light-default",
-      },
-    );
+    const html = await codeToHtml(`${requirements.map((r) => r).join("\n")}`, {
+      lang: lang,
+      theme: mode === "dark" ? "github-dark-default" : "github-light-default",
+    });
     setHtml(html);
     setLoading(false);
   };
@@ -37,18 +38,13 @@ const Requirements: FC<RequirementsProps> = ({ requirements = [] }) => {
 
   return (
     <div className="flex flex-col">
-      <h2 className="mb-2 max-w-xl text-xl font-medium capitalize text-foreground">
-        Requirements
-      </h2>
       {requirements.length === 0 && (
-        <p className="text-sm text-muted-foreground">
-          No requirements
-        </p>
+        <p className="text-sm text-muted-foreground">No requirements</p>
       )}
       {requirements.length > 0 && (
         <div className="w-full rounded-md border">
           {loading ? (
-            <div className="flex items-center justify-center px-4 py-5 text-sm text-primary">
+            <div className="flex items-center justify-center px-4 py-3 text-sm text-primary">
               <LoaderCircle size={24} className="animate-spin" />
             </div>
           ) : (

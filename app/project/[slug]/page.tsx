@@ -31,7 +31,12 @@ const Components = async ({ params }: { params: { slug: string } }) => {
           <p>{variantText}</p>
         </div>
       </div>
-      <Requirements requirements={category.requirement} />
+      <div className="flex flex-col">
+        <h2 className="mb-2 max-w-xl text-xl font-medium capitalize text-foreground">
+          Requirements
+        </h2>
+        <Requirements requirements={category.requirement} />
+      </div>
       <div className="flex w-full flex-col">
         <h2 className="mb-3 max-w-xl text-xl font-medium capitalize text-foreground">
           Example

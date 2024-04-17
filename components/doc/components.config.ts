@@ -34,7 +34,13 @@ export const categories: Categories[] = [
     type: "profile",
     description:
       "A profile component is a UI element or module designed to display information related to a user or entity's profile within an application.",
-    requirement: ["# components", "npx shadcn-ui@latest add avatar"],
+    requirement: [
+      "# icons",
+      "npm i react-icons",
+      "",
+      "# components",
+      "npx shadcn-ui@latest add avatar",
+    ],
     url: "https://github.com/msafdev",
   },
   // Badge
@@ -61,7 +67,13 @@ export const categories: Categories[] = [
     type: "card",
     description:
       "A card component is a UI element or module designed to display information related to a user or entity within an application.",
-    requirement: ["# icons", "npm i react-icons"],
+    requirement: [
+      "# icons",
+      "npm i react-icons",
+      "",
+      "# card-one",
+      "npx shadcn-ui@latest add button",
+    ],
     url: "https://github.com/msafdev",
   },
   // Input

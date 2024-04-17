@@ -14,7 +14,7 @@ type Props = {
   theme?: BundledTheme;
 };
 
-export default function Code({
+export default function Shiki({
   code,
   lang = "tsx",
   theme = "github-light-default",

@@ -71,4 +71,40 @@ const Experience = [
   },
 ];
 
-export { NavItems, FilterItems, Experience };
+const Inspiration = [
+  {
+    twitter: "zakiego",
+  },
+  {
+    twitter: "shadcn",
+  },
+  {
+    twitter: "zakiego",
+  },
+  {
+    twitter: "gadingnstn",
+  },
+  {
+    twitter: "ilyamiskov",
+  },
+  {
+    twitter: "dsgnverse",
+  },
+  {
+    twitter: "ozanoz",
+  },
+  {
+    twitter: "maulanafikri455",
+  },
+  {
+    twitter: "samdape",
+  },
+  {
+    twitter: "fonsmans",
+  },
+  {
+    twitter: "sandhikagalih",
+  },
+];
+
+export { NavItems, FilterItems, Experience, Inspiration };

@@ -1,13 +1,18 @@
-import { MoveRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 // Assets
 import FN from "@/public/images/logos/fndigitalcode.png";
 import Kemnaker from "@/public/images/logos/kemnaker.png";
 import Bangkit from "@/public/images/logos/bangkit.png";
 import Undip from "@/public/images/logos/undip.png";
-import Image from "next/image";
+import Avatar from "@/public/images/avatar-cloud.png";
+
+// Components
 import { Button } from "@/components/ui/button";
+
+// Constants
+import { Inspiration } from "@/lib/constants";
 
 const About = () => {
   return (
@@ -46,7 +51,7 @@ const About = () => {
       </div>
       <div className="h-[1px] w-full bg-border" />
       <div className="flex h-full w-full grow flex-col md:flex-row">
-        <div className="pad-x flex h-auto w-full flex-col justify-center gap-y-4 border-b py-4 md:w-fit md:border-b-0 md:border-r md:pt-8 lg:py-12">
+        <div className="pad-x flex h-auto w-full flex-col justify-center gap-y-4 border-b py-4 md:w-fit md:border-b-0 md:border-r md:py-8 lg:py-12">
           <h2 className="mb-2 text-balance text-left text-2xl font-semibold lg:mb-4">
             Experience
           </h2>
@@ -115,6 +120,37 @@ const About = () => {
               See My LinkedIn
             </Link>
           </Button>
+        </div>
+        <div className="pad-x flex h-auto w-auto grow flex-col justify-center self-stretch pt-4 pb-5 md:items-center md:py-8 lg:py-12">
+          <h2 className="mb-1 w-full text-balance text-left text-2xl font-semibold md:max-w-lg lg:mb-2">
+            Inspiration
+          </h2>
+          <div className="flex w-full flex-col gap-y-4 md:max-w-lg">
+            <p className="text-sm text-muted-foreground">
+              Inspirations can come from anywhere. These people shaped my
+              journey and I am grateful for that, not only programming-wise but
+              also life-wise.
+            </p>
+            <div className="flex w-full flex-wrap items-center gap-2">
+              {Inspiration.map((inspo, index) => (
+                <Link
+                  key={index}
+                  href={`https://twitter.com/${inspo.twitter}`}
+                  target="_blank"
+                  className="rounded-sm bg-secondary px-2 py-0.5 text-secondary-foreground"
+                >
+                  <code className="text-xs font-medium md:text-sm">
+                    {inspo.twitter}
+                  </code>
+                </Link>
+              ))}
+              <div className="rounded-sm bg-transparent px-1 py-0.5 text-secondary-foreground">
+                <code className="text-xs font-medium md:text-sm">
+                  ...
+                </code>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

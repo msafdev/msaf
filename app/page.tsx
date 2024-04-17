@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // Components
 import {
   AccordionContent,
@@ -75,7 +77,7 @@ export default function Home() {
               </h2>
               <p className="text-balance text-base text-muted-foreground md:max-w-sm md:text-lg lg:max-w-lg">
                 Ola! My name is{" "}
-                <span className="font-semibold text-foreground">Salman</span>, a
+                <span className="font-medium text-foreground">Salman</span>, a
                 very funny-looking visual design enthusiast. I do web design,
                 web development, product management, project manager, infra, and
                 also a speaker. Feel free to surf around 👋
@@ -100,16 +102,26 @@ export default function Home() {
                     your daily expenses. Built with{" "}
                     <span className="text-foreground">Next</span>,{" "}
                     <span className="text-foreground">Tailwind</span>, and{" "}
-                    <span className="text-foreground">Supabase</span>.
+                    <span className="text-foreground">Supabase</span>. It is
+                    still on development, so might be a bit buggy.
                   </p>
-                  <Badge
-                    variant="secondary"
-                    className="relative flex w-fit items-center gap-x-2 rounded-full"
-                  >
-                    <div className="h-1.5 w-1.5 animate-ping rounded-full bg-green-500" />
-                    <div className="absolute left-2.5 h-1.5 w-1.5 rounded-full bg-green-500" />
-                    Live
-                  </Badge>
+                  <div className="flex items-center justify-between gap-x-4">
+                    <Badge
+                      variant="secondary"
+                      className="relative flex w-fit items-center gap-x-2 rounded-full"
+                    >
+                      <div className="h-1.5 w-1.5 animate-ping rounded-full bg-green-500" />
+                      <div className="absolute left-2.5 h-1.5 w-1.5 rounded-full bg-green-500" />
+                      Live
+                    </Badge>
+                    <Link
+                      target="_blank"
+                      className="text-sm font-medium text-foreground underline underline-offset-2"
+                      href="https://countify-wine.vercel.app"
+                    >
+                      Visit Project
+                    </Link>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
@@ -121,14 +133,23 @@ export default function Home() {
                     <span className="text-foreground">Next</span> and{" "}
                     <span className="text-foreground">Tailwind</span>.
                   </p>
-                  <Badge
-                    variant="secondary"
-                    className="relative flex w-fit items-center gap-x-2 rounded-full"
-                  >
-                    <div className="h-1.5 w-1.5 animate-ping rounded-full bg-green-500" />
-                    <div className="absolute left-2.5 h-1.5 w-1.5 rounded-full bg-green-500" />
-                    Live
-                  </Badge>
+                  <div className="flex items-center justify-between gap-x-4">
+                    <Badge
+                      variant="secondary"
+                      className="relative flex w-fit items-center gap-x-2 rounded-full"
+                    >
+                      <div className="h-1.5 w-1.5 animate-ping rounded-full bg-green-500" />
+                      <div className="absolute left-2.5 h-1.5 w-1.5 rounded-full bg-green-500" />
+                      Live
+                    </Badge>
+                    <Link
+                      target="_blank"
+                      className="text-sm font-medium text-foreground underline underline-offset-2"
+                      href="https://msaf-terminal.vercel.app"
+                    >
+                      Visit Project
+                    </Link>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
