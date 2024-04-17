@@ -73,7 +73,7 @@ const Experience = [
 
 const Inspiration = [
   {
-    twitter: "zakiego",
+    twitter: "peachyloeyy",
   },
   {
     twitter: "shadcn",

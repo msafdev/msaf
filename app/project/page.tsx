@@ -1,3 +1,5 @@
+import Note from "@/components/macro/note";
+import { BadgeInfo } from "lucide-react";
 import Link from "next/link";
 
 export default function Introduction() {
@@ -12,10 +14,16 @@ export default function Introduction() {
         <span className="font-medium text-foreground">obviously</span>{" "}
         open-sourced.
       </p>
-      <blockquote className="mt-3 w-fit border-l-2 border-l-primary bg-secondary py-2 pl-4 pr-4 text-xs italic text-secondary-foreground md:text-sm">
-        This is a collection of components I have used in my projects. <br />
-        This is <span className="font-medium">NOT</span> a component library.
-      </blockquote>
+      <Note className="mt-3">
+        <h4 className="text-lg font-medium text-foreground">
+          <BadgeInfo className="mr-2 inline-block h-3 w-3" />
+          Note
+        </h4>
+        <p className="text-muted-foreground text-sm">
+          This is a collection of components I have used in my projects. <br />
+          This is <span className="font-medium text-foreground">NOT</span> a component library.
+        </p>
+      </Note>
       <h2 className="mt-6 text-lg font-semibold text-foreground">Reference</h2>
       <p className="mt-3 text-sm text-muted-foreground md:text-base">
         Making this by myself is never possible without the help of others. I

@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 // Components
 import Sidebar from "@/components/sidebar/side-bar";
 import Breadcrumb from "@/components/ui/breadcrumb";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
-import { Github, MoveUpRight, Star } from "lucide-react";
+import { BadgeAlert, Star } from "lucide-react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Salman | Project",
@@ -31,36 +31,39 @@ export default function ProjectLayout({
       </main>
       <div className="hidden h-auto w-1/3 grow flex-col gap-y-2 py-6 pl-12 pr-[8%] lg:flex">
         <Button
-          className="flex w-full items-center justify-between gap-x-2"
+          className="flex w-full items-center justify-between gap-x-2 border"
           variant={"secondary"}
+          asChild
         >
-          Visit the Repo
-          <MoveUpRight size={16} className="" />
+          <Link href="https://github.com/msafdev/msaf-new" target="_blank">
+            Star on GitHub
+            <Star size={16} className="" />
+          </Link>
         </Button>
         <Button
-          className="flex w-full items-center justify-between gap-x-2"
+          className="flex w-full items-center justify-between gap-x-2 border"
           variant={"secondary"}
+          asChild
         >
-          Star on GitHub
-          <Star size={16} className="" />
+          <Link
+            href="https://github.com/msafdev/msaf-new/issues"
+            target="_blank"
+          >
+            Report an Issue
+            <BadgeAlert size={16} className="" />
+          </Link>
         </Button>
         <Button
-          className="flex w-full items-center justify-between gap-x-2"
+          className="flex w-full items-center justify-between gap-x-2 border"
           variant={"secondary"}
+          asChild
         >
-          Request a Feature
-        </Button>
-        <Button
-          className="flex w-full items-center justify-between gap-x-2"
-          variant={"secondary"}
-        >
-          Report an Issue
-        </Button>
-        <Button
-          className="flex w-full items-center justify-between gap-x-2"
-          variant={"secondary"}
-        >
-          Support the Project
+          <Link
+            href="https://github.com/msafdev/msaf-new/issues"
+            target="_blank"
+          >
+            Support the Project
+          </Link>
         </Button>
       </div>
     </section>

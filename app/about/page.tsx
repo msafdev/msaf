@@ -121,8 +121,8 @@ const About = () => {
             </Link>
           </Button>
         </div>
-        <div className="pad-x flex h-auto w-auto grow flex-col justify-center self-stretch pt-4 pb-5 md:items-center md:py-8 lg:py-12">
-          <h2 className="mb-1 w-full text-balance text-left text-2xl font-semibold md:max-w-lg lg:mb-2">
+        <div className="pad-x flex h-auto w-auto gap-y-4 grow flex-col justify-center self-stretch pb-5 pt-4 md:items-center md:py-8 lg:py-12">
+          <h2 className="w-full text-balance text-left text-2xl font-semibold md:max-w-lg">
             Inspiration
           </h2>
           <div className="flex w-full flex-col gap-y-4 md:max-w-lg">
@@ -137,17 +137,15 @@ const About = () => {
                   key={index}
                   href={`https://twitter.com/${inspo.twitter}`}
                   target="_blank"
-                  className="rounded-sm bg-secondary px-2 py-0.5 text-secondary-foreground"
+                  className="rounded-sm border bg-popover px-2 py-0.5 text-popover-foreground"
                 >
                   <code className="text-xs font-medium md:text-sm">
                     {inspo.twitter}
                   </code>
                 </Link>
               ))}
-              <div className="rounded-sm bg-transparent px-1 py-0.5 text-secondary-foreground">
-                <code className="text-xs font-medium md:text-sm">
-                  ...
-                </code>
+              <div className="rounded-sm bg-transparent px-1 py-0.5 text-popover-foreground">
+                <code className="text-xs font-medium md:text-sm">...</code>
               </div>
             </div>
           </div>

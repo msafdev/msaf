@@ -115,11 +115,13 @@ export default function Home() {
                       Live
                     </Badge>
                     <Link
-                      target="_blank"
-                      className="text-sm font-medium text-foreground underline underline-offset-2"
                       href="https://countify-wine.vercel.app"
+                      target="_blank"
+                      className="rounded-sm border bg-popover px-2 text-popover-foreground"
                     >
-                      Visit Project
+                      <code className="text-xs font-medium md:text-sm">
+                        Visit Project
+                      </code>
                     </Link>
                   </div>
                 </AccordionContent>
@@ -143,11 +145,13 @@ export default function Home() {
                       Live
                     </Badge>
                     <Link
-                      target="_blank"
-                      className="text-sm font-medium text-foreground underline underline-offset-2"
                       href="https://msaf-terminal.vercel.app"
+                      target="_blank"
+                      className="rounded-sm border bg-popover px-2 text-popover-foreground"
                     >
-                      Visit Project
+                      <code className="text-xs font-medium md:text-sm">
+                        Visit Project
+                      </code>
                     </Link>
                   </div>
                 </AccordionContent>
