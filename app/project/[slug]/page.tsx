@@ -1,17 +1,20 @@
+import React from "react";
 import { categories, components } from "@/components/doc/components.config";
-
 import Requirements from "@/components/doc/requirement";
-import ProjectCard from "@/components/macro/project-card";
 import { getProject } from "@/lib/gql";
-
 import { Components as ComponentType } from "@/lib/types/components";
 
+const ProjectCard = React.lazy(() => import("@/components/macro/project-card"));
+
 const Components = async ({ params }: { params: { slug: string } }) => {
-  const category = categories.filter((c) => c.type === params.slug);
+  const [category] = categories.filter((c) => c.type === params.slug);
   const component = components.filter((c) => c.type === params.slug);
 
-  const projects = await getProject({ slug: category[0].type });
-  const project = projects.projectsConnection.edges.map((p) => p.node);
+  const { projectsConnection } = await getProject({ slug: category.type });
+  const projects = projectsConnection.edges.map((p) => p.node);
+  const codes = projects.map((p) => p.code.raw.children[0].children[0].text);
+
+  const variantText = component.length > 1 ? "Variants" : "Variant";
 
   return (
     <div className="flex h-full flex-col gap-y-8 md:max-w-2xl">
@@ -20,17 +23,15 @@ const Components = async ({ params }: { params: { slug: string } }) => {
           {params.slug}
         </h1>
         <p className="mb-4 text-base text-muted-foreground">
-          {category.map((c) => c.description)}
+          {category.description}
         </p>
         <div className="flex h-6 w-fit items-center gap-x-2 rounded-sm border bg-muted px-2 text-xs font-medium text-muted-foreground dark:bg-popover dark:text-popover-foreground">
           <p>{component.length}</p>
           <div className="h-full w-[1px] bg-border" />
-          <p>{component.length > 1 ? "Variants" : "Variant"}</p>
+          <p>{variantText}</p>
         </div>
       </div>
-      <Requirements
-        requirements={category.length > 0 ? category[0].requirement : []}
-      />
+      <Requirements requirements={category.requirement} />
       <div className="flex w-full flex-col">
         <h2 className="mb-3 max-w-xl text-xl font-medium capitalize text-foreground">
           Example
@@ -40,7 +41,7 @@ const Components = async ({ params }: { params: { slug: string } }) => {
             <ProjectCard
               key={index}
               name={c.name}
-              codeString={project[index].code.raw.children[0].children[0].text}
+              codeString={codes && codes[index]}
             >
               <c.component />
             </ProjectCard>
@@ -50,4 +51,5 @@ const Components = async ({ params }: { params: { slug: string } }) => {
     </div>
   );
 };
+
 export default Components;

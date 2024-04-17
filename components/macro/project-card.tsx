@@ -21,39 +21,42 @@ const ProjectCard: FC<PreviewProps> = ({
   const [preview, setPreview] = useState<boolean>(true);
 
   return (
-    <div className="flex w-full flex-col relative">
-      <div className="flex items-center gap-x-1 absolute z-10 bg-background px-1 top-2 left-2 border rounded-md">
+    <div className="relative flex w-full flex-col">
+      <div className="anim absolute left-2 top-2 z-10 flex items-center gap-x-1 rounded-md border bg-background px-1">
         <Button
           variant={"secondary"}
           onClick={() => setPreview(true)}
-          className={`bg-background rounded-sm hover:bg-accent anim h-fit py-1 px-2 text-sm font-medium ${
-            preview
-              ? ""
-              : ""
+          className={`anim h-fit rounded-sm bg-background px-2 py-1 text-sm font-medium hover:bg-accent ${
+            preview ? "" : ""
           }`}
         >
           Preview
         </Button>
-        <div className="w-[1px] h-9 bg-border grow"/>
+        <div className="h-9 w-[1px] grow bg-border" />
         <Button
           variant={"secondary"}
           onClick={() => setPreview(false)}
-          className={`bg-background rounded-sm hover:bg-accent anim h-fit py-1 px-2 text-sm font-medium ${
-            preview
-              ? ""
-              : ""
+          className={`anim h-fit rounded-sm bg-background px-2 py-1 text-sm font-medium hover:bg-accent ${
+            preview ? "" : ""
           }`}
         >
           Code
         </Button>
       </div>
       {preview ? (
-        <div className="flex h-full w-full items-center justify-center rounded-md border px-6 py-16 md:px-8 md:py-20 lg:px-10 lg:py-24">
+        <div className="flex h-full w-full flex-wrap items-center justify-center gap-3 rounded-md border px-6 py-16 md:px-8 md:py-20 lg:px-10 lg:py-24">
           {children}
         </div>
       ) : (
         <Shiki code={codeString} lang="tsx" />
       )}
+      <div className="absolute bottom-2 left-3">
+        {name && preview && (
+          <code className="text-sm font-medium text-foreground md:text-base">
+            {name}
+          </code>
+        )}
+      </div>
     </div>
   );
 };

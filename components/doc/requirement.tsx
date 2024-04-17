@@ -48,7 +48,7 @@ const Requirements: FC<RequirementsProps> = ({ requirements = [] }) => {
       {requirements.length > 0 && (
         <div className="w-full rounded-md border">
           {loading ? (
-            <div className="flex items-center justify-center p-2 text-sm text-primary">
+            <div className="flex items-center justify-center px-4 py-5 text-sm text-primary">
               <LoaderCircle size={24} className="animate-spin" />
             </div>
           ) : (

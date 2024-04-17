@@ -78,7 +78,7 @@ const getPost = async ({ slug }: { slug: string }) => {
 const getProject = async ({ slug }: { slug: string }) => {
   const query = gql`
     query FetchProject($slug: String!) {
-      projectsConnection(where: { slug: $slug }) {
+      projectsConnection(orderBy: createdAt_ASC, where: { slug: $slug }) {
         edges {
           node {
             createdAt

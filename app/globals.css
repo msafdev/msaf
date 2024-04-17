@@ -55,6 +55,11 @@
   }
 
   html,
+  body {
+    @apply min-w-60;
+  }
+
+  html,
   h1,
   h2,
   h3,
