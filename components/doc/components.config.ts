@@ -364,7 +364,7 @@ export const categories: Categories[] = [
     name: "Tweet",
     type: "tweet",
     description:
-      "A tweet component is a UI element or module designed to display a tweet within an application.",
+      "A tweet component is a UI element or module designed to display a tweet within an application. This was made with react-tweet package from Vercel.",
     requirement: [TweetRequirement],
     reqLang: "tsx",
     url: "https://github.com/msafdev",
