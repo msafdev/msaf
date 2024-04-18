@@ -44,7 +44,7 @@ const TweetNotFound = () => {
 };
 
 const Content = async ({
-  id = "1777751741359923543",
+  id = "1776282373703016801",
   components,
   onError,
 }: TweetProps) => {
