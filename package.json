@@ -36,6 +36,7 @@
     "react-dom": "^18",
     "react-icons": "^5.1.0",
     "react-syntax-highlighter": "^15.5.0",
+    "react-tweet": "^3.2.1",
     "react-wrap-balancer": "^1.1.0",
     "sharp": "^0.32",
     "tailwind-merge": "^2.2.1",

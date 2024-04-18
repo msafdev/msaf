@@ -35,7 +35,10 @@ const Components = async ({ params }: { params: { slug: string } }) => {
         <h2 className="mb-2 max-w-xl text-xl font-medium capitalize text-foreground">
           Requirements
         </h2>
-        <Requirements requirements={category.requirement} />
+        <Requirements
+          requirements={category.requirement}
+          lang={category.reqLang}
+        />
       </div>
       <div className="flex w-full flex-col">
         <h2 className="mb-3 max-w-xl text-xl font-medium capitalize text-foreground">

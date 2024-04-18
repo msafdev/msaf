@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { BundledLanguage } from "shiki";
 
 // Types
 export interface Components {
@@ -13,5 +14,6 @@ export interface Categories {
   type: string;
   description: string;
   requirement?: string[];
+  reqLang?: BundledLanguage;
   url: string;
 }

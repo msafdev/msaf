@@ -75,16 +75,26 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "ping": {
+        ping: {
           0: { transform: "scale(1)", opacity: "1" },
           75: { transform: "scale(1.1)", opacity: "0" },
           100: { transform: "scale(1.1)", opacity: "0" },
-        }
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        marquee2: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "ping": "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
+        ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
+        marquee: "marquee 25s linear infinite",
+        marquee2: "marquee2 25s linear infinite",
       },
     },
   },

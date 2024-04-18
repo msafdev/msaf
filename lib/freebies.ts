@@ -53,7 +53,7 @@ const SidebarGeneralItems: SidebarGenItems[] = [
 
 const SidebarItems: SidebarSubItems[] = [
   {
-    name: "Components",
+    name: "Component",
     subItems: [
       {
         name: "Button",
@@ -80,30 +80,25 @@ const SidebarItems: SidebarSubItems[] = [
         icon: ArrowRight,
         href: "profile",
       },
+      {
+        name: "Marquee",
+        icon: ArrowRight,
+        href: "marquee",
+      },
     ],
   },
   {
-    name: "Layouts",
+    name: "Special",
     subItems: [
       {
-        name: "Typography",
+        name: "Grid",
         icon: ArrowRight,
-        href: "typography",
+        href: "grid",
       },
       {
-        name: "Gallery",
+        name: "Tweet",
         icon: ArrowRight,
-        href: "gallery",
-      },
-      {
-        name: "Hero",
-        icon: ArrowRight,
-        href: "hero",
-      },
-      {
-        name: "Portfolio",
-        icon: ArrowRight,
-        href: "portfolio",
+        href: "tweet",
       },
     ],
   },

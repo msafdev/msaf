@@ -8,6 +8,7 @@ import { themeAtom } from "@/lib/atoms/themeAtom";
 import { useAtom } from "jotai";
 
 import { LoaderCircle } from "lucide-react";
+import CopyButton from "../button/copy-button";
 
 interface RequirementsProps {
   requirements?: string[];
@@ -42,16 +43,22 @@ const Requirements: FC<RequirementsProps> = ({
         <p className="text-sm text-muted-foreground">No requirements</p>
       )}
       {requirements.length > 0 && (
-        <div className="w-full rounded-md border">
+        <div className="relative max-h-96 w-full overflow-y-auto rounded-md border">
           {loading ? (
             <div className="flex items-center justify-center px-4 py-3 text-sm text-primary">
               <LoaderCircle size={24} className="animate-spin" />
             </div>
           ) : (
-            <div
-              className="rounded-md bg-background text-sm [&>pre]:overflow-x-auto [&>pre]:!rounded-md [&>pre]:py-3 [&>pre]:pl-4 [&>pre]:pr-5 [&>pre]:leading-snug dark:[&>pre]:!bg-background [&_code]:block [&_code]:w-fit [&_code]:min-w-full"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
+            <>
+              <div
+                className="rounded-md bg-background text-sm [&>pre]:overflow-x-auto [&>pre]:!rounded-md [&>pre]:py-3 [&>pre]:pl-4 [&>pre]:pr-5 [&>pre]:leading-snug dark:[&>pre]:!bg-background [&_code]:block [&_code]:w-fit [&_code]:min-w-full"
+                dangerouslySetInnerHTML={{ __html: html }}
+              />
+              <CopyButton
+                codeString={requirements.join("\n")}
+                className="absolute right-2 top-2"
+              />
+            </>
           )}
         </div>
       )}
