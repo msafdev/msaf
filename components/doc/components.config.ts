@@ -30,8 +30,8 @@ import GridTwo from "@/components/doc/grid/grid-two";
 import GridThree from "@/components/doc/grid/grid-three";
 
 // Marquee
-import MarqueeOne from "@/components/doc/marquee/marquee-one";
-import TweetOne from "./tweet/tweet-one";
+import Marquee from "@/components/doc/marquee/marquee";
+import Tweet from "./tweet/tweet";
 import CyberButton from "./button/cyberpunk-button";
 
 // Requirement Markdown
@@ -42,14 +42,9 @@ extend: {
       "0%": { transform: "translateX(0%)" },
       "100%": { transform: "translateX(-100%)" },
     },
-    marquee2: {
-      "0%": { transform: "translateX(100%)" },
-      "100%": { transform: "translateX(0%)" },
-    },
   },
   animation: {
-    marquee: "marquee 25s linear infinite",
-    marquee2: "marquee2 25s linear infinite",
+    marquee: "marquee 10s linear infinite",
   },
 }`;
 
@@ -477,15 +472,15 @@ export const components: Components[] = [
   },
   // Marquee
   {
-    component: MarqueeOne,
-    path: "marquee-one",
+    component: Marquee,
+    path: "marquee.tsx",
     type: "marquee",
     name: "Infinite Marquee",
   },
   // Tweet
   {
-    component: TweetOne,
-    path: "tweet-one",
+    component: Tweet,
+    path: "",
     type: "tweet",
     name: "Twitter Embed",
   },
