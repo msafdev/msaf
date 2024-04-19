@@ -26,32 +26,32 @@ const CyberButton = ({
   return (
     <button
       className={cn(
-        "anim group relative flex w-fit items-center justify-center gap-x-4 px-4 py-1.5 delay-200",
+        "anim group relative flex w-fit items-center justify-center gap-x-4 px-4 py-1.5 delay-200 hover:rounded-sm",
         className,
         buttonVariant[variant],
       )}
     >
       <div
         className={cn(
-          "anim-slow pointer-events-none absolute left-0 top-0 h-2 w-2 border-l-[2px] border-t-[2px] group-hover:h-full group-hover:w-full",
+          "anim-slow pointer-events-none absolute left-0 top-0 h-2 w-2 border-l-[2px] border-t-[2px] group-hover:h-full group-hover:rounded-sm group-hover:w-full",
           borderVariant[variant],
         )}
       />
       <div
         className={cn(
-          "anim-slow pointer-events-none absolute right-0 top-0 h-2 w-2 border-r-[2px] border-t-[2px] group-hover:h-full group-hover:w-full",
+          "anim-slow pointer-events-none absolute right-0 top-0 h-2 w-2 border-r-[2px] border-t-[2px] group-hover:h-full group-hover:rounded-sm group-hover:w-full",
           borderVariant[variant],
         )}
       />
       <div
         className={cn(
-          "anim-slow pointer-events-none absolute bottom-0 left-0 h-2 w-2 border-b-[2px] border-l-[2px] group-hover:h-full group-hover:w-full",
+          "anim-slow pointer-events-none absolute bottom-0 left-0 h-2 w-2 border-b-[2px] border-l-[2px] group-hover:h-full group-hover:rounded-sm group-hover:w-full",
           borderVariant[variant],
         )}
       />
       <div
         className={cn(
-          "anim-slow pointer-events-none absolute bottom-0 right-0 h-2 w-2 border-b-[2px] border-r-[2px] group-hover:h-full group-hover:w-full",
+          "anim-slow pointer-events-none absolute bottom-0 right-0 h-2 w-2 border-b-[2px] border-r-[2px] group-hover:h-full group-hover:rounded-sm group-hover:w-full",
           borderVariant[variant],
         )}
       />
