@@ -1,10 +1,13 @@
 import React from "react";
-import { categories, components } from "@/components/doc/components.config";
+
+// Components
 import Requirements from "@/components/doc/requirement";
+import ProjectCard from "@/components/macro/project-card";
+
+// Utils
+import { categories, components } from "@/components/doc/components.config";
 import { getProject } from "@/lib/gql";
 import { Components as ComponentType } from "@/lib/types/components";
-
-const ProjectCard = React.lazy(() => import("@/components/macro/project-card"));
 
 const Components = async ({ params }: { params: { slug: string } }) => {
   const [category] = categories.filter((c) => c.type === params.slug);
@@ -50,8 +53,10 @@ const Components = async ({ params }: { params: { slug: string } }) => {
               key={index}
               name={c.name}
               codeString={codes && codes[index]}
+              type={c.type}
+              path={c.path}
             >
-              <c.component />
+              <c.component/>
             </ProjectCard>
           ))}
         </div>

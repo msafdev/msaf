@@ -16,7 +16,7 @@ import { Inspiration } from "@/lib/constants";
 
 const About = () => {
   return (
-    <section className="flex h-full w-full grow flex-col">
+    <section id="about" className="flex h-full w-full grow flex-col">
       <div className="pad-x flex w-full flex-col items-start gap-x-8 gap-y-6 py-4 md:flex-row md:py-8 lg:py-12">
         <h1 className="w-full text-balance text-2xl font-semibold leading-tight xs:text-3xl sm:text-left md:w-1/2 lg:text-4xl">
           I love to create something simple and clean

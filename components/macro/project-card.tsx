@@ -2,21 +2,26 @@
 
 import { FC, useState } from "react";
 
+// Components
 import Shiki from "@/components/macro/shikijs";
-
-// UI
 import { Button } from "../ui/button";
+import Link from "next/link";
+import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
 type PreviewProps = {
   codeString?: string;
   children?: React.ReactNode;
   name?: string;
+  type?: string;
+  path?: string;
 };
 
 const ProjectCard: FC<PreviewProps> = ({
   codeString = "console.log('Hello, World!')",
   children,
   name,
+  type,
+  path,
 }) => {
   const [preview, setPreview] = useState<boolean>(true);
 
@@ -43,6 +48,7 @@ const ProjectCard: FC<PreviewProps> = ({
           Code
         </Button>
       </div>
+      {/* Components */}
       {preview ? (
         <div className="flex h-full w-full flex-wrap items-center justify-center gap-3 rounded-md border px-6 py-16 md:px-8 md:py-20 lg:px-10 lg:py-24">
           {children}
@@ -57,6 +63,12 @@ const ProjectCard: FC<PreviewProps> = ({
           </code>
         )}
       </div>
+      <Link href={`https://github.com/msafdev/msaf-new/tree/main/components/doc/${type}/${path}`} target="_blank" className="absolute bottom-2 right-3">
+        <code className="flex items-center gap-x-2 text-sm hover:border-foreground border-b pb-0.5 leading-none border-transparent anim">
+          See Code
+          <ArrowTopRightIcon className="w-3 h-3" />
+        </code>
+      </Link>
     </div>
   );
 };

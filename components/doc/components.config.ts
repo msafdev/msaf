@@ -2,22 +2,22 @@
 import { Categories, Components } from "@/lib/types/components";
 
 // Profile
-import ProfileOne from "@/components/doc/profile/profile-one";
-import ProfileTwo from "@/components/doc/profile/profile-two";
+import Profile from "@/components/doc/profile/profile";
+import ProfileCard from "@/components/doc/profile/profile-card";
 
 // Badge
-import BadgeOne from "@/components/doc/badge/badge-one";
-import BadgeTwo from "@/components/doc/badge/badge-two";
+import Badge from "@/components/doc/badge/badge";
+import StatusBadge from "@/components/doc/badge/status-badge";
 
 // Button
-import ButtonOne from "@/components/doc/button/button-one";
-import ButtonTwo from "@/components/doc/button/button-two";
-import ButtonThree from "@/components/doc/button/button-three";
+import Button from "@/components/doc/button/button";
+import IconWithButton from "@/components/doc/button/w-icon-button";
+import IconButton from "@/components/doc/button/icon-button";
 
 // Card
-import CardOne from "@/components/doc/card/card-one";
-import CardTwo from "@/components/doc/card/card-two";
-import CardThree from "@/components/doc/card/card-three";
+import BlogCard from "@/components/doc/card/blog-card";
+import CreditCard from "@/components/doc/card/credit-card";
+import JobCard from "@/components/doc/card/job-card";
 
 // Input
 import InputOne from "@/components/doc/input/input-one";
@@ -32,6 +32,7 @@ import GridThree from "@/components/doc/grid/grid-three";
 // Marquee
 import MarqueeOne from "@/components/doc/marquee/marquee-one";
 import TweetOne from "./tweet/tweet-one";
+import CyberButton from "./button/cyberpunk-button";
 
 // Requirement Markdown
 const MarqueeRequirement = `// add to tailwind.config.js
@@ -292,7 +293,7 @@ export const categories: Categories[] = [
       "A profile component is a UI element or module designed to display information related to a user or entity's profile within an application.",
     requirement: [
       "# icons",
-      "npm i react-icons",
+      "npm i @radix-ui/react-icons",
       "",
       "# components",
       "npx shadcn-ui@latest add avatar",
@@ -323,13 +324,7 @@ export const categories: Categories[] = [
     type: "card",
     description:
       "A card component is a UI element or module designed to display information related to a user or entity within an application.",
-    requirement: [
-      "# icons",
-      "npm i react-icons",
-      "",
-      "# card-one",
-      "npx shadcn-ui@latest add button",
-    ],
+    requirement: ["# icons", "npm i react-icons"],
     url: "https://github.com/msafdev",
   },
   // Input
@@ -374,65 +369,71 @@ export const categories: Categories[] = [
 export const components: Components[] = [
   // Profile
   {
-    component: ProfileOne,
-    path: "profile-one",
+    component: Profile,
+    path: "profile.tsx",
     type: "profile",
-    name: "Profile Chip",
+    name: "Profile",
   },
   {
-    component: ProfileTwo,
-    path: "profile-two",
+    component: ProfileCard,
+    path: "profile-card.tsx",
     type: "profile",
     name: "Profile Card",
   },
   // Badge
   {
-    component: BadgeOne,
-    path: "badge-one",
+    component: Badge,
+    path: "badge.tsx",
     type: "badge",
     name: "Icon Badge",
   },
   {
-    component: BadgeTwo,
-    path: "badge-two",
+    component: StatusBadge,
+    path: "status-badge.tsx",
     type: "badge",
     name: "Status Badge",
   },
   // Button
   {
-    component: ButtonOne,
-    path: "button-one",
+    component: Button,
+    path: "button.tsx",
     type: "button",
     name: "Default Button",
   },
   {
-    component: ButtonTwo,
-    path: "button-two",
+    component: IconWithButton,
+    path: "w-icon-button.tsx",
     type: "button",
     name: "Button /w Icon",
   },
   {
-    component: ButtonThree,
-    path: "button-three",
+    component: IconButton,
+    path: "icon-button.tsx",
     type: "button",
-    name: "Icon",
+    name: "Icon Button",
+  },
+  {
+    component: CyberButton,
+    path: "cyberpunk-button.tsx",
+    type: "button",
+    name: "Cyberpunk Button",
   },
   // Card
   {
-    component: CardOne,
-    path: "card-one",
+    component: BlogCard,
+    path: "blog-card.tsx",
     type: "card",
     name: "Blog Card",
   },
   {
-    component: CardTwo,
-    path: "card-two",
+    component: CreditCard,
+    path: "credit-card.tsx",
     type: "card",
     name: "Credit Card",
   },
   {
-    component: CardThree,
-    path: "card-three",
+    component: JobCard,
+    path: "job-card.tsx",
     type: "card",
     name: "Job Card",
   },

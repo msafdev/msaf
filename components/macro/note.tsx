@@ -7,7 +7,7 @@ interface NoteProps {
 }
 
 const Note: FC<NoteProps> = ({
-  variant = "primary",
+  variant = "secondary",
   children,
   className = "",
 }) => {
