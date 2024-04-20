@@ -57,11 +57,11 @@ const Template = () => {
         {Templates.map((template, index) => (
           <TemplateCard key={index} {...template} />
         ))}
-        <div className="flex h-full w-full grow items-center justify-center">
+        {/* <div className="flex h-full w-full grow items-center justify-center">
           <p className="max-w-xs text-center text-sm font-semibold italic text-muted-foreground xs:text-base md:text-lg">
             Currently building a new template. Stay tuned!
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
