@@ -33,7 +33,7 @@ const Template = () => {
   return (
     <section
       id="template"
-      className="flex h-fit min-h-fit w-full md:grow flex-col gap-y-4 py-4 md:h-full md:gap-y-8 md:py-8 lg:gap-y-12 lg:py-12"
+      className="flex h-full w-full grow flex-col gap-y-4 py-4 md:gap-y-8 md:py-8 lg:gap-y-12 lg:py-12"
     >
       <div className="pad-x flex h-full w-full flex-col gap-y-2 md:gap-y-4">
         <h1 className="text-lg font-semibold xs:text-xl md:text-2xl">
@@ -53,7 +53,7 @@ const Template = () => {
         </p>
       </div>
       <div className="h-[1px] w-full bg-border" />
-      <div className="pad-x grid h-fit w-full grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:gap-12 xl:grid-cols-3">
+      <div className="pad-x grid h-fit min-h-fit w-full grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:gap-12 xl:grid-cols-3">
         {Templates.map((template, index) => (
           <TemplateCard key={index} {...template} />
         ))}
