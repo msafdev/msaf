@@ -53,7 +53,7 @@ const Template = () => {
         </p>
       </div>
       <div className="h-[1px] w-full bg-border" />
-      <div className="pad-x grid h-fit min-h-fit w-full grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:gap-12 xl:grid-cols-3">
+      <div className="pad-x grid h-full min-h-fit w-full grow grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:gap-12 xl:grid-cols-3">
         {Templates.map((template, index) => (
           <TemplateCard key={index} {...template} />
         ))}
