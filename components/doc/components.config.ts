@@ -24,10 +24,11 @@ import InputOne from "@/components/doc/input/input-one";
 import InputTwo from "@/components/doc/input/input-two";
 import InputThree from "@/components/doc/input/input-three";
 
-// Grid
-import GridOne from "@/components/doc/grid/grid-one";
-import GridTwo from "@/components/doc/grid/grid-two";
-import GridThree from "@/components/doc/grid/grid-three";
+// Widget
+import BrandWidget from "@/components/doc/widget/brand-widget";
+import ClockWidget from "@/components/doc/widget/clock-widget";
+import GraphWidget from "./widget/graph-widget";
+import StatsWidget from "./widget/stats-widget";
 
 // Marquee
 import Marquee from "@/components/doc/marquee/marquee";
@@ -331,12 +332,13 @@ export const categories: Categories[] = [
     requirement: ["# icons", "npm i @radix-ui/react-icons"],
     url: "https://github.com/msafdev",
   },
-  // Grid
+  // Widget
   {
-    name: "Grid",
-    type: "grid",
+    name: "Widget",
+    type: "widget",
     description:
-      "A grid component is a UI element or module designed to display information in a grid layout within an application.",
+      "A widget component is a UI element or module designed to display information in a grid layout within an application.",
+    requirement: ["# icons", "npm i react-icons"],
     url: "https://github.com/msafdev",
   },
   // Marquee
@@ -451,24 +453,30 @@ export const components: Components[] = [
     type: "input",
     name: "Icon Input",
   },
-  // Grid
+  // Widget
   {
-    component: GridOne,
-    path: "grid-one",
-    type: "grid",
-    name: "4x4 Grid",
+    component: BrandWidget,
+    path: "brand-widget.tsx",
+    type: "widget",
+    name: "Brand Widget",
   },
   {
-    component: GridTwo,
-    path: "grid-two",
-    type: "grid",
-    name: "3x2 Grid",
+    component: ClockWidget,
+    path: "clock-widget.tsx",
+    type: "widget",
+    name: "Clock Widget",
   },
   {
-    component: GridThree,
-    path: "grid-three",
-    type: "grid",
-    name: "Bento Grid",
+    component: GraphWidget,
+    path: "graph-widget.tsx",
+    type: "widget",
+    name: "Graph Widget",
+  },
+  {
+    component: StatsWidget,
+    path: "stats-widget.tsx",
+    type: "widget",
+    name: "Stats Widget",
   },
   // Marquee
   {

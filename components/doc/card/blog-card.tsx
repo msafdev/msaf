@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
-
 const BlogCard = ({
   title = "Card Title",
   description = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, deserunt?",

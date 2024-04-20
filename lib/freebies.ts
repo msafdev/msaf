@@ -91,9 +91,9 @@ const SidebarItems: SidebarSubItems[] = [
     name: "Special",
     subItems: [
       {
-        name: "Grid",
+        name: "Widget",
         icon: ArrowRight,
-        href: "grid",
+        href: "widget",
       },
       {
         name: "Tweet",
