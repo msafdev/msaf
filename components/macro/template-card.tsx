@@ -1,13 +1,10 @@
 import { SiVercel } from "react-icons/si";
 
 // Assets
-import Terma from "@/public/images/templates/terma.png";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { StarFilledIcon } from "@radix-ui/react-icons";
 
 const TemplateStack = ({ stack }: { stack: string[] }) => {
-  console.log(stack);
   return (
     <div className="anim absolute -top-full left-0 z-10 flex w-full items-center justify-around border-b bg-popover px-3 group-hover:top-0">
       {stack.map((item, index) => (
@@ -19,7 +16,10 @@ const TemplateStack = ({ stack }: { stack: string[] }) => {
             {item}
           </code>
           {index !== stack.length - 1 && (
-            <div className="h-auto w-[1px] self-stretch bg-border" />
+            <div
+              key={index}
+              className="h-auto w-[1px] self-stretch bg-border"
+            />
           )}
         </>
       ))}
