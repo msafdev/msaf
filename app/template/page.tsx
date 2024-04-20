@@ -16,15 +16,15 @@ const Templates = [
     price: "Free",
     category: "Portfolio",
   },
-  {
-    name: "Countify",
-    url: "https://countify-wine.vercel.app",
-    image: Countify,
-    type: "Open Source",
-    stack: ["Next", "Tailwind", "Supabase"],
-    price: "Free",
-    category: "Web App",
-  },
+  // {
+  //   name: "Countify",
+  //   url: "https://countify-wine.vercel.app",
+  //   image: Countify,
+  //   type: "Open Source",
+  //   stack: ["Next", "Tailwind", "Supabase"],
+  //   price: "Free",
+  //   category: "Web App",
+  // },
 ];
 
 const Template = () => {
