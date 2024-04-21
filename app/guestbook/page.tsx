@@ -23,7 +23,7 @@ const Feedback = async () => {
       className="flex h-full w-full grow flex-col gap-y-4 md:gap-y-8 lg:gap-y-12"
     >
       <div className="flex h-full w-full grow flex-col md:flex-row">
-        <div className="pad-x relative flex h-auto w-full flex-col">
+        <div className="md:pad-x px-6 relative flex h-auto w-full flex-col">
           <div className="relative flex h-auto w-full grow flex-col gap-6 py-4 md:gap-8 md:py-6 lg:py-12">
             {/* Login */}
             <div className="group relative z-10 flex h-fit w-fit flex-col pl-8">
