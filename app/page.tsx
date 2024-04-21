@@ -8,6 +8,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+import {
+  FileText,
+  GitPullRequest,
+  Link2,
+  MessageCircleHeart,
+  MessageSquare,
+  Sparkles,
+} from "lucide-react";
 
 export default function Home() {
   return (
@@ -17,7 +25,7 @@ export default function Home() {
         className="flex h-full w-full flex-col pt-4 md:grow md:pt-8 lg:pt-12"
       >
         <div className="pad-x relative w-full">
-          <h1 className="text-balance text-2xl font-medium leading-tight xs:text-3xl text-left md:w-[60%] lg:text-4xl">
+          <h1 className="text-balance text-left text-2xl font-medium leading-tight xs:text-3xl md:w-[60%] lg:text-4xl">
             Software Engineer
             <br />
             UI Designer
@@ -42,40 +50,80 @@ export default function Home() {
         </div>
 
         <div className="anim mt-4 grid h-fit w-full grid-cols-2 grid-rows-3 items-center justify-between border-y md:mt-8 md:flex md:grid-rows-1 lg:mt-12">
-          <div className="md:pad-l anim col-span-1 flex h-fit w-full items-center justify-center py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2">
+          <Link
+            href={"https://github.com/msafdev"}
+            target="_blank"
+            className="md:pad-l anim group col-span-1 flex h-fit w-full items-center justify-center gap-x-2 py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2"
+          >
+            <Sparkles
+              size={14}
+              className="anim-slow delay-100 group-hover:text-yellow-300"
+            />
             <p className="text-center text-xs font-medium text-foreground">
-              Jira
+              Starter
             </p>
-          </div>
-          <div className="anim col-span-1 flex h-fit w-full items-center justify-center border-l py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2">
+          </Link>
+          <Link
+            href={
+              "https://drive.google.com/file/d/1V7Qa8LvjbemeR9QcOb0p1hoVKRmp5m1i/view?usp=sharing"
+            }
+            target="_blank"
+            className="anim group col-span-1 flex h-fit w-full items-center justify-center gap-x-2 border-l py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2"
+          >
+            <FileText
+              size={14}
+              className="anim-slow delay-100 group-hover:text-red-500"
+            />
             <p className="text-center text-xs font-medium text-foreground">
-              Typescript
+              Resume
             </p>
-          </div>
-          <div className="anim col-span-1 flex h-fit w-full items-center justify-center border-l-0 border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-l md:border-t-0">
+          </Link>
+          <Link
+            href={"/guestbook"}
+            className="anim group col-span-1 flex h-fit w-full items-center justify-center gap-x-2 border-l-0 border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-l md:border-t-0"
+          >
+            <MessageCircleHeart
+              size={14}
+              className="anim-slow delay-100 group-hover:text-rose-400"
+            />
             <p className="text-center text-xs font-medium text-foreground">
-              Hygraph
+              Guestbook
             </p>
-          </div>
-          <div className="anim col-span-1 flex h-fit w-full items-center justify-center border-l border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-t-0">
+          </Link>
+          <Link
+            href={"https://github.com/msafdev/msaf-new"}
+            target="_blank"
+            className="anim group col-span-1 flex h-fit w-full items-center justify-center gap-x-2 border-l border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-t-0"
+          >
+            <GitPullRequest
+              size={14}
+              className="anim-slow delay-100 group-hover:text-black"
+            />
             <p className="text-center text-xs font-medium text-foreground">
-              Next
+              Contribute
             </p>
-          </div>
-          <div className="md:pad-r anim col-span-2 flex h-fit w-full items-center justify-center border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-l md:border-t-0">
+          </Link>
+          <Link
+            href={"https://github.com/msafdev"}
+            className="md:pad-r anim group col-span-2 flex h-fit w-full items-center justify-center gap-x-2 border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-l md:border-t-0"
+          >
+            <Link2
+              size={14}
+              className="anim-slow delay-100 group-hover:text-sky-500"
+            />
             <p className="text-center text-xs font-medium text-foreground">
-              Github
+              Link
             </p>
-          </div>
+          </Link>
         </div>
 
         <div className="pad-x flex w-full flex-col justify-center py-4 md:grow md:py-8 lg:py-12">
           <div className="grid grid-cols-1 items-end gap-x-6 md:grid-cols-2">
             <div className="flex flex-col justify-between">
-              <p className="mb-2 w-full text-sm font-medium uppercase text-muted-foreground md:mb-5">
+              <p className="mb-2 w-full text-sm font-medium uppercase text-muted-foreground md:mb-3">
                 Portfolio
               </p>
-              <h2 className="mb-4 w-full max-w-lg text-balance text-xl font-semibold text-foreground md:mb-6 md:text-2xl lg:text-3xl">
+              <h2 className="mb-3 w-full max-w-lg text-balance text-xl font-semibold text-foreground md:mb-4 md:text-2xl lg:text-3xl">
                 I strive to create beatiful and useful things
               </h2>
               <p className="text-balance text-base text-muted-foreground md:max-w-sm md:text-lg lg:max-w-lg">
@@ -86,7 +134,7 @@ export default function Home() {
                 also a speaker. Feel free to surf around 👋
               </p>
 
-              <h2 className="ml-auto mt-8 font-semibold uppercase text-foreground md:ml-0">
+              <h2 className="ml-auto mt-8 text-sm font-semibold uppercase text-foreground md:ml-0 md:text-base">
                 Featured Projects
               </h2>
             </div>

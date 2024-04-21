@@ -1,15 +1,17 @@
 // Components
+import ContentForm from "@/components/form/content-form";
 import GuestbookCard from "@/components/macro/guestbook-card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 // Utils
-import { addFeedback } from "@/utils/action/add";
 import { githubSignIn, signOut } from "@/utils/function/fn";
 import { createClient } from "@/utils/supabase/server";
 
 // Icons
-import { ArrowRightIcon, GitHubLogoIcon, Pencil1Icon } from "@radix-ui/react-icons";
+import {
+  GitHubLogoIcon,
+  Pencil1Icon,
+} from "@radix-ui/react-icons";
 
 const Feedback = async () => {
   const supabase = createClient();
@@ -23,7 +25,7 @@ const Feedback = async () => {
       className="flex h-full w-full grow flex-col gap-y-4 md:gap-y-8 lg:gap-y-12"
     >
       <div className="flex h-full w-full grow flex-col md:flex-row">
-        <div className="md:pad-x px-6 relative flex h-auto w-full flex-col">
+        <div className="md:pad-x relative flex h-auto w-full flex-col px-6">
           <div className="relative flex h-auto w-full grow flex-col gap-6 py-4 md:gap-8 md:py-6 lg:py-12">
             {/* Login */}
             <div className="group relative z-10 flex h-fit w-fit flex-col pl-8">
@@ -35,35 +37,11 @@ const Feedback = async () => {
               </p>
               {user && user.user ? (
                 <>
-                  <form
-                    className="mt-2 flex w-full flex-col"
-                    action={addFeedback}
-                  >
-                    <p className="mb-2 text-balance text-sm text-muted-foreground">
-                      Signed in as{" "}
-                      <span className="text-foreground">{user.user.email}</span>
-                    </p>
-                    <div className="flex items-center gap-x-2">
-                      <Input
-                        placeholder=""
-                        name="content"
-                        id="content"
-                        type="text"
-                        maxLength={100}
-                      />
-                      <Button
-                        type="submit"
-                        className="aspect-square px-2 py-2"
-                        variant={"secondary"}
-                      >
-                        <ArrowRightIcon className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </form>
+                  <ContentForm user={user.user} />
                   <form action={signOut} className="mt-1">
                     <Button
                       type="submit"
-                      className="flex h-fit items-center justify-start gap-2 px-0 py-0 text-sm hover:bg-transparent font-medium"
+                      className="flex h-fit items-center justify-start gap-2 px-0 py-0 text-sm font-medium hover:bg-transparent"
                       variant={"ghost"}
                     >
                       Sign out
@@ -86,19 +64,21 @@ const Feedback = async () => {
                 <Pencil1Icon className="h-4 w-4" />
               </div>
             </div>
-            {/* Content */}
-            {guestbook &&
-              guestbook.map((item, index) => {
-                return (
-                  <GuestbookCard
-                    content={item.content}
-                    user_id={item.user_id as string}
-                    key={index}
-                    createdAt={item.created_at as string}
-                    index={index}
-                  />
-                );
-              })}
+            <div className="flex h-fit w-full flex-col-reverse gap-6 md:gap-8">
+              {/* Content */}
+              {guestbook &&
+                guestbook.map((item, index) => {
+                  return (
+                    <GuestbookCard
+                      content={item.content}
+                      user_id={item.user_id as string}
+                      key={index}
+                      createdAt={item.created_at as string}
+                      index={index}
+                    />
+                  );
+                })}
+            </div>
             <div className="absolute top-0 h-full w-[1px] grow bg-border" />
           </div>
         </div>

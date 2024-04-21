@@ -4,8 +4,8 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 
-export async function addFeedback(formData: FormData) {
-  let guestbook = formData.get("guestbook") as string;
+export async function addContent(formData: FormData) {
+  let content = formData.get("content") as string;
 
   const cookieStore = cookies();
   const supabase = createServerComponentClient({ cookies: () => cookieStore });
@@ -14,25 +14,26 @@ export async function addFeedback(formData: FormData) {
   const user_id = user.user?.id;
 
   if (!user) {
-    console.error("User is not authenticated!");
-    return;
+    return { error: "User not found" };
   }
 
-  const { data, error } = await supabase.from("guestbook").insert([
+  if (content.length < 3) {
+    return { error: "Content must be at least 3 characters" };
+  } else if (content.length > 100) {
+    return { error: "Content must be less than 100 characters" };
+  }
+
+  const { error } = await supabase.from("guestbook").insert([
     {
-      guestbook,
+      content: content,
       user_id: user_id,
     },
   ]);
 
   if (error) {
-    console.error("Error inserting data", error);
-    return;
+    return { error: "Error inserting data" };
+  } else {
+    revalidatePath("/guestbook");
+    return { data: "Data inserted successfully" };
   }
-
-  revalidatePath("/");
-
-  formData.delete("guestbook");
-
-  return data;
 }
