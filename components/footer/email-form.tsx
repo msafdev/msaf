@@ -9,7 +9,7 @@ import { Textarea } from "../ui/textarea";
 import { useToast } from "../ui/use-toast";
 
 // Icons
-import { AtSign, LoaderCircle } from "lucide-react";
+import { LoaderCircle } from "lucide-react";
 
 // Lib
 import { sendEmail } from "@/lib/email";

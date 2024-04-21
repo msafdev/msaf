@@ -18,10 +18,10 @@ const About = () => {
   return (
     <section id="about" className="flex h-full w-full grow flex-col">
       <div className="pad-x flex w-full flex-col items-start gap-x-8 gap-y-6 py-4 md:flex-row md:py-8 lg:py-12">
-        <h1 className="w-full text-balance text-2xl font-semibold leading-tight xs:text-3xl sm:text-left md:w-1/2 lg:text-4xl">
+        <h1 className="w-full text-balance text-3xl font-medium leading-tight sm:text-left md:w-1/2 lg:text-4xl">
           I love to create something simple and clean
         </h1>
-        <div className="flex w-full flex-col gap-y-4 text-xs text-muted-foreground md:w-1/2 md:text-sm">
+        <div className="flex w-full flex-col gap-y-4 text-muted-foreground md:w-1/2">
           <p>
             <span className="font-medium text-foreground">MSAF</span> is a{" "}
             <span className="font-medium text-foreground">
@@ -121,7 +121,7 @@ const About = () => {
             </Link>
           </Button>
         </div>
-        <div className="pad-x flex h-auto w-auto gap-y-4 grow flex-col justify-center self-stretch pb-5 pt-4 md:items-center md:py-8 lg:py-12">
+        <div className="pad-x flex h-auto w-auto grow flex-col justify-center gap-y-4 self-stretch pb-5 pt-4 md:items-center md:py-8 lg:py-12">
           <h2 className="w-full text-balance text-left text-2xl font-semibold md:max-w-lg">
             Inspiration
           </h2>

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Fonts
-import { Montserrat } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 // Assets
 import "./globals.css";
@@ -14,12 +15,6 @@ import NotFound from "./not-found";
 import Navbar from "@/components/navbar/nav-bar";
 import Footer from "@/components/footer/foo-bar";
 import { Toaster } from "@/components/ui/toaster";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  weight: ["200", "300", "400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Salman",
@@ -34,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="no-scrollbar">
-      <body className={montserrat.className}>
+      <body className={GeistSans.className}>
         <SpeedInsights />
         <main className="flex w-full flex-col bg-background md:min-h-[100svh] ">
           <Navbar />

@@ -8,20 +8,14 @@ const TemplateStack = ({ stack }: { stack: string[] }) => {
   return (
     <div className="anim absolute -top-full left-0 z-10 flex w-full items-center justify-around border-b bg-popover px-3 group-hover:top-0">
       {stack.map((item, index) => (
-        <>
-          <code
-            key={index}
-            className="py-3 text-xs leading-none text-foreground"
-          >
+        <div className="flex w-full items-center justify-around" key={index}>
+          <code className="py-3 text-xs leading-none text-foreground">
             {item}
           </code>
           {index !== stack.length - 1 && (
-            <div
-              key={index}
-              className="h-auto w-[1px] self-stretch bg-border"
-            />
+            <div className="h-auto w-[1px] self-stretch bg-border" />
           )}
-        </>
+        </div>
       ))}
     </div>
   );

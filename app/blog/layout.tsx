@@ -21,8 +21,8 @@ export default function BlogLayout({
       className="flex h-full w-full grow flex-col pt-4 md:pt-8 lg:pt-12"
     >
       <div className="pad-x mb-4 pb-4 md:mb-6 lg:mb-8">
-        <h1 className="text-balance text-left text-3xl font-semibold leading-tight md:w-[70%] lg:text-4xl">
-          Explore my latest thoughts and ideas 🌟
+        <h1 className="text-balance text-left text-3xl font-medium leading-tight md:w-[60%] lg:text-4xl">
+          Writing on software engineering and personal anecdotes
         </h1>
         <p className="my-4 w-full max-w-lg text-muted-foreground md:my-5">
           I write about web development, business, and personal growth. You can

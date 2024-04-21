@@ -17,9 +17,12 @@ export default function Home() {
         className="flex h-full w-full flex-col pt-4 md:grow md:pt-8 lg:pt-12"
       >
         <div className="pad-x relative w-full">
-          <h1 className="text-balance text-center text-2xl font-semibold leading-tight xs:text-3xl sm:text-left md:w-[70%] lg:text-4xl">
-            Visual Driven<span className="mx-2 text-yellow-400">★</span>Web
-            Developer, converting ideas into reality
+          <h1 className="text-balance text-2xl font-medium leading-tight xs:text-3xl text-left md:w-[60%] lg:text-4xl">
+            Software Engineer
+            <br />
+            UI Designer
+            <br />
+            and Speaker
           </h1>
 
           <div className="pad-r absolute bottom-0 right-0 hidden flex-col items-end gap-y-2 sm:flex">
@@ -69,7 +72,7 @@ export default function Home() {
         <div className="pad-x flex w-full flex-col justify-center py-4 md:grow md:py-8 lg:py-12">
           <div className="grid grid-cols-1 items-end gap-x-6 md:grid-cols-2">
             <div className="flex flex-col justify-between">
-              <p className="mb-3 w-full text-sm font-medium uppercase text-muted-foreground md:mb-5">
+              <p className="mb-2 w-full text-sm font-medium uppercase text-muted-foreground md:mb-5">
                 Portfolio
               </p>
               <h2 className="mb-4 w-full max-w-lg text-balance text-xl font-semibold text-foreground md:mb-6 md:text-2xl lg:text-3xl">
