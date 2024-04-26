@@ -66,7 +66,8 @@ const Footer = () => {
             <HoverItem header="Nav">
               <HoverLinks href="/about">About</HoverLinks>
               <HoverLinks href="/blog">Blog</HoverLinks>
-              <HoverLinks href="/project">Project</HoverLinks>
+              <HoverLinks href="/playground">Playground</HoverLinks>
+              <HoverLinks href="/template">Template</HoverLinks>
             </HoverItem>
           </HoverCard>
           <HoverCard className="border-b">

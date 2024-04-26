@@ -18,17 +18,17 @@ const SidebarButton: FC<SidebarButtonProps> = ({ children, href, onClick }) => {
       <button
         onClick={onClick}
         className={`anim group group flex w-fit cursor-pointer items-center border-b py-1 hover:border-b-primary ${
-          currentPath === `/project`
+          currentPath === `/playground`
             ? "border-b-primary"
             : "border-b-transparent"
         }`}
       >
         <Link
           href={{
-            pathname: `/project`,
+            pathname: `/playground`,
           }}
           className={`anim flex w-full items-center text-sm font-medium group-hover:text-foreground ${
-            currentPath === `/project`
+            currentPath === `/playground`
               ? "text-foreground"
               : "text-muted-foreground"
           }`}
@@ -43,17 +43,17 @@ const SidebarButton: FC<SidebarButtonProps> = ({ children, href, onClick }) => {
     <button
       onClick={onClick}
       className={`anim group group flex w-fit cursor-pointer items-center border-b py-1 hover:border-b-primary ${
-        currentPath === `/project/${href}`
+        currentPath === `/playground/${href}`
           ? "border-b-primary"
           : "border-b-transparent"
       }`}
     >
       <Link
         href={{
-          pathname: `/project/${href}`,
+          pathname: `/playground/${href}`,
         }}
         className={`anim flex w-full items-center text-sm font-medium group-hover:text-foreground ${
-          currentPath === `/project/${href}`
+          currentPath === `/playground/${href}`
             ? "text-foreground"
             : "text-muted-foreground"
         }`}

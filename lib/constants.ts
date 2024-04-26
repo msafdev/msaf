@@ -8,8 +8,8 @@ const NavItems = [
     href: "/blog",
   },
   {
-    name: "Project",
-    href: "/project",
+    name: "Playground",
+    href: "/playground",
   },
   {
     name: "Template",

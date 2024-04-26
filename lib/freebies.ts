@@ -10,6 +10,7 @@ interface SidebarSub {
   name: string;
   href: string;
   icon?: ElementType;
+  status?: "new" | "updated";
 }
 
 interface SidebarGen {
@@ -94,11 +95,17 @@ const SidebarItems: SidebarSubItems[] = [
         name: "Widget",
         icon: ArrowRight,
         href: "widget",
+        status: "updated",
       },
       {
         name: "Tweet",
         icon: ArrowRight,
         href: "tweet",
+      },
+      {
+        name: "Window",
+        icon: ArrowRight,
+        href: "window",
       },
     ],
   },

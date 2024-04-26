@@ -8,18 +8,18 @@ import { BadgeAlert, Star } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Salman | Project",
-  description: "A collection of my projects",
+  title: "Salman | Playground",
+  description: "A safe-haven for my experiments and explorations.",
 };
 
-export default function ProjectLayout({
+export default function PlaygroundLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <section
-      id="project"
+      id="playground"
       className="relative flex h-full w-full grow flex-col md:flex-row"
     >
       <Sidebar />

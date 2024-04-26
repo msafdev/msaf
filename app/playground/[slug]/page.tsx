@@ -2,7 +2,7 @@ import React from "react";
 
 // Components
 import Requirements from "@/components/doc/requirement";
-import ProjectCard from "@/components/macro/project-card";
+import PlaygroundCard from "@/components/macro/playground-card";
 
 // Utils
 import { categories, components } from "@/components/doc/components.config";
@@ -49,7 +49,7 @@ const Components = async ({ params }: { params: { slug: string } }) => {
         </h2>
         <div className="grid w-full grid-cols-1 gap-4">
           {component.map((c: ComponentType, index: number) => (
-            <ProjectCard
+            <PlaygroundCard
               key={index}
               name={c.name}
               codeString={codes && codes[index]}
@@ -57,7 +57,7 @@ const Components = async ({ params }: { params: { slug: string } }) => {
               path={c.path}
             >
               <c.component/>
-            </ProjectCard>
+            </PlaygroundCard>
           ))}
         </div>
       </div>

@@ -16,7 +16,7 @@ type PreviewProps = {
   path?: string;
 };
 
-const ProjectCard: FC<PreviewProps> = ({
+const PlaygroundCard: FC<PreviewProps> = ({
   codeString = "console.log('Hello, World!')",
   children,
   name,
@@ -72,4 +72,4 @@ const ProjectCard: FC<PreviewProps> = ({
     </div>
   );
 };
-export default ProjectCard;
+export default PlaygroundCard;

@@ -136,7 +136,14 @@ const Sidebar = () => {
               </h1>
               <ul className="flex flex-col gap-y-1">
                 {item.subItems.map((subItem, index) => (
-                  <li key={index}>
+                  <li key={index} className="relative">
+                    {subItem.status && (
+                      <div className="absolute right-0 top-1 w-fit translate-x-5 rounded-full border bg-accent px-2 py-0.5 lg:translate-x-8">
+                        <p className="text-xs font-medium text-accent-foreground">
+                          New
+                        </p>
+                      </div>
+                    )}
                     <SidebarButton href={subItem.href}>
                       {subItem.icon && (
                         <subItem.icon className="mr-3 h-3.5 w-3.5" />

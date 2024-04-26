@@ -104,7 +104,7 @@ export default function Home() {
             </p>
           </Link>
           <Link
-            href={"https://github.com/msafdev"}
+            href={"https://msaf-link.vercel.app"}
             className="md:pad-r anim group col-span-2 flex h-fit w-full items-center justify-center gap-x-2 border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-l md:border-t-0"
           >
             <Link2
@@ -208,22 +208,33 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger>Noteify</AccordionTrigger>
+                <AccordionTrigger>Linkify</AccordionTrigger>
                 <AccordionContent>
                   <p className="mb-4 text-muted-foreground">
-                    A note taking website that can help you to write down,
-                    manage, and visualize your thoughts and ideas. Built with{" "}
+                    A little to no-code Linktree alternative with pre-made
+                    components you can easily customize. Built with{" "}
                     <span className="text-foreground">Next</span> and{" "}
                     <span className="text-foreground">Tailwind</span>.
                   </p>
-                  <Badge
-                    variant="secondary"
-                    className="relative flex w-fit items-center gap-x-2 rounded-full"
-                  >
-                    <div className="h-1.5 w-1.5 animate-ping rounded-full bg-yellow-500" />
-                    <div className="absolute left-2.5 h-1.5 w-1.5 rounded-full bg-yellow-500" />
-                    Building
-                  </Badge>
+                  <div className="flex items-center justify-between gap-x-4">
+                    <Badge
+                      variant="secondary"
+                      className="relative flex w-fit items-center gap-x-2 rounded-full"
+                    >
+                      <div className="h-1.5 w-1.5 animate-ping rounded-full bg-green-500" />
+                      <div className="absolute left-2.5 h-1.5 w-1.5 rounded-full bg-green-500" />
+                      Live
+                    </Badge>
+                    <Link
+                      href="https://linkify-demo.vercel.app"
+                      target="_blank"
+                      className="rounded-sm border bg-popover px-2 text-popover-foreground"
+                    >
+                      <code className="text-xs font-medium md:text-sm">
+                        Visit Project
+                      </code>
+                    </Link>
+                  </div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
