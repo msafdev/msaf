@@ -5,7 +5,7 @@ import EmptyCard from "@/components/macro/empty-card";
 // Fetch
 import { getPosts } from "@/lib/gql";
 
-export default async function Blog() {
+export default async function Page() {
   const posts = await getPosts();
 
   return (

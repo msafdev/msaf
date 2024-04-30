@@ -5,7 +5,7 @@ import EmptyCard from "@/components/macro/empty-card";
 // Fetch
 import { getPostsCategory } from "@/lib/gql";
 
-export default async function Category({
+export default async function Page({
   params,
 }: {
   params: { category: string };

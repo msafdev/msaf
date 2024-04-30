@@ -9,7 +9,7 @@ import {
 import Image from "next/image";
 import CopyButton from "@/components/button/copy-button";
 
-export default async function Read({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const post = await getPost({ slug: params.slug });
 
   const detail = post?.postsConnection?.edges[0].node;

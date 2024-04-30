@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { createAdminClient } from "@/utils/supabase/server";
+import { createAdminClient, createClient } from "@/utils/supabase/server";
 
 import { RocketIcon } from "@radix-ui/react-icons";
 
@@ -39,7 +39,7 @@ const GuestbookCard = async ({
   };
 
   return (
-    <div className="relative z-10 flex h-fit w-full flex-col gap-y-2 pl-8 group">
+    <div className="group relative z-10 flex h-fit w-full flex-col gap-y-2 pl-8">
       <div className="flex w-full items-center gap-4">
         <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-secondary md:h-10 md:w-10">
           <Image
@@ -65,4 +65,28 @@ const GuestbookCard = async ({
     </div>
   );
 };
-export default GuestbookCard;
+
+const Guestbook = async () => {
+  const supabase = createClient();
+  const { data: guestbook } = await supabase.from("guestbook").select("*");
+
+  return (
+    <div className="flex h-fit w-full flex-col-reverse gap-6 md:gap-8">
+      {/* Content */}
+      {guestbook &&
+        guestbook.map((item, index) => {
+          return (
+            <GuestbookCard
+              content={item.content}
+              user_id={item.user_id as string}
+              key={index}
+              createdAt={item.created_at as string}
+              index={index}
+            />
+          );
+        })}
+    </div>
+  );
+};
+
+export default Guestbook;

@@ -2,7 +2,7 @@ import Note from "@/components/macro/note";
 import { BadgeInfo } from "lucide-react";
 import Link from "next/link";
 
-export default function Introduction() {
+export default function Page() {
   return (
     <div className="flex h-full max-w-xl grow flex-col">
       <h1 className="text-2xl font-semibold text-foreground">Introduction</h1>

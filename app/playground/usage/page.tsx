@@ -1,7 +1,7 @@
 import { BundledLanguage } from "shiki";
 import Requirements from "@/components/doc/requirement";
 
-export default function Usage() {
+export default function Page() {
   const steps = [
     {
       title: "Install Next and Tailwind",

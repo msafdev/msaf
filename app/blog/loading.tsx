@@ -1,4 +1,4 @@
-import { BlogSkeleton } from "@/components/ui/skeleton";
+import { BlogSkeleton } from "@/components/macro/skeleton";
 
 const Loading = () => {
   return (

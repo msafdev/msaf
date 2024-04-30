@@ -1,23 +1,22 @@
 // Components
 import ContentForm from "@/components/form/content-form";
-import GuestbookCard from "@/components/macro/guestbook-card";
+import Guestbook from "@/components/macro/guestbook";
+import GuestbookCard from "@/components/macro/guestbook";
+import { GuestbookSkeleton } from "@/components/macro/skeleton";
 import { Button } from "@/components/ui/button";
 
 // Utils
-import { githubSignIn, signOut } from "@/utils/function/fn";
+import { githubSignIn, googleSignIn, signOut } from "@/utils/function/fn";
 import { createClient } from "@/utils/supabase/server";
 
 // Icons
-import {
-  GitHubLogoIcon,
-  Pencil1Icon,
-} from "@radix-ui/react-icons";
+import { GitHubLogoIcon, Pencil1Icon } from "@radix-ui/react-icons";
+import { Suspense } from "react";
+import { FcGoogle } from "react-icons/fc";
 
-const Feedback = async () => {
+const Page = async () => {
   const supabase = createClient();
   const { data: user, error } = await supabase.auth.getUser();
-
-  const { data: guestbook } = await supabase.from("guestbook").select("*");
 
   return (
     <section
@@ -49,36 +48,35 @@ const Feedback = async () => {
                   </form>
                 </>
               ) : (
-                <form action={githubSignIn} className="flex flex-col gap-2">
-                  <Button
-                    type="submit"
-                    className="flex items-center gap-2"
-                    variant={"outline"}
-                  >
-                    <GitHubLogoIcon className="h-4 w-4" /> Sign in with GitHub
-                  </Button>
-                </form>
+                <div className="flex flex-col gap-2">
+                  <form action={githubSignIn} className="w-full">
+                    <Button
+                      type="submit"
+                      className="flex w-full items-center gap-2"
+                      variant={"outline"}
+                    >
+                      <GitHubLogoIcon className="h-4 w-4" /> Sign in with GitHub
+                    </Button>
+                  </form>
+                  <form action={googleSignIn} className="w-full">
+                    <Button
+                      type="submit"
+                      className="flex w-full items-center gap-2"
+                      variant={"outline"}
+                    >
+                      <FcGoogle className="h-4 w-4" /> Sign in with Google
+                    </Button>
+                  </form>
+                </div>
               )}
 
               <div className="anim-slow absolute -left-4 top-0 flex h-8 w-8 items-center justify-center rounded-full border bg-popover text-popover-foreground group-hover:border-primary">
                 <Pencil1Icon className="h-4 w-4" />
               </div>
             </div>
-            <div className="flex h-fit w-full flex-col-reverse gap-6 md:gap-8">
-              {/* Content */}
-              {guestbook &&
-                guestbook.map((item, index) => {
-                  return (
-                    <GuestbookCard
-                      content={item.content}
-                      user_id={item.user_id as string}
-                      key={index}
-                      createdAt={item.created_at as string}
-                      index={index}
-                    />
-                  );
-                })}
-            </div>
+            <Suspense fallback={<GuestbookSkeleton />}>
+              <Guestbook />
+            </Suspense>
             <div className="absolute top-0 h-full w-[1px] grow bg-border" />
           </div>
         </div>
@@ -86,4 +84,4 @@ const Feedback = async () => {
     </section>
   );
 };
-export default Feedback;
+export default Page;

@@ -9,7 +9,7 @@ import { categories, components } from "@/components/doc/components.config";
 import { getProject } from "@/lib/gql";
 import { Components as ComponentType } from "@/lib/types/components";
 
-const Components = async ({ params }: { params: { slug: string } }) => {
+const Page = async ({ params }: { params: { slug: string } }) => {
   const [category] = categories.filter((c) => c.type === params.slug);
   const component = components.filter((c) => c.type === params.slug);
 
@@ -65,4 +65,4 @@ const Components = async ({ params }: { params: { slug: string } }) => {
   );
 };
 
-export default Components;
+export default Page;

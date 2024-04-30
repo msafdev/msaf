@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 // Constants
 import { Inspiration } from "@/lib/constants";
 
-const About = () => {
+const Page = () => {
   return (
     <section id="about" className="flex h-full w-full grow flex-col">
       <div className="pad-x flex w-full flex-col items-start gap-x-8 gap-y-6 py-4 md:flex-row md:py-8 lg:py-12">
@@ -154,4 +154,4 @@ const About = () => {
     </section>
   );
 };
-export default About;
+export default Page;

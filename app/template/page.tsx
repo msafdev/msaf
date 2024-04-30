@@ -4,7 +4,6 @@ import TemplateCard from "@/components/macro/template-card";
 // Images
 import Terma from "@/public/images/templates/terma.png";
 import Countify from "@/public/images/templates/countify.png";
-import { DotsHorizontalIcon } from "@radix-ui/react-icons";
 
 const Templates = [
   {
@@ -27,9 +26,7 @@ const Templates = [
   },
 ];
 
-const Template = () => {
-  const TargetDate = new Date("2024-10-26");
-
+const Page = () => {
   return (
     <section
       id="template"
@@ -61,4 +58,4 @@ const Template = () => {
     </section>
   );
 };
-export default Template;
+export default Page;

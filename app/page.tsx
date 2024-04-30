@@ -17,7 +17,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <section

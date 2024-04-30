@@ -35,6 +35,9 @@ import Marquee from "@/components/doc/marquee/marquee";
 import Tweet from "./tweet/tweet";
 import CyberButton from "./button/cyberpunk-button";
 
+// Window
+import Window from "@/components/doc/window/window";
+
 // Requirement Markdown
 const MarqueeRequirement = `// add to tailwind.config.js
 extend: {
@@ -361,6 +364,15 @@ export const categories: Categories[] = [
     reqLang: "tsx",
     url: "https://github.com/msafdev",
   },
+  // Window
+  {
+    name: "Window",
+    type: "window",
+    description:
+      "A window component is a UI element or module designed to display information in a window layout within an application.",
+    requirement: ["# icons", "npm i react-icons"],
+    url: "https://github.com/msafdev",
+  },
 ];
 
 export const components: Components[] = [
@@ -491,5 +503,12 @@ export const components: Components[] = [
     path: "",
     type: "tweet",
     name: "Twitter Embed",
+  },
+  // Window
+  {
+    component: Window,
+    path: "window.tsx",
+    type: "window",
+    name: "Window",
   },
 ];
