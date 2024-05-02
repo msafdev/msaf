@@ -1,7 +1,6 @@
 // Components
 import ContentForm from "@/components/form/content-form";
 import Guestbook from "@/components/macro/guestbook";
-import GuestbookCard from "@/components/macro/guestbook";
 import { GuestbookSkeleton } from "@/components/macro/skeleton";
 import { Button } from "@/components/ui/button";
 

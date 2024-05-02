@@ -13,7 +13,6 @@ import {
   GitPullRequest,
   Link2,
   MessageCircleHeart,
-  MessageSquare,
   Sparkles,
 } from "lucide-react";
 
@@ -50,8 +49,9 @@ export default function Page() {
         </div>
 
         <div className="anim mt-4 grid h-fit w-full grid-cols-2 grid-rows-3 items-center justify-between border-y md:mt-8 md:flex md:grid-rows-1 lg:mt-12">
+
           <Link
-            href={"https://github.com/msafdev"}
+            href={"https://github.com/msafdev?tab=repositories&q=&type=template"}
             target="_blank"
             className="md:pad-l anim group col-span-1 flex h-fit w-full items-center justify-center gap-x-2 py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2"
           >

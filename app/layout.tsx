@@ -3,7 +3,6 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Fonts
 import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
 
 // Assets
 import "./globals.css";
@@ -18,7 +17,8 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Salman",
-  description: "Salman's personal website",
+  description:
+    "This is Salman's (me!) personal website. I write about tech, programming, and other things I find interesting. I also share my projects and experiences. There is a playground where you can try out free components that I have build.",
   icons: "favicon.ico",
 };
 
