@@ -86,6 +86,7 @@ const SidebarItems: SidebarSubItems[] = [
         icon: ArrowRight,
         href: "marquee",
       },
+      { name: "Link", icon: ArrowRight, href: "link" },
     ],
   },
   {

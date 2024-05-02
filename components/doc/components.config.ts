@@ -27,16 +27,20 @@ import InputThree from "@/components/doc/input/input-three";
 // Widget
 import BrandWidget from "@/components/doc/widget/brand-widget";
 import ClockWidget from "@/components/doc/widget/clock-widget";
-import GraphWidget from "./widget/graph-widget";
-import StatsWidget from "./widget/stats-widget";
+import GraphWidget from "@/components/doc/widget/graph-widget";
+import StatsWidget from "@/components/doc/widget/stats-widget";
 
 // Marquee
 import Marquee from "@/components/doc/marquee/marquee";
-import Tweet from "./tweet/tweet";
-import CyberButton from "./button/cyberpunk-button";
+import Tweet from "@/components/doc/tweet/tweet";
+import CyberButton from "@/components/doc/button/cyberpunk-button";
 
 // Window
 import Window from "@/components/doc/window/window";
+
+// Link
+import Link from "@/components/doc/link/link";
+import IconLink from "@/components/doc/link/icon-link";
 
 // Requirement Markdown
 const MarqueeRequirement = `// add to tailwind.config.js
@@ -308,6 +312,15 @@ export const categories: Categories[] = [
     requirement: ["# icons", "npm i @radix-ui/react-icons"],
     url: "https://github.com/msafdev",
   },
+  // Link
+  {
+    name: "Link",
+    type: "link",
+    description:
+      "A link component is a UI element or module designed to navigate to a different page or section within an application.",
+    requirement: ["# icons", "npm i react-icons"],
+    url: "https://github.com/msafdev",
+  },
   // Button
   {
     name: "Button",
@@ -401,6 +414,19 @@ export const components: Components[] = [
     path: "status-badge.tsx",
     type: "badge",
     name: "Status Badge",
+  },
+  // Link
+  {
+    component: Link,
+    path: "link.tsx",
+    type: "link",
+    name: "Link",
+  },
+  {
+    component: IconLink,
+    path: "icon-link.tsx",
+    type: "link",
+    name: "Icon Link",
   },
   // Button
   {
