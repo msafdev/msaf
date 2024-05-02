@@ -51,7 +51,7 @@ const ProfileCard = ({
         <Pencil2Icon className="h-4 w-4 cursor-pointer text-primary" />
       </div>
       <div className="mt-2 h-[1px] w-full bg-border" />
-      <div className="anim mt-1 flex max-h-0 flex-col gap-y-2 overflow-hidden group-hover:max-h-96">
+      <div className="mt-1 flex h-fit flex-col gap-y-2 overflow-hidden">
         <ProfileContent>
           <ProfileButton>
             <PersonIcon className="mr-2 h-4 w-4" />
