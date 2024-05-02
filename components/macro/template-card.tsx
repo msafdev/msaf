@@ -64,14 +64,13 @@ const TemplateCard = ({
           </p>
         </div>
       </div>
-      <div className="relative flex aspect-[16/8] h-auto w-full items-center justify-center overflow-hidden rounded-b">
+      <div className="relative flex aspect-[16/11] h-auto w-full items-center justify-center overflow-hidden rounded-b">
         <TemplateStack stack={stack} />
         <Image
           src={image}
           alt={name}
           placeholder="blur"
-          className="h-full w-full object-cover"
-          fill
+          className="h-full w-full object-cover group-hover:blur-sm anim"
         />
         <div className="anim absolute -bottom-full left-0 z-10 flex w-full items-center justify-around border-t bg-popover px-3 group-hover:bottom-0">
           {/* Star */}

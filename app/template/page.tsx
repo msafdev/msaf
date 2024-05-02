@@ -2,27 +2,17 @@
 import TemplateCard from "@/components/macro/template-card";
 
 // Images
-import Terma from "@/public/images/templates/terma.png";
-import Countify from "@/public/images/templates/countify.png";
+import NextBase from "@/public/images/templates/nextbase.png";
 
 const Templates = [
   {
-    name: "Terma",
-    url: "https://msaf-terminal.vercel.app",
-    image: Terma,
-    type: "Open Source",
-    stack: ["Next", "Tailwind"],
-    price: "Free",
-    category: "Portfolio",
-  },
-  {
-    name: "Countify",
-    url: "https://countify-wine.vercel.app",
-    image: Countify,
+    name: "NextBase",
+    url: "https://nextbase-demo.vercel.app",
+    image: NextBase,
     type: "Open Source",
     stack: ["Next", "Tailwind", "Supabase"],
     price: "Free",
-    category: "Web App",
+    category: "Starter Kit",
   },
 ];
 
@@ -33,10 +23,10 @@ const Page = () => {
       className="flex h-full w-full grow flex-col gap-y-4 py-4 md:gap-y-8 md:py-8 lg:gap-y-12 lg:py-12"
     >
       <div className="pad-x flex h-full w-full flex-col gap-y-4 md:gap-y-5">
-        <h1 className="text-3xl text-balance text-left leading-tight font-semibold lg:text-4xl">
+        <h1 className="text-balance text-left text-3xl font-semibold leading-tight lg:text-4xl">
           Templates
         </h1>
-        <p className="max-w-lg w-full text-muted-foreground">
+        <p className="w-full max-w-lg text-muted-foreground">
           Choose from a variety of templates to{" "}
           <span className="font-medium text-foreground">kickstart</span> your
           next project. All templates are{" "}
