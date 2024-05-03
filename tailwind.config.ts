@@ -67,6 +67,14 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        shimmer: {
+          "0%, 90%, 100%": {
+            "background-position": "calc(-100% - var(--shimmer-width)) 0",
+          },
+          "30%, 60%": {
+            "background-position": "calc(100% + var(--shimmer-width)) 0",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -90,6 +98,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
         marquee: "marquee 10s linear infinite",
+        shimmer: "shimmer 8s infinite",
       },
     },
   },

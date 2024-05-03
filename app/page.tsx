@@ -8,13 +8,16 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+
+// Icons
 import {
   FileText,
-  GitPullRequest,
   Link2,
   MessageCircleHeart,
   Sparkles,
+  MonitorSmartphone,
 } from "lucide-react";
+import Shine from "@/components/macro/shine";
 
 export default function Page() {
   return (
@@ -49,15 +52,16 @@ export default function Page() {
         </div>
 
         <div className="anim mt-4 grid h-fit w-full grid-cols-2 grid-rows-3 items-center justify-between border-y md:mt-8 md:flex md:grid-rows-1 lg:mt-12">
-
           <Link
-            href={"https://github.com/msafdev?tab=repositories&q=&type=template"}
+            href={
+              "https://github.com/msafdev?tab=repositories&q=&type=template"
+            }
             target="_blank"
             className="md:pad-l anim group col-span-1 flex h-fit w-full items-center justify-center gap-x-2 py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2"
           >
             <Sparkles
               size={14}
-              className="anim-slow delay-100 group-hover:text-yellow-300"
+              className="anim-slow delay-100 group-hover:text-sky-500"
             />
             <p className="text-center text-xs font-medium text-foreground">
               Starter
@@ -72,7 +76,7 @@ export default function Page() {
           >
             <FileText
               size={14}
-              className="anim-slow delay-100 group-hover:text-red-500"
+              className="anim-slow delay-100 group-hover:text-rose-600"
             />
             <p className="text-center text-xs font-medium text-foreground">
               Resume
@@ -84,23 +88,23 @@ export default function Page() {
           >
             <MessageCircleHeart
               size={14}
-              className="anim-slow delay-100 group-hover:text-rose-400"
+              className="anim-slow delay-100 group-hover:text-pink-500"
             />
             <p className="text-center text-xs font-medium text-foreground">
               Guestbook
             </p>
           </Link>
           <Link
-            href={"https://github.com/msafdev/msaf-new"}
+            href={"https://github.com/msafdev/"}
             target="_blank"
             className="anim group col-span-1 flex h-fit w-full items-center justify-center gap-x-2 border-l border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-t-0"
           >
-            <GitPullRequest
+            <MonitorSmartphone
               size={14}
-              className="anim-slow delay-100 group-hover:text-black"
+              className="anim-slow delay-100 group-hover:text-violet-600"
             />
             <p className="text-center text-xs font-medium text-foreground">
-              Contribute
+              Setup
             </p>
           </Link>
           <Link
@@ -109,7 +113,7 @@ export default function Page() {
           >
             <Link2
               size={14}
-              className="anim-slow delay-100 group-hover:text-sky-500"
+              className="anim-slow delay-100 group-hover:text-green-500"
             />
             <p className="text-center text-xs font-medium text-foreground">
               Link
@@ -120,9 +124,9 @@ export default function Page() {
         <div className="pad-x flex w-full flex-col justify-center py-4 md:grow md:py-8 lg:py-12">
           <div className="grid grid-cols-1 items-end gap-x-6 md:grid-cols-2">
             <div className="flex flex-col justify-between">
-              <p className="mb-2 w-full text-sm font-medium uppercase text-muted-foreground md:mb-3">
-                Portfolio
-              </p>
+              <Shine className="anim mb-2 inline-flex w-fit items-center justify-center py-1">
+                <span>✨ I'm open for work</span>
+              </Shine>
               <h2 className="mb-3 w-full max-w-lg text-balance text-xl font-semibold text-foreground md:mb-4 md:text-2xl lg:text-3xl">
                 I strive to create beatiful and useful things
               </h2>
