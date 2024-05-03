@@ -92,6 +92,12 @@ const SidebarItems: SidebarSubItems[] = [
         href: "link",
         status: "new",
       },
+      {
+        name: "Chat",
+        icon: ArrowRight,
+        href: "chat",
+        status: "new",
+      }
     ],
   },
   {

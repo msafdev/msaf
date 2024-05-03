@@ -42,6 +42,9 @@ import Window from "@/components/doc/window/window";
 import Link from "@/components/doc/link/link";
 import IconLink from "@/components/doc/link/icon-link";
 
+// Chat
+import Chat from "@/components/doc/chat/chat";
+
 // Requirement Markdown
 const MarqueeRequirement = `// add to tailwind.config.js
 extend: {
@@ -386,6 +389,15 @@ export const categories: Categories[] = [
     requirement: ["# icons", "npm i react-icons"],
     url: "https://github.com/msafdev",
   },
+  // Chat
+  {
+    name: "Chat",
+    type: "chat",
+    description:
+      "A chat component is a UI element or module designed to display a chat interface within an application.",
+    requirement: ["# icons", "npm i react-icons"],
+    url: "htts://github.com/msafdev",
+  },
 ];
 
 export const components: Components[] = [
@@ -536,5 +548,11 @@ export const components: Components[] = [
     path: "window.tsx",
     type: "window",
     name: "Window",
+  },
+  {
+    component: Chat,
+    path: "chat.tsx",
+    type: "chat",
+    name: "Chat",
   },
 ];
