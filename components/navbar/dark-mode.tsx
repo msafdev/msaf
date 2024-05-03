@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import { Switch } from "../ui/switch";
+import { Switch } from "@/components/ui/switch";
 
 import { useAtom } from "jotai";
 import { themeAtom } from "@/lib/atoms/themeAtom";

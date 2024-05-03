@@ -3,9 +3,9 @@
 import { useState } from "react";
 
 // Components
-import { ScrollArea } from "../ui/scroll-area";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import SidebarButton from "./sidebar-button";
-import { Input } from "../ui/input";
+import { Input } from "@/components/ui/input";
 
 // Icons
 import { X, GanttChart } from "lucide-react";

@@ -15,10 +15,11 @@ import {
 } from "@/components/ui/command";
 import { useToast } from "@/components/ui/use-toast";
 
-import DarkMode from "../navbar/dark-mode";
+import DarkMode from "@/components/navbar/dark-mode";
 
 import { useAtom } from "jotai";
 import { themeAtom } from "@/lib/atoms/themeAtom";
+import { CheckCheck } from "lucide-react";
 
 const email = "salmanalfarisi261002@gmail.com";
 
@@ -69,6 +70,7 @@ export function Command() {
     toast({
       title: "Copied to clipboard!",
       description: "salmanalfarisi261002@gmail.com",
+      icon: <CheckCheck className="h-6 w-6 text-green-500" />,
     });
   };
 

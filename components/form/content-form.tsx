@@ -9,7 +9,8 @@ import { ArrowRightIcon, SymbolIcon } from "@radix-ui/react-icons";
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useToast } from "../ui/use-toast";
+import { useToast } from "@/components/ui/use-toast";
+import { CheckCheck, X } from "lucide-react";
 
 const ContentForm = ({ user }: { user: User }) => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -35,13 +36,15 @@ const ContentForm = ({ user }: { user: User }) => {
     if (response?.error) {
       console.error(response.error);
       toast({
-        title: "❌ Failed to send content",
+        title: "Failed to send messages",
         description: response.error,
+        icon: <X className="h-6 w-6 text-red-500" />,
       });
     } else if (response.data) {
       toast({
         title: "Content sent!",
         description: response.data,
+        icon: <CheckCheck className="h-6 w-6 text-green-500" />,
       });
     }
 

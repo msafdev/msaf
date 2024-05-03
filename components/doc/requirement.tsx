@@ -8,7 +8,7 @@ import { themeAtom } from "@/lib/atoms/themeAtom";
 import { useAtom } from "jotai";
 
 import { LoaderCircle } from "lucide-react";
-import CopyButton from "../button/copy-button";
+import CopyButton from "@/components/button/copy-button";
 
 interface RequirementsProps {
   requirements?: string[];

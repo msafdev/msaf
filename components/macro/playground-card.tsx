@@ -4,7 +4,7 @@ import { FC, useState } from "react";
 
 // Components
 import Shiki from "@/components/macro/shikijs";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 

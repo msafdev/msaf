@@ -22,7 +22,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
   return (
     <div className="flex h-full flex-col gap-y-8 md:max-w-2xl">
       <div className="flex flex-col">
-        <h1 className="mb-2 max-w-xl text-2xl font-semibold capitalize text-foreground">
+        <h1 className="mb-2 text-2xl font-semibold capitalize text-foreground">
           {params.slug}
         </h1>
         <p className="mb-4 text-base text-muted-foreground">
@@ -35,16 +35,21 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         </div>
       </div>
       <div className="flex flex-col">
-        <h2 className="mb-2 max-w-xl text-xl font-medium capitalize text-foreground">
+        <h2 className="mb-2 text-xl font-medium capitalize text-foreground">
           Requirements
         </h2>
+        {category.reqDesc && (
+          <p className="mb-4 text-base text-muted-foreground">
+            {category.reqDesc}
+          </p>
+        )}
         <Requirements
           requirements={category.requirement}
           lang={category.reqLang}
         />
       </div>
       <div className="flex w-full flex-col">
-        <h2 className="mb-3 max-w-xl text-xl font-medium capitalize text-foreground">
+        <h2 className="mb-3 text-xl font-medium capitalize text-foreground">
           Example
         </h2>
         <div className="grid w-full grid-cols-1 gap-4">

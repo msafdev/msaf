@@ -15,5 +15,5 @@ export interface Categories {
   description: string;
   requirement?: string[];
   reqLang?: BundledLanguage;
-  url: string;
+  reqDesc?: string;
 }

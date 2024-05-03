@@ -45,9 +45,11 @@ import IconLink from "@/components/doc/link/icon-link";
 // Chat
 import Chat from "@/components/doc/chat/chat";
 
+// Toast
+import Toast from "@/components/doc/toast/toast";
+
 // Requirement Markdown
-const MarqueeRequirement = `// add to tailwind.config.js
-extend: {
+const MarqueeRequirement = `extend: {
   keyframes: {
     marquee: {
       "0%": { transform: "translateX(0%)" },
@@ -59,8 +61,7 @@ extend: {
   },
 }`;
 
-const TweetRequirement = `// copy and paste this code into tweet.tsx
-import Image from "next/image";
+const TweetRequirement = `import Image from "next/image";
 import Link from "next/link";
 
 import type { Tweet } from "react-tweet/api";
@@ -298,13 +299,9 @@ export const categories: Categories[] = [
     description:
       "A profile component is a UI element or module designed to display information related to a user or entity's profile within an application.",
     requirement: [
-      "# icons",
-      "npm i @radix-ui/react-icons",
-      "",
-      "# components",
       "npx shadcn-ui@latest add avatar",
     ],
-    url: "https://github.com/msafdev",
+    reqDesc: "This component uses the Avatar component from shadcn-ui.",
   },
   // Badge
   {
@@ -312,8 +309,6 @@ export const categories: Categories[] = [
     type: "badge",
     description:
       "A badge component is a UI element or module designed to display a small amount of information or status related to a user or entity within an application.",
-    requirement: ["# icons", "npm i @radix-ui/react-icons"],
-    url: "https://github.com/msafdev",
   },
   // Link
   {
@@ -321,8 +316,6 @@ export const categories: Categories[] = [
     type: "link",
     description:
       "A link component is a UI element or module designed to navigate to a different page or section within an application.",
-    requirement: ["# icons", "npm i react-icons"],
-    url: "https://github.com/msafdev",
   },
   // Button
   {
@@ -330,8 +323,6 @@ export const categories: Categories[] = [
     type: "button",
     description:
       "A button component is a UI element or module designed to trigger an action or event within an application.",
-    requirement: ["# icons", "npm i react-icons"],
-    url: "https://github.com/msafdev",
   },
   // Card
   {
@@ -339,8 +330,6 @@ export const categories: Categories[] = [
     type: "card",
     description:
       "A card component is a UI element or module designed to display information related to a user or entity within an application.",
-    requirement: ["# icons", "npm i react-icons"],
-    url: "https://github.com/msafdev",
   },
   // Input
   {
@@ -348,8 +337,6 @@ export const categories: Categories[] = [
     type: "input",
     description:
       "An input component is a UI element or module designed to accept user input within an application.",
-    requirement: ["# icons", "npm i @radix-ui/react-icons"],
-    url: "https://github.com/msafdev",
   },
   // Widget
   {
@@ -357,8 +344,6 @@ export const categories: Categories[] = [
     type: "widget",
     description:
       "A widget component is a UI element or module designed to display information in a grid layout within an application.",
-    requirement: ["# icons", "npm i react-icons"],
-    url: "https://github.com/msafdev",
   },
   // Marquee
   {
@@ -367,8 +352,8 @@ export const categories: Categories[] = [
     description:
       "A marquee component is a UI element or module designed to display information in a scrolling manner within an application.",
     requirement: [MarqueeRequirement],
+    reqDesc: "This component uses TailwindCSS for the animation. Copy and paste this code to your Tailwind config file.",
     reqLang: "ts",
-    url: "https://github.com/msafdev",
   },
   // Tweet
   {
@@ -377,8 +362,8 @@ export const categories: Categories[] = [
     description:
       "A tweet component is a UI element or module designed to display a tweet within an application. This was made with react-tweet package from Vercel.",
     requirement: [TweetRequirement],
+    reqDesc: "This component uses Vercel's react-tweet package. Below here is a quick custom usage of the package.",
     reqLang: "tsx",
-    url: "https://github.com/msafdev",
   },
   // Window
   {
@@ -386,8 +371,6 @@ export const categories: Categories[] = [
     type: "window",
     description:
       "A window component is a UI element or module designed to display information in a window layout within an application.",
-    requirement: ["# icons", "npm i react-icons"],
-    url: "https://github.com/msafdev",
   },
   // Chat
   {
@@ -395,8 +378,13 @@ export const categories: Categories[] = [
     type: "chat",
     description:
       "A chat component is a UI element or module designed to display a chat interface within an application.",
-    requirement: ["# icons", "npm i react-icons"],
-    url: "htts://github.com/msafdev",
+  },
+  // Toast
+  {
+    name: "Toast",
+    type: "toast",
+    description:
+      "A toast component is a UI element or module designed to display a notification within an application.",
   },
 ];
 
@@ -554,5 +542,12 @@ export const components: Components[] = [
     path: "chat.tsx",
     type: "chat",
     name: "Chat",
+  },
+  // Toast
+  {
+    component: Toast,
+    path: "toast.tsx",
+    type: "toast",
+    name: "Toast",
   },
 ];

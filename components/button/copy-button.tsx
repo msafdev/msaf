@@ -3,7 +3,7 @@
 import { FC } from "react";
 
 // Icons
-import { Copy } from "lucide-react";
+import { CheckCheck, Copy } from "lucide-react";
 
 // Components
 import { useToast } from "@/components/ui/use-toast";
@@ -20,6 +20,8 @@ const CopyButton: FC<CopyButtonProps> = ({ codeString, className }) => {
     navigator.clipboard.writeText(codeString);
     toast({
       title: "Copied to clipboard!",
+      description: "Don't forget to star the repo.",
+      icon: <CheckCheck className="h-6 w-6 text-green-500" />,
     });
   };
 
@@ -27,7 +29,7 @@ const CopyButton: FC<CopyButtonProps> = ({ codeString, className }) => {
     <button
       onClick={handleCopy}
       aria-label="Copy code snippet"
-      className={`group cursor-pointer bg-popover p-2 rounded-md text-popover-foreground ${className}`}
+      className={`group cursor-pointer rounded-md bg-popover p-2 text-popover-foreground ${className}`}
     >
       <Copy className="anim h-4 w-4" />
     </button>

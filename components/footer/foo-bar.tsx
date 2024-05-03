@@ -18,7 +18,7 @@ import {
 } from "./hover-card";
 
 import Email from "./email-form";
-import { Command } from "../macro/command-dialog";
+import { Command } from "@/components/macro/command-dialog";
 
 const Footer = () => {
   return (

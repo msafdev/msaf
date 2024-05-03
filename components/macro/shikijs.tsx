@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { themeAtom } from "@/lib/atoms/themeAtom";
 import { LoaderCircle } from "lucide-react";
-import CopyButton from "../button/copy-button";
+import CopyButton from "@/components/button/copy-button";
 
 type Props = {
   code: string;

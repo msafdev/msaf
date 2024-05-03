@@ -1,6 +1,6 @@
 "use client";
 
-import { createClient } from "../supabase/client";
+import { createClient } from "@/utils/supabase/client";
 
 const githubSignIn = async () => {
   const supabase = createClient();

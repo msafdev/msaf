@@ -76,7 +76,7 @@ export default function Page() {
     {
       title: "Add Tailwind Directives",
       description:
-        "These are not required, but some of the components have these classNames for styling.",
+        "These are not required, but some of the components have these classNames for animations.",
       code: `@layer components {
   .anim {
     @apply transition-all duration-300 ease-in-out;
@@ -87,9 +87,9 @@ export default function Page() {
     {
       title: "Install recurring dependencies.",
       description:
-        "Install the dependencies that are oftenly used here. Don't worry, most of them are small in size (e.g. icons).",
+        "The CLI should install these, but you can install them manually if needed.",
       code: `#icons
-npm i @radix-ui/react-icons lucide-react react-icons`,
+npm i @radix-ui/react-icons react-icons lucide-react`,
       lang: "shell",
     },
     {

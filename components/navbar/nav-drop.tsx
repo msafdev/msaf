@@ -9,7 +9,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import DarkMode from "./dark-mode";
-import { DividerHorizontal } from "../ui/divider";
+import { DividerHorizontal } from "@/components/ui/divider";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

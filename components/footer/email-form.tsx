@@ -3,13 +3,13 @@
 import { useState } from "react";
 
 // Components
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import { Textarea } from "../ui/textarea";
-import { useToast } from "../ui/use-toast";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
 
 // Icons
-import { LoaderCircle } from "lucide-react";
+import { CheckCheck, LoaderCircle, X } from "lucide-react";
 
 // Lib
 import { sendEmail } from "@/lib/email";
@@ -28,12 +28,14 @@ const Email = () => {
       toast({
         title: "Email sent!",
         description: "I will get back to you as soon as possible",
+        icon: <CheckCheck className="h-6 w-6 text-green-500" />,
       });
       setLoading(false);
     } else {
       toast({
-        title: "❌ Failed to send email",
+        title: "Failed to send email",
         description: "Please try again later",
+        icon: <X className="h-6 w-6 text-red-500" />,
       });
       setLoading(false);
     }
