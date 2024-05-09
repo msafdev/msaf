@@ -18,7 +18,7 @@ export default function NotFound() {
         Oops! Page not found
       </h2>
       <p className="text-sm text-balance mt-1 sm:text-base md:text-lg text-center text-muted-foreground leading-tight">
-          The page you are looking for does not exist or has been moved
+          The page you are looking for does not exist or has been moved.
       </p>
     </main>
   );
