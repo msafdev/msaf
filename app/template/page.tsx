@@ -2,7 +2,8 @@
 import TemplateCard from "@/components/macro/template-card";
 
 // Images
-import NextBase from "@/public/images/templates/nextbase.png";
+import NextBase from "@/public/images/templates/nextbase.webp";
+import Macintosh from "@/public/images/templates/macintosh.webp";
 
 const Templates = [
   {
@@ -13,6 +14,15 @@ const Templates = [
     stack: ["Next", "Tailwind", "Supabase"],
     price: "Free",
     category: "Starter Kit",
+  },
+  {
+    name: "Macintosh",
+    url: "https://msaf-macintosh.vercel.app",
+    image: Macintosh,
+    type: "Open Source",
+    stack: ["Next", "Tailwind"],
+    price: "Free",
+    category: "Portfolio Template",
   },
 ];
 
