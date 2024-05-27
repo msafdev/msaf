@@ -4,6 +4,7 @@ import TemplateCard from "@/components/macro/template-card";
 // Images
 import NextBase from "@/public/images/templates/nextbase.webp";
 import Macintosh from "@/public/images/templates/macintosh.webp";
+import Compactfolio from "@/public/images/templates/compactfolio.webp";
 
 const Templates = [
   {
@@ -24,6 +25,15 @@ const Templates = [
     price: "Free",
     category: "Portfolio Template",
   },
+  {
+    name: "Compactfolio",
+    url: "https://msaf-compactfolio.vercel.app",
+    image: Compactfolio,
+    type: "Open Source",
+    stack: ["Next", "Tailwind"],
+    price: "Free",
+    category: "Portfolio Template",
+  }
 ];
 
 const Page = () => {
