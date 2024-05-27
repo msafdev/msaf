@@ -200,7 +200,7 @@ export default function Page() {
                       Live
                     </Badge>
                     <Link
-                      href="https://msaf-terminal.vercel.app"
+                      href="https://terma-demo.vercel.app"
                       target="_blank"
                       className="rounded-sm border bg-popover px-2 text-popover-foreground"
                     >
