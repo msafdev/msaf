@@ -18,7 +18,7 @@ const Templates = [
   },
   {
     name: "Macintosh",
-    url: "https://msaf-macintosh.vercel.app",
+    url: "https://mac.msaf.tech",
     image: Macintosh,
     type: "Open Source",
     stack: ["Next", "Tailwind"],
@@ -27,7 +27,7 @@ const Templates = [
   },
   {
     name: "Compactfolio",
-    url: "https://msaf-compactfolio.vercel.app",
+    url: "https://compact.msaf.tech",
     image: Compactfolio,
     type: "Open Source",
     stack: ["Next", "Tailwind"],
