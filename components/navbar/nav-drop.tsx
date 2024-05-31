@@ -11,28 +11,13 @@ import {
 import DarkMode from "./dark-mode";
 import { DividerHorizontal } from "@/components/ui/divider";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
-import { useAtom } from "jotai";
-import { themeAtom } from "@/lib/atoms/themeAtom";
+import { usePathname } from "next/navigation";
 
 const NavDrop = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useAtom(themeAtom);
-  const pathname = usePathname();
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const html = document.querySelector("html");
-      if (html) {
-        if (theme === "dark") {
-          html.classList.add("dark");
-        } else {
-          html.classList.remove("dark");
-        }
-      }
-    }
-  }, [theme]);
+  const pathname = usePathname();
 
   return (
     <>

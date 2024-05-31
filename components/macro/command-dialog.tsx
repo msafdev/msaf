@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 
+import { CheckCheck } from "lucide-react";
 import { TbMail, TbCalendar, TbMoon } from "react-icons/tb";
 
 import {
@@ -13,38 +14,24 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
-import { useToast } from "@/components/ui/use-toast";
-
 import DarkMode from "@/components/navbar/dark-mode";
 
-import { useAtom } from "jotai";
-import { themeAtom } from "@/lib/atoms/themeAtom";
-import { CheckCheck } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
+import { useTheme } from "next-themes";
 
 const email = "salmanalfarisi261002@gmail.com";
 
 export function Command() {
   const [open, setOpen] = useState(false);
-  const [theme, setTheme] = useAtom(themeAtom);
 
   const { toast } = useToast();
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "m" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
-        if (typeof window !== "undefined") {
-          const html = document.querySelector("html");
-          if (html) {
-            if (html.classList.contains("dark")) {
-              setTheme("light");
-              html.classList.remove("dark");
-            } else {
-              setTheme("dark");
-              html.classList.add("dark");
-            }
-          }
-        }
+        setTheme(theme === "dark" ? "light" : "dark");
       }
     };
 

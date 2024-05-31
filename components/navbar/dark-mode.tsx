@@ -4,28 +4,13 @@ import { useEffect, useState } from "react";
 
 import { Switch } from "@/components/ui/switch";
 
-import { useAtom } from "jotai";
-import { themeAtom } from "@/lib/atoms/themeAtom";
+import { useTheme } from "next-themes";
 
 const DarkMode = () => {
-  const [theme, setTheme] = useAtom(themeAtom);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const html = document.querySelector("html");
-      if (html) {
-        if (theme === "dark") {
-          html.classList.add("dark");
-        } else {
-          html.classList.remove("dark");
-        }
-      }
-    }
-  }, [theme]);
+  const { theme, setTheme } = useTheme();
 
   const handleChange = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (

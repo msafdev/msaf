@@ -14,6 +14,7 @@ import NotFound from "./not-found";
 import Navbar from "@/components/navbar/nav-bar";
 import Footer from "@/components/footer/foo-bar";
 import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 export const metadata: Metadata = {
   title: "Salman",
@@ -30,13 +31,20 @@ export default function RootLayout({
   return (
     <html lang="en" className="no-scrollbar">
       <body className={GeistSans.className}>
-        <SpeedInsights />
-        <main className="flex w-full flex-col bg-background md:min-h-[100svh] ">
-          <Navbar />
-          {children}
-          <Toaster />
-        </main>
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange={false}
+        >
+          <SpeedInsights />
+          <main className="flex w-full flex-col bg-background md:min-h-[100svh] ">
+            <Navbar />
+            {children}
+            <Toaster />
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

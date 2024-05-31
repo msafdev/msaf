@@ -8,15 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-
-// Icons
-import {
-  FileText,
-  Link2,
-  MessageCircleHeart,
-  Sparkles,
-  MonitorSmartphone,
-} from "lucide-react";
+import SubLinks from "@/components/macro/sub-links";
 import Shine from "@/components/macro/shine";
 
 export default function Page() {
@@ -51,75 +43,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className="anim mt-4 grid h-fit w-full grid-cols-2 grid-rows-3 items-center justify-between border-y md:mt-8 md:flex md:grid-rows-1 lg:mt-12">
-          <Link
-            href={
-              "https://github.com/msafdev?tab=repositories&q=&type=template"
-            }
-            target="_blank"
-            className="md:pad-l anim group col-span-1 flex h-fit w-full items-center justify-center gap-x-2 py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2"
-          >
-            <Sparkles
-              size={14}
-              className="anim-slow delay-100 group-hover:text-sky-500"
-            />
-            <p className="text-center text-xs font-medium text-foreground">
-              Starter
-            </p>
-          </Link>
-          <Link
-            href={
-              "https://drive.google.com/file/d/1V7Qa8LvjbemeR9QcOb0p1hoVKRmp5m1i/view?usp=sharing"
-            }
-            target="_blank"
-            className="anim group col-span-1 flex h-fit w-full items-center justify-center gap-x-2 border-l py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2"
-          >
-            <FileText
-              size={14}
-              className="anim-slow delay-100 group-hover:text-rose-600"
-            />
-            <p className="text-center text-xs font-medium text-foreground">
-              Resume
-            </p>
-          </Link>
-          <Link
-            href={"/guestbook"}
-            className="anim group col-span-1 flex h-fit w-full items-center justify-center gap-x-2 border-l-0 border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-l md:border-t-0"
-          >
-            <MessageCircleHeart
-              size={14}
-              className="anim-slow delay-100 group-hover:text-pink-500"
-            />
-            <p className="text-center text-xs font-medium text-foreground">
-              Guestbook
-            </p>
-          </Link>
-          <Link
-            href={"https://github.com/msafdev/"}
-            target="_blank"
-            className="anim group col-span-1 flex h-fit w-full items-center justify-center gap-x-2 border-l border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-t-0"
-          >
-            <MonitorSmartphone
-              size={14}
-              className="anim-slow delay-100 group-hover:text-violet-600"
-            />
-            <p className="text-center text-xs font-medium text-foreground">
-              Setup
-            </p>
-          </Link>
-          <Link
-            href={"https://msaf-link.vercel.app"}
-            className="md:pad-r anim group col-span-2 flex h-fit w-full items-center justify-center gap-x-2 border-t py-4 font-medium transition-all duration-200 ease-in-out hover:w-full hover:bg-muted md:w-1/2 md:border-l md:border-t-0"
-          >
-            <Link2
-              size={14}
-              className="anim-slow delay-100 group-hover:text-green-500"
-            />
-            <p className="text-center text-xs font-medium text-foreground">
-              Link
-            </p>
-          </Link>
-        </div>
+        <SubLinks />
 
         <div className="pad-x flex w-full flex-col justify-center py-4 md:grow md:py-8 lg:py-12">
           <div className="grid grid-cols-1 items-end gap-x-6 md:grid-cols-2">

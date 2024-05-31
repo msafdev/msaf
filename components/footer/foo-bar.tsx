@@ -39,22 +39,22 @@ const Footer = () => {
 
         {/* Social Icons */}
         <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
-          <TbBrandTwitter className="anim h-6 w-6 text-foreground group-hover:rotate-12 group-hover:scale-125 group-hover:text-primary-foreground" />
+          <TbBrandTwitter className="anim h-5 w-5 md:w-6 md:h-6 text-foreground group-hover:rotate-12 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
         <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
-          <TbBrandInstagram className="anim h-6 w-6 text-foreground group-hover:-rotate-12 group-hover:scale-125 group-hover:text-primary-foreground" />
+          <TbBrandInstagram className="anim h-5 w-5 md:w-6 md:h-6 text-foreground group-hover:-rotate-12 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
         <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
-          <TbBrandDribbble className="anim h-6 w-6 text-foreground group-hover:-rotate-45 group-hover:scale-125 group-hover:text-primary-foreground" />
+          <TbBrandDribbble className="anim h-5 w-5 md:w-6 md:h-6 text-foreground group-hover:-rotate-45 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
         <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
-          <TbBrandFigma className="anim h-6 w-6 text-foreground group-hover:rotate-6 group-hover:scale-125 group-hover:text-primary-foreground" />
+          <TbBrandFigma className="anim h-5 w-5 md:w-6 md:h-6 text-foreground group-hover:rotate-6 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
         <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
-          <TbBrandGithub className="anim h-6 w-6 text-foreground group-hover:rotate-6 group-hover:scale-125 group-hover:text-primary-foreground" />
+          <TbBrandGithub className="anim h-5 w-5 md:w-6 md:h-6 text-foreground group-hover:rotate-6 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
         <div className="anim group col-span-1 flex h-auto w-full cursor-pointer items-center justify-center py-6 hover:bg-primary sm:aspect-video sm:py-8">
-          <TbBrandFiverr className="anim h-6 w-6 text-foreground group-hover:-rotate-12 group-hover:scale-125 group-hover:text-primary-foreground" />
+          <TbBrandFiverr className="anim h-5 w-5 md:w-6 md:h-6 text-foreground group-hover:-rotate-12 group-hover:scale-125 group-hover:text-primary-foreground" />
         </div>
       </div>
 

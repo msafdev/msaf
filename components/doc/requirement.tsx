@@ -27,7 +27,10 @@ const Requirements: FC<RequirementsProps> = ({
     setLoading(true);
     const html = await codeToHtml(`${requirements.map((r) => r).join("\n")}`, {
       lang: lang,
-      theme: mode === "dark" ? "github-dark-default" : "github-light-default",
+      theme:
+        mode === "dark" || "system"
+          ? "github-dark-default"
+          : "github-light-default",
     });
     setHtml(html);
     setLoading(false);

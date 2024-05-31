@@ -48,7 +48,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href = "/", name = "Link" }) => {
       <p
         data-value={name}
         onMouseOver={handleMouseOver}
-        className="text-lg font-bold uppercase font-mono"
+        className="font-medium text-sm uppercase font-mono text-muted-foreground hover:text-foreground"
       >
         {name}
       </p>
