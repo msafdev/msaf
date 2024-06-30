@@ -45,7 +45,7 @@
     "react-syntax-highlighter": "^15.5.0",
     "react-tweet": "^3.2.1",
     "react-wrap-balancer": "^1.1.0",
-    "sharp": "^0.32",
+    "sharp": "^0.33.4",
     "supabase": "^1.162.4",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7"
