@@ -24,7 +24,7 @@
     "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@supabase/ssr": "^0.3.0",
     "@supabase/supabase-js": "^2.42.5",
-    "@uiw/react-textarea-code-editor": "^3.0.2",
+    "@uiw/react-textarea-code-editor": "3.1.0",
     "@vercel/speed-insights": "^1.0.10",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
